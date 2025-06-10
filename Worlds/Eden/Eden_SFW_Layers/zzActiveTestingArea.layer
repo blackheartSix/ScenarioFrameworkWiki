@@ -1,54 +1,60 @@
-GenericEntity GreenButton2 {
- components {
-  SoundComponent "{61FEC10E7ECD183E}" {
-   Filenames {
-    "{CEA788D79A641BBF}Sounds/UI/UI.acp"
-   }
-  }
-  MeshObject "{61FEC1022126D577}" {
-   Object "{B4284D6D23F0C821}Assets/Structures/BuildingsParts/Electrical/Data/IndustrialUtilityPropSet_Button_Green_01.xob"
-  }
-  ActionsManagerComponent "{61FEC10D82AC12C4}" {
-   ActionContexts {
-    UserActionContext "{61FEC10D853200D2}" {
-     ContextName "Press"
-     Position PointInfo "{61FEC10DE8E7D0B7}" {
-     }
-     Radius 0.7
+$grp GenericEntity {
+ GreenButton2 {
+  components {
+   SoundComponent "{61FEC10E7ECD183E}" {
+    Filenames {
+     "{CEA788D79A641BBF}Sounds/UI/UI.acp"
     }
    }
-   additionalActions {
-    SCR_BaseAudioScriptedUserAction "{61FEC10C3DFEB291}" {
-     ParentContextList {
-      "Press"
+   MeshObject "{61FEC1022126D577}" {
+    Object "{B4284D6D23F0C821}Assets/Structures/BuildingsParts/Electrical/Data/IndustrialUtilityPropSet_Button_Green_01.xob"
+   }
+   ActionsManagerComponent "{61FEC10D82AC12C4}" {
+    ActionContexts {
+     UserActionContext "{61FEC10D853200D2}" {
+      ContextName "Press"
+      Position PointInfo "{61FEC10DE8E7D0B7}" {
+      }
+      Radius 0.7
      }
-     UIInfo UIInfo "{61FEC10C2028762C}" {
-      Name "Issue Air Mission"
-     }
-     Duration 0.1
-     m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
     }
-    SCR_BaseAudioScriptedUserAction "{65857CF148E2B237}" {
-     ParentContextList {
-      "Press"
+    additionalActions {
+     SCR_BaseAudioScriptedUserAction "{61FEC10C3DFEB291}" {
+      ParentContextList {
+       "Press"
+      }
+      UIInfo UIInfo "{61FEC10C2028762C}" {
+       Name "Issue Air Mission"
+      }
+      Duration 0.1
+      m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
      }
-     UIInfo UIInfo "{61FEC10C2028762C}" {
-      Name "Issue Ground Mission"
+     SCR_BaseAudioScriptedUserAction "{65857CF148E2B237}" {
+      ParentContextList {
+       "Press"
+      }
+      UIInfo UIInfo "{61FEC10C2028762C}" {
+       Name "Issue Ground Mission"
+      }
+      Duration 0.1
+      "Sort Priority" 1
+      m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
      }
-     Duration 0.1
-     "Sort Priority" 1
-     m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
     }
    }
+   RplComponent "{61FEC10CE6C7120B}" {
+   }
   }
-  RplComponent "{61FEC10CE6C7120B}" {
-  }
+  coords 5003.301 3.365 3896.746
+  angleX -2.315
+  angleY 136.864
+  angleZ 0.024
+  scale 2
  }
- coords 5003.301 3.365 3896.746
- angleX -2.315
- angleY 136.864
- angleZ 0.024
- scale 2
+ {
+  coords 5324.348 80.744 6324.004
+  angleY 61.215
+ }
 }
 GenericEntity Layer51 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
  coords 6484.046 160.149 6389.367

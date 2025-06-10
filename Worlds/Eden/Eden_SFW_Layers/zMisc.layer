@@ -77,6 +77,9 @@ $grp GenericEntity {
   angleY -170.398
  }
 }
+GenericEntity : "{5A3C5290D0DDB6F3}Prefabs/Props/Wrecks/UH1H_wreck_SFW.et" {
+ coords 6131.204 128.027 7812.228
+}
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  VehDepotModify {
   components {

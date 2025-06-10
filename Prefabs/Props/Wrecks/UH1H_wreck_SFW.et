@@ -7,10 +7,42 @@ GenericEntity : "{3619812B192CCAE9}Prefabs/Props/Core/Wreck_Base.et" {
     20 10 5 1 1
    }
   }
-  RplComponent "{65932C26F55C84A7}" {
+  RplComponent "{659546E364763405}" {
   }
-  Hierarchy "{65932C26F10490FB}" {
+  Hierarchy "{659546E360FA4A07}" {
   }
  }
  coords 2.326 5.692 -2.385
+ {
+  $grp ParticleEffectEntity : "{899360C930DA3EE3}Prefabs/Particles/Campfire_burning.et" {
+   {
+    ID "659546E05E34D69D"
+    components {
+     RigidBody "{659546E330F0507F}" {
+     }
+     SCR_FireplaceComponent "{659546E3D9A0234A}" {
+     }
+     RplComponent "{659546E300078693}" {
+     }
+     Hierarchy "{659546E3160AE3FF}" {
+     }
+    }
+    coords 0.161 3.008 -0.325
+   }
+   {
+    ID "659546E3A35864D6"
+    components {
+     RigidBody "{659546E30FED61BB}" {
+     }
+     SCR_FireplaceComponent "{659546E3D5145547}" {
+     }
+     RplComponent "{659546E31EA147EB}" {
+     }
+     Hierarchy "{659546E315D0D8E0}" {
+     }
+    }
+    coords 0 0.907 1.458
+   }
+  }
+ }
 }

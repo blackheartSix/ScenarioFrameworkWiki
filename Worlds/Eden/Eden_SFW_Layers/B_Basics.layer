@@ -2,7 +2,7 @@ SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramewo
  components {
   SCR_CommunicationSoundComponent "{5A96D5C2D1670EEF}" {
    Filenames {
-    "{91D53896F5AD5DB4}Sounds/RadioProtocol/RadioProtocol_CombatPatrol_US.acp" "{6C46716BAD0C61A3}Sounds/Props/Military/Generators/Props_GeneratorFloodlight.acp"
+    "{91D53896F5AD5DB4}Sounds/RadioProtocol/RadioProtocol_CombatPatrol_US.acp" "{6C46716BAD0C61A3}Sounds/Props/Military/Generators/Props_GeneratorFloodlight.acp" "{ADF9249D6654328B}Sounds/Compositions/Misc/Campfire/Compositions_Campfire.acp"
    }
   }
   SCR_CampaignBuildingManagerComponent "{646AD9E3C1224612}" : "{F07437CC1A5BF612}ComponentsCopied/SCR_CampBuildManagerComp.ct" {
