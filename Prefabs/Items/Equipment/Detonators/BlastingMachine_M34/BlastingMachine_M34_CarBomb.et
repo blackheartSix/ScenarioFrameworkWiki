@@ -1,0 +1,64 @@
+GenericEntity : "{30C4DBE0A7729BE3}Prefabs/Weapons/Core/BlastingMachine_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  SoundComponent "{612C49569E6362FC}" {
+   Filenames + {
+    "{4385E18004D7760E}Sounds/Items/Equipment/Detonators/BlastingMachine_M34/Items_Detonators_BlastingMachine_M34_Handling.acp"
+   }
+  }
+  MeshObject "{64708C0DF00BE697}" {
+   Object "{C13578ECF13ADD63}Assets/Weapons/Explosives/BlastingMachine_M34/BlastingMachine_M34.xob"
+  }
+  SCR_BaseDeployableInventoryItemComponent "{5F26A42FA3F3D133}" {
+   m_sReplacementPrefab "{1BE3AC5A76F84398}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/DeployableDetonatorReplacementUS.et"
+  }
+  SCR_DeployableInventoryItemInventoryComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "#AR-Item_M34BlastingMachine_Name"
+     Description "#AR-Item_M34BlastingMachine_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.368
+     SizeSetupStrategy Manual
+     ItemDimensions 10 10 10
+     ItemVolume 200
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0.03 0 0
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{64708C0DF00BE6FB}" {
+     AnimationInstance "{9CFD755430D3619A}Assets/Weapons/Explosives/workspace/M34_player.asi"
+     AnimationAttachments {
+      AnimationAttachmentInfo "{64708C0DF00BE6F9}" {
+       AnimGraph "{8462461570E623A5}Assets/Weapons/Explosives/workspace/M34.agr"
+       AnimInstance "{9CFD755430D3619A}Assets/Weapons/Explosives/workspace/M34_player.asi"
+       BindingName "Gadget"
+      }
+     }
+     AllowInspection 1
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{64708C0DF00BE6F3}" {
+      CameraOrbitAngles -25 -20 0
+      CameraOffset -0.01 0.01 0
+      FOV 36
+      LodModel 1
+     }
+    }
+    m_SlotType SLOT_GADGETS_STORAGE
+   }
+  }
+  SlotManagerComponent "{5F1CBB25D9EFD771}" {
+   Slots {
+    EntitySlotInfo wire {
+     Prefab "{3F3A1D96CA18DB53}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/ArmedDetonatorWires_M34.et"
+    }
+   }
+  }
+  GadgetAnimationComponent "{6114E06D5FC71705}" {
+   AnimGraph "{8462461570E623A5}Assets/Weapons/Explosives/workspace/M34.agr"
+   AnimInstance "{67A3E465A8D20576}Assets/Weapons/Explosives/workspace/M34_weapon.asi"
+  }
+ }
+}

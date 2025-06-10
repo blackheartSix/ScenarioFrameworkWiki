@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{131DAC3E58EF8FAC}UI/layouts/HUD/Hint/HintInfoDisplayCustom.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass PS5 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}

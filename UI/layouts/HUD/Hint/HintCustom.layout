@@ -1,0 +1,192 @@
+OverlayWidgetClass {
+ Name "Hint"
+ components {
+  SCR_HintUIComponent "{562265601C9A8A82}" {
+   m_sTitleWidgetName "Name"
+   m_sDescriptionWidgetName "Description"
+   m_sIconWidgetName "Icon"
+   m_sToggleButtonWidgetName "ButtonToggle"
+   m_sContextButtonWidgetName "ButtonContext"
+   m_sTimeLeftWidgetName "PoggersBar"
+   m_sPageWidgetName "Page"
+   m_sVisibilitySelectorName "NameOverlay"
+   m_sColorWidgetName "Bar"
+   m_ToggleButtonTextHide "#AR-Hint_ButtonHide_Text"
+   m_ToggleButtonTextNext "#AR-Hint_ButtonNext_Text"
+   m_HighlightLayout "{D574871D2C37B255}UI/layouts/Common/WidgetHighlight.layout"
+   m_cTimerColor 0.76 0.392 0.078 1
+  }
+ }
+ {
+  OverlayWidgetClass "{6550C4FA5C36EEE8}" {
+   Name "Overlay"
+   Slot OverlayWidgetSlot "{5E249B865C95BB6D}" {
+   }
+   {
+    BlurWidgetClass "{6550C4FA5C36EEEE}" {
+     Name "Blur0"
+     Slot OverlayWidgetSlot "{56268E72676CC13C}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     "Is Visible" 0
+    }
+    SmartPanelWidgetClass "{6550C4FA5C364658}" {
+     Name "Background"
+     Slot OverlayWidgetSlot "{5E58B1F54A5C97DD}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Color 0.007 0.012 0.014 0.9
+     style rounded_2px
+    }
+    SizeLayoutWidgetClass "{6550C4FA5C36465A}" {
+     Name "SizeLayout"
+     Slot OverlayWidgetSlot "{56226B9A3936168F}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     AllowWidthOverride 1
+     WidthOverride 375
+     {
+      VerticalLayoutWidgetClass "{6550C4FA5C364655}" {
+       Name "VerticalLayout"
+       Slot OverlayWidgetSlot "{5622656143BFD1A4}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       {
+        SizeLayoutWidgetClass "{6550C4FA5C364654}" : "{8C63C2E7AE0092B7}UI/layouts/WidgetLibrary/WLib_ProgressBar.layout" {
+         Name "PoggersBar"
+         Slot LayoutSlot "{58DE94D5BB982FA2}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         components {
+          SCR_WLibProgressBarComponent "{5570DACE374D2D4B}" {
+           m_fValue 1
+          }
+         }
+         HeightOverride 4
+        }
+        OverlayWidgetClass "{6550C4FA5C364657}" {
+         Name "NameOverlay"
+         Slot LayoutSlot "{562654A5EE852274}" {
+         }
+         {
+          RichTextWidgetClass "{6550C4FA5C365807}" : "{B537936D5B7E2BA1}UI/layouts/WidgetLibrary/TextWidgets/Text_BodySmall.layout" {
+           Name "Page"
+           Slot OverlayWidgetSlot "{5E24CDA3F24233E8}" {
+            HorizontalAlign 2
+            VerticalAlign 3
+            Padding 0 6 20 0
+           }
+           Text "#AR-Editor_ContentBrowser_PageIndex_Text"
+           "Font Size" 14
+           "Min Font Size" 14
+           "Horizontal Alignment" Right
+           "Vertical Alignment" Center
+          }
+          TextWidgetClass "{6550C4FA5C365806}" : "{0D7FF083FDE39877}UI/layouts/WidgetLibrary/TextWidgets/Text_Heading4.layout" {
+           Name "Name"
+           Slot OverlayWidgetSlot "{5626566653EB7FCA}" {
+            HorizontalAlign 0
+            Padding 12 12 8 8
+           }
+           Color 0.761 0.392 0.078 1
+           Text "My Hint"
+           "Font Size" 20
+           "Min Font Size" 18
+           FontProperties FontProperties "{546AF489DFD25402}" {
+            Font "{EABA4FE9D014CCEF}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+           }
+          }
+         }
+        }
+        ImageWidgetClass "{6550C4FA5C3672D9}" {
+         Name "Icon"
+         Slot LayoutSlot "{5626510FE5EF0CEE}" {
+          HorizontalAlign 1
+          Padding 0 20 0 0
+         }
+         Texture "{2A06DB6C5CD7B3BF}Images/SFWPreviewImage.edds"
+         Size 250 150
+        }
+        RichTextWidgetClass "{6550C4FA5C3672DE}" : "{E256BCCAE8821432}UI/layouts/WidgetLibrary/RichTextWidgets/RichText_Body.layout" {
+         Name "Description"
+         Slot LayoutSlot "{5626510F4FEC56C9}" {
+          Padding 12 10 12 0
+         }
+         "Font Size" 14
+         "Min Font Size" 14
+         "Vertical Alignment" Center
+         "Line Spacing" 20
+        }
+        ImageWidgetClass "{6550C4FA5C35C934}" {
+         Name "Separator"
+         Slot LayoutSlot "{557EC93E1D74F620}" {
+         }
+         "Is Visible" 0
+         Color 0.761 0.392 0.078 1
+         Size 4 4
+        }
+        HorizontalLayoutWidgetClass "{6550C4FA5C35B160}" {
+         Name "HorizontalLayout0"
+         Slot LayoutSlot "{62CA759311B51E3B}" {
+          Padding 8 14 12 12
+         }
+         {
+          GridLayoutWidgetClass "{6550C4FA5C35B161}" {
+           Name "FooterGrid"
+           Slot LayoutSlot "{5E249B851789EBA1}" {
+           }
+           ColumnFill {
+           }
+           {
+            ButtonWidgetClass "{6550C4FA5C3504B4}" : "{CB8563509DEF3E0E}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButtonSmall.layout" {
+             Name "ButtonToggle"
+             Slot GridWidgetSlot "{62CA7591E6DE3416}" {
+              HorizontalAlign 0
+              Padding 0 2 0 0
+             }
+             components {
+              SCR_InputButtonComponent "{5D346C3DD81D95CD}" {
+               m_BackgroundDefault 0 0 0 0.392
+               m_bShowBorderOnFocus 1
+               m_sActionName "HintToggle"
+               m_sLabel ""
+               m_iHeightInPixel 40
+               m_bCanBeDisabled 0
+              }
+             }
+            }
+            ButtonWidgetClass "{6550C4FA5C350489}" : "{CB8563509DEF3E0E}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButtonSmall.layout" {
+             Name "ButtonContext"
+             Slot GridWidgetSlot "{62CA7591E6DE3449}" {
+              HorizontalAlign 0
+              Padding 0 3 0 0
+              Row 1
+             }
+             components {
+              SCR_InputButtonComponent "{5D346C3DD81D95CD}" {
+               m_BackgroundDefault 0 0 0 0.392
+               m_bShowBorderOnFocus 1
+               m_sActionName "HintContext"
+               m_sLabel "#AR-Hint_ButtonContext_Text"
+               m_iHeightInPixel 40
+               m_bCanBeDisabled 0
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,428 @@
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ Area1 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 100
+    m_fAreaRadius 5
+    m_bOnce 0
+   }
+  }
+  coords 7683.468 341.848 3087.521
+  {
+   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    Layer11 {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_SpawnChildren RANDOM_ONE
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
+     coords 0 0 0
+     {
+      $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+       SmallBarrage {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_sObjectToSpawn "{5D48E2F7DB0C3714}PrefabsEditable/EffectsModules/Mortar/EffectModule_Zoned_MortarBarrage_Small.et"
+         }
+        }
+        coords 0 -0.973 0
+       }
+       MediumBarrage {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_sObjectToSpawn "{E7B7D4467E9A82DD}PrefabsEditable/EffectsModules/Mortar/EffectModule_Zoned_MortarBarrage_Medium.et"
+         }
+        }
+        coords 0 -0.973 0
+       }
+       LargeBarrage {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_sObjectToSpawn "{1DDF7187608968F2}PrefabsEditable/EffectsModules/Mortar/EffectModule_Zoned_MortarBarrage_Large.et"
+         }
+        }
+        coords 0 -0.973 0
+       }
+      }
+     }
+    }
+    Layer8 {
+     coords 0 0 0
+     {
+      GenericEntity Slot2 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{EF49B1F62D20ABD1}Prefabs/Props/Garbage/Cardboard/Cardboard_05.et"
+        }
+       }
+       coords 0.096 -0.973 0
+      }
+      GenericEntity SlotPlayerTrigger1 : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+       components {
+        SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+         m_bShowDebugShapesInWorkbench 0
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+           m_fAreaRadius 200
+          }
+         }
+         m_aTriggerActions {
+          SCR_ScenarioFrameworkActionBasedOnConditions "{6320A9E78D325ED2}" {
+           m_aActivationConditions {
+            SCR_ScenarioFrameworkEntityDistanceCondition "{6320A9E7841F330E}" {
+             m_GetterA SCR_ScenarioFrameworkGetSpawnedEntity "{6320A9E7D0BEB3C5}" {
+              m_sLayerName "Slot2"
+             }
+             m_GetterB SCR_ScenarioFrameworkGetPlayerEntity "{6320C36996450C76}" {
+             }
+             m_fMinDistance 1
+             m_fMaxDistance 190
+            }
+           }
+           m_aActions {
+            SCR_ScenarioFrameworkActionWaitAndExecute "{6320A9E7099C28DC}" {
+             m_iDelayInSeconds 1
+             m_aActions {
+              SCR_ScenarioFrameworkActionSpawnObjects "{6320A9E71956FFDB}" {
+               m_aNameOfObjectsToSpawnOnActivation {
+                "Layer11"
+               }
+              }
+             }
+            }
+           }
+          }
+          SCR_ScenarioFrameworkActionBasedOnConditions "{6320A9E4BF8D2B72}" {
+           m_aActivationConditions {
+            SCR_ScenarioFrameworkEntityDistanceCondition "{6320A9E4BA00F244}" {
+             m_GetterA SCR_ScenarioFrameworkGetSpawnedEntity "{6320A9E4B19F5134}" {
+              m_sLayerName "Slot2"
+             }
+             m_GetterB SCR_ScenarioFrameworkGetPlayerEntity "{6320A9E427B36991}" {
+             }
+             m_fMinDistance 191
+             m_fMaxDistance 200
+            }
+           }
+           m_aActions {
+            SCR_ScenarioFrameworkActionWaitAndExecute "{6320A9E4991D695B}" {
+             m_iDelayInSeconds 10
+             m_iDelayInSecondsMax 10
+             m_aActions {
+              SCR_ScenarioFrameworkActionRestoreLayerToDefault "{6320A9E49239990C}" {
+               m_Getter SCR_ScenarioFrameworkGetLayerBase "{6320A9E4EC158657}" {
+                m_sLayerBaseName "Layer11"
+               }
+               m_bReinitAfterRestoration 1
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+       coords 0 0 0
+      }
+     }
+    }
+   }
+  }
+ }
+ Area6 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+    m_iDynamicDespawnRange 200
+    m_fAreaRadius 5
+    m_bOnce 0
+   }
+  }
+  coords 8282.774 227.999 2350.386
+  {
+   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    Layer14 {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_SpawnChildren RANDOM_ONE
+       m_bShowDebugShapesDuringRuntime 1
+       m_bShowDebugShapesInWorkbench 1
+       m_eActivationType ON_TRIGGER_ACTIVATION
+       m_iDynamicDespawnRange 100
+      }
+     }
+     coords 0 0 0
+     {
+      $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+       MineField {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_sObjectToSpawn "{0D6A1225534F164D}PrefabsEditable/EffectsModules/Mine/EffectModule_MineField_Small_USSR.et"
+         }
+        }
+        coords -1.071 0.009 1.026
+        angleX 5.046
+        angleY 42.458
+        angleZ -0.223
+       }
+       MediumBarrage2 {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_sObjectToSpawn "{F5FAFFDBC271088C}PrefabsEditable/EffectsModules/Mortar/EffectModule_Zoned_MortarBarrage_Creeping.et"
+         }
+        }
+        coords 0.046 -0.97 0.06
+        angleX -4.444
+        angleY -137.295
+        angleZ -0.454
+       }
+      }
+     }
+    }
+    Layer15 {
+     coords 0 0 0
+     {
+      GenericEntity Slot3 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{EF49B1F62D20ABD1}Prefabs/Props/Garbage/Cardboard/Cardboard_05.et"
+        }
+       }
+       coords 0.096 -0.973 0
+      }
+      GenericEntity SlotPlayerTrigger2 : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+       components {
+        SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+         m_bShowDebugShapesInWorkbench 0
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+           m_fAreaRadius 200
+          }
+         }
+         m_aTriggerActions {
+          SCR_ScenarioFrameworkActionBasedOnConditions "{6320A9E78D325ED2}" {
+           m_aActivationConditions {
+            SCR_ScenarioFrameworkEntityDistanceCondition "{6320A9E7841F330E}" {
+             m_GetterA SCR_ScenarioFrameworkGetSpawnedEntity "{6320A9E7D0BEB3C5}" {
+              m_sLayerName "Slot3"
+             }
+             m_GetterB SCR_ScenarioFrameworkGetPlayerEntity "{6320A9EB116EA9FB}" {
+             }
+             m_fMinDistance 1
+             m_fMaxDistance 100
+            }
+           }
+           m_aActions {
+            SCR_ScenarioFrameworkActionWaitAndExecute "{6320A9E7099C28DC}" {
+             m_iDelayInSeconds 1
+             m_aActions {
+              SCR_ScenarioFrameworkActionSpawnObjects "{6320A9E71956FFDB}" {
+               m_aNameOfObjectsToSpawnOnActivation {
+                "Layer14"
+               }
+              }
+             }
+            }
+           }
+          }
+          SCR_ScenarioFrameworkActionBasedOnConditions "{6320A9E4BF8D2B72}" {
+           m_aActivationConditions {
+            SCR_ScenarioFrameworkEntityDistanceCondition "{6320A9E4BA00F244}" {
+             m_GetterA SCR_ScenarioFrameworkGetSpawnedEntity "{6320A9E4B19F5134}" {
+              m_sLayerName "Slot3"
+             }
+             m_GetterB SCR_ScenarioFrameworkGetPlayerEntity "{6320A9E427B36991}" {
+             }
+             m_fMinDistance 191
+             m_fMaxDistance 200
+            }
+           }
+           m_aActions {
+            SCR_ScenarioFrameworkActionWaitAndExecute "{6320A9E4991D695B}" {
+             m_iDelayInSeconds 5
+             m_iDelayInSecondsMax 5
+             m_aActions {
+              SCR_ScenarioFrameworkActionRestoreLayerToDefault "{6320A9E49239990C}" {
+               m_Getter SCR_ScenarioFrameworkGetLayerBase "{6320A9E4EC158657}" {
+                m_sLayerBaseName "Layer14"
+               }
+               m_bReinitAfterRestoration 1
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+       coords 0 0 0
+      }
+     }
+    }
+   }
+  }
+ }
+ SpawnPoint {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
+  coords 4946.916 28.233 11923.893
+  {
+   GenericEntity Layer9 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+   }
+  }
+ }
+ IED_CarBomb_WIP {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
+  coords 4771.602 27.844 11064.938
+  angleY 1.245
+  {
+   GenericEntity Detonator {
+    components {
+     SoundComponent "{61FEC10E7ECD183E}" {
+      Filenames {
+       "{CEA788D79A641BBF}Sounds/UI/UI.acp"
+      }
+     }
+     MeshObject "{61FEC1022126D577}" {
+      Object "{C13578ECF13ADD63}Assets/Weapons/Explosives/BlastingMachine_M34/BlastingMachine_M34.xob"
+     }
+     ActionsManagerComponent "{61FEC10D82AC12C4}" {
+      ActionContexts {
+       UserActionContext "{61FEC10D853200D2}" {
+        ContextName "Press"
+        Position PointInfo "{61FEC10DE8E7D0B7}" {
+        }
+        Radius 0.7
+       }
+      }
+      additionalActions {
+       SCR_BaseAudioScriptedUserAction "{61FEC10C3DFEB291}" {
+        ParentContextList {
+         "Press"
+        }
+        UIInfo UIInfo "{61FEC10C2028762C}" {
+         Name "Press"
+        }
+        Duration 0.1
+        m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
+       }
+      }
+     }
+     RplComponent "{61FEC10CE6C7120B}" {
+     }
+    }
+    coords -67.36 0.136 24.069
+    angleX 1.721
+    angleY 135.62
+    angleZ 0.024
+    scale 2
+   }
+   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    Layer33 {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_bShowDebugShapesInWorkbench 1
+      }
+     }
+     coords 0 0 0
+     {
+      $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+       Slot25 {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_bShowDebugShapesInWorkbench 0
+          m_eActivationType ON_TRIGGER_ACTIVATION
+          m_sObjectToSpawn "{72BEEF40AF179763}Prefabs/Weapons/Warheads/Explosions/Explosion_Tnt_Large.et"
+         }
+        }
+        coords 0 0 0
+        scale 0.4
+       }
+       Slot27 {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_aActivationActions {
+           SCR_ScenarioFrameworkActionOnEngineStartedOrStop "{64708C0BE24AC481}" {
+            m_aActions {
+             SCR_ScenarioFrameworkActionOnUserActionEvent "{64708C0D46CB58AF}" {
+              m_Getter SCR_ScenarioFrameworkGetEntityByName "{64708C0CB9B8F52E}" {
+               m_sEntityName "Detonator"
+              }
+              m_aActions {
+               SCR_ScenarioFrameworkActionSpawnObjects "{64708C0C8053D311}" {
+                m_aNameOfObjectsToSpawnOnActivation {
+                 "Slot25"
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          m_sObjectToSpawn "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+          m_sID "Bomb"
+         }
+        }
+        coords 0 0 0
+       }
+      }
+     }
+    }
+    Layer34 {
+     coords 0 0 0
+     {
+      GenericEntity SlotAI4 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{DE15FB5FAFC3E63F}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Officer.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{64708C0A18CCA918}" {
+          m_aLayerName {
+           "SlotWaypoint3" "SlotWaypoint9"
+          }
+         }
+        }
+       }
+       coords -4.3 0 0
+       angleY 85.7
+      }
+      $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+       SlotWaypoint3 {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{64708C0AD88054C9}" {
+          }
+         }
+        }
+        coords 0 0 0
+       }
+       SlotWaypoint9 {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{64708C0AD0CD6CBC}" {
+           m_fCompletionRadius 1
+          }
+         }
+        }
+        coords 0 0 5.004
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+Projectile : "{D6F93E839C9B1955}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_HE_IED.et" {
+ coords 6424.087 162.031 6476.657
+}

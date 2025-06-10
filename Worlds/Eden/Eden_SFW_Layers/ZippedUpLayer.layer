@@ -1,0 +1,145 @@
+GenericEntity LayerTaskDefend1 : "{775C493CE872C3A5}Prefabs/Systems/ScenarioFramework/Components/LayerTaskDefend.et" {
+ components {
+  SCR_ScenarioFrameworkLayerTaskDefend "{5C52E161174024CB}" {
+   m_eActivationType ON_TASKS_INIT
+   m_sTaskTitle "Task Defend Area"
+   m_sTaskDescription "Your objective is to defend area"
+   m_sTaskPrefab "{888DC29A0B4F3F20}Prefabs/Systems/ScenarioFramework/Tasks/TaskDefend.et"
+   m_sTriggerName "myNamedTrigger"
+   m_sCountdownTitleText "This We'll Defend"
+   m_fDefendTime 120
+   m_aFactionSettings {
+    SCR_ScenarioFrameworkTaskDefendAttackingFaction "{5C5A81043FCD0717}" {
+     m_sFactionKey "USSR"
+    }
+    SCR_ScenarioFrameworkTaskDefendDefendingFaction "{5C5A8104314438A8}" {
+     m_sFactionKey "US"
+     m_bCountOnlyPlayers 1
+    }
+   }
+   m_fMinDefenderPercentageRatio 0.51
+   m_aAttackerLayerNames {
+    "Attackers"
+   }
+   m_bEarlierEvaluation 1
+   m_bDelayedEvaluation 1
+   m_bDisplayDelayedEvaluationText 1
+   m_sDelayedEvaluationText "Kill 'em Let God sort 'em out"
+  }
+ }
+ coords 4649.276 27.844 11179.313
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   Defenders {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_iRandomPercent 100
+     }
+    }
+    coords 0 0 0
+    {
+     GenericEntity myNamedTrigger : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+          m_fAreaRadius 50
+          m_eActivationPresence ANY_CHARACTER
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+     GenericEntity Slot_Defend : "{E123BAC59A9B3D5F}Prefabs/Systems/ScenarioFramework/Components/SlotDefend.et" {
+      components {
+       SCR_ScenarioFrameworkSlotDefend "{5C52E161597D867A}" {
+        m_bShowDebugShapesInWorkbench 0
+        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+       }
+      }
+      coords -1.122 0.049 -3.341
+     }
+    }
+   }
+   Attackers {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_bEnableRepeatedSpawn 1
+      m_iRepeatedSpawnNumber 3
+      m_fRepeatedSpawnTimer 15
+     }
+    }
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI20 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_bEnableRepeatedSpawn 1
+         m_sObjectToSpawn "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{631F06A41C15D82C}" {
+          m_aLayerName {
+           "SlotWaypoint1"
+          }
+         }
+        }
+       }
+       coords 201.186 1.193 -108.225
+       angleZ -4.467
+      }
+      SlotAI21 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_bEnableRepeatedSpawn 1
+         m_sObjectToSpawn "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{631F06A41C15D82C}" {
+          m_aLayerName {
+           "SlotWaypoint1"
+          }
+         }
+        }
+       }
+       coords 1 -1.786 -144.576
+       angleX 1.779
+       angleY -0.139
+       angleZ -4.469
+      }
+      SlotAI22 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_bEnableRepeatedSpawn 1
+         m_sObjectToSpawn "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{631F06A41C15D82C}" {
+          m_aLayerName {
+           "SlotWaypoint1"
+          }
+         }
+        }
+       }
+       coords -41.75 -22.813 253.405
+       angleX -0.881
+       angleY 0.11
+       angleZ -7.126
+      }
+     }
+    }
+   }
+   Layer3 {
+    coords 0 0 0
+    {
+     GenericEntity SlotWaypoint1 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{631F06A35D45B78E}" {
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+}

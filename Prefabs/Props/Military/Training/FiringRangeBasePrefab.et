@@ -1,0 +1,32 @@
+SCR_FiringRangeManager : "{214BCC72DBBE1CB0}Prefabs/Props/Military/Training/FiringRangeManager.et" {
+ ID "5310BE672EC2F1A7"
+ {
+  SCR_FiringRangeController {
+   ID "55C49C58E9ED9959"
+   components {
+    ActionsManagerComponent "{55BCF8E9FC76BCC4}" {
+     ActionContexts {
+      UserActionContext "{55BCF8EB6946B4E9}" {
+       ContextName "GroupUp"
+      }
+      UserActionContext "{55BCF8EACA7CDEAC}" {
+       ContextName "GroupDown"
+      }
+     }
+     additionalActions {
+      SCR_SetTargetDistanceUpUserAction "{55BCF8EAB989353A}" {
+       ParentContextList {
+        "GroupUp"
+       }
+      }
+      SCR_SetTargetDistanceDownUserAction "{55C49C5D1D61D48A}" {
+       ParentContextList {
+        "GroupDown"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

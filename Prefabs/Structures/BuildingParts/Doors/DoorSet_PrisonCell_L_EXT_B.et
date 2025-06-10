@@ -1,0 +1,17 @@
+GenericEntity : "{87CADB5ADC989993}Prefabs/Structures/BuildingParts/Doors/DoorSet_Base.et" {
+ ID "26326831C74F1A1C"
+ components {
+  SCR_BaseLockComponent "{6466AD7EEB28EFC2}" {
+  }
+ }
+ {
+  GenericEntity {
+   ID "568ABA5656ABBD13"
+   components {
+    SCR_BaseLockComponent "{6466AD7EE105A37A}" {
+     m_bIsLocked 1
+    }
+   }
+  }
+ }
+}

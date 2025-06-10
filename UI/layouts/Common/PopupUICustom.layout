@@ -1,0 +1,69 @@
+FrameWidgetClass {
+ Name "rootFrame"
+ "Z Order" 100
+ {
+  ImageWidgetClass "{6550C4FE7850E400}" {
+   Name "Image0"
+   Slot FrameWidgetSlot "{6550C4FE7850E5E8}" {
+    PositionX 860
+    OffsetLeft 860
+    PositionY 20
+    OffsetTop 20
+    SizeX 250
+    OffsetRight -1110
+    SizeY 130
+    OffsetBottom -150
+    Alignment 0.1 -1
+   }
+   Texture "{2A06DB6C5CD7B3BF}Images/SFWPreviewImage.edds"
+   Size 250 150
+  }
+  TextWidgetClass "{6550C4FBDA68CEC5}" {
+   Name "Text0"
+   Slot FrameWidgetSlot "{6550C4FBDA68CE27}" {
+    Anchor 0.5 0 0.5 0
+    PositionX -960
+    OffsetLeft -960
+    PositionY 116
+    OffsetTop 116
+    SizeX 1920
+    OffsetRight -960
+    SizeY 25
+    OffsetBottom -141
+   }
+   Rotation 0
+   Text "My Discord Channel "
+   "Horizontal Alignment" Center
+   "Vertical Alignment" Center
+   FontProperties FontProperties "{6550C4FA97EFE2B9}" {
+    Font "{E2CBA6F76AAA42AF}UI/Fonts/Roboto/Roboto_Regular.fnt"
+    ForceFont 1
+   }
+  }
+  TextWidgetClass "{6550C4FEF94015B4}" {
+   Name "Text1"
+   Slot FrameWidgetSlot "{6550C4FBDA68CE27}" {
+    Anchor 0.5 0 0.5 0
+    PositionX -960
+    OffsetLeft -960
+    PositionY 116
+    OffsetTop 116
+    SizeX 1920
+    OffsetRight -960
+    SizeY 25
+    OffsetBottom -141
+    Alignment 0 2
+   }
+   Rotation 0
+   Text "https://discord.gg/6eyAWvh4"
+   "Horizontal Alignment" Center
+   "Vertical Alignment" Center
+   FontProperties FontProperties "{6550C4FA97EFE2B9}" {
+    Font "{E2CBA6F76AAA42AF}UI/Fonts/Roboto/Roboto_Regular.fnt"
+    ForceFont 1
+    Italic 1
+    Bold 1
+   }
+  }
+ }
+}

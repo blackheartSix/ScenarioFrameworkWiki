@@ -1,0 +1,11 @@
+GenericEntity {
+ ID "646AF50DBA495A6A"
+ components {
+  MeshObject "{646AF50DBA495A62}" {
+   Object "{60DBB84B7B5EF04E}Assets/Weapons/Explosives/BlastingMachine_M34/BlastingMachine_M34_Wires.xob"
+  }
+  Hierarchy "{646AF50DBA495A58}" {
+  }
+ }
+ coords 130.983 1 133.244
+}

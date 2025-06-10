@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A21CD65392B69FA4}Configs/Editor/PlaceableEntities/Vehicles/LAV25_Mortar.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

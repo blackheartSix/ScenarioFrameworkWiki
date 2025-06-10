@@ -1,0 +1,85 @@
+GenericEntity QRFTesting : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+  }
+ }
+ coords 3086.967 118.051 5213.66
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   X_QRF {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionQRFDispacher "{648445CA9D20EF92}" {
+        m_aGroupList {
+         SCR_QRFGroupConfig "{648445CA3A30D6B0}" {
+          m_sGroupPrefab "{147CBDE26A8A76EB}Prefabs/Groups/OPFOR/Group_USSR_QRFVictor.et"
+          m_eGroupType VEHICLE
+         }
+        }
+        m_aQRFMaxDistanceConfig {
+         SCR_QRFTypeMaxDistance "{648445C9A24D7C0D}" {
+          m_eGroupType VEHICLE
+          m_iMaxSpawnDistance 500
+         }
+        }
+        m_aWPConfig {
+         SCR_QRFWaypointConfig "{648445C9BA398D66}" {
+          m_sWPToSpawn "{1B0E3436C30FA211}Prefabs/AI/Waypoints/AIWaypoint_Attack.et"
+         }
+        }
+       }
+      }
+     }
+    }
+    coords 18.201 0.56 4.152
+    angleY -78.61
+    {
+     GenericEntity QRFSpawnpoint1 : "{FCE82B7F21949782}Prefabs/Systems/ScenarioFramework/Compositions/QRFSpawnpoint.et" {
+      coords -157.468 -5.303 -443.38
+     }
+    }
+   }
+   Layer35 {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI5 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et"
+         m_sWPToSpawn "{B049D4C74FBC0C4D}Prefabs/AI/Waypoints/AIWaypoint_GetInNearest.et"
+        }
+       }
+       coords 29.163 0.826 6.118
+       angleX -0.877
+       angleY -78.607
+       angleZ -0.177
+      }
+      SlotAI6 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et"
+        }
+       }
+       coords 25.016 0.728 11.5
+       angleY -78.61
+      }
+     }
+     GenericEntity Slot28 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{254289B9C09904AB}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2.et"
+       }
+      }
+      coords 25.472 0.743 6.862
+      angleX -1.755
+      angleY -78.587
+      angleZ -0.354
+     }
+    }
+   }
+  }
+ }
+}

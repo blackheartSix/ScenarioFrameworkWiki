@@ -1,0 +1,43 @@
+FrameWidgetClass {
+ {
+  VerticalLayoutWidgetClass "{59FA8187416ABB88}" {
+   Prefab "{59FA8187416ABB88}"
+   {
+    RichTextWidgetClass "{59F8836EF18B153C}" {
+     Prefab "{59F8836EF18B153C}"
+     Slot LayoutSlot "{59FA818758BAF13E}" {
+      HorizontalAlign 2
+      Padding 0 0 20 0
+     }
+    }
+    SizeLayoutWidgetClass "{59FA81859D0F6536}" {
+     Prefab "{59FA81859D0F6536}"
+     {
+      HorizontalLayoutWidgetClass "{59F6AA97583438F4}" {
+       Prefab "{59F6AA97583438F4}"
+       "Fill Origin" Right
+       {
+        ImageWidgetClass "{59F6AA975FDBFCA5}" {
+         Prefab "{59F6AA975FDBFCA5}"
+         "Is Enabled" 0
+         "Is Visible" 0
+        }
+        RichTextWidgetClass "{59866CF87FE9DF59}" {
+         Prefab "{59866CF87FE9DF59}"
+         Slot LayoutSlot "{59F6AA975807CD22}" {
+          Padding 5 0 20 0
+         }
+        }
+        ImageWidgetClass "{59F6AA9751A8FD45}" {
+         Prefab "{59F6AA9751A8FD45}"
+         "Is Enabled" 0
+         "Is Visible" 0
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

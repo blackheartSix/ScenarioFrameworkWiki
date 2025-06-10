@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4D4B1F0F0B56B2C9}Configs/Callsigns/Callsigns_Non-Combatant.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

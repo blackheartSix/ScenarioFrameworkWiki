@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{796946D842C54BDB}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/ArmedDetonatorWires_M34_Red.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

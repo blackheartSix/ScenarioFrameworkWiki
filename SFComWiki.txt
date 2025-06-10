@@ -1,0 +1,11 @@
+Welcome to the SF Community Wiki mod...
+
+The purpose of this modification is educational. It was designed to give examples of the entries in the Scenario Framework Community Wiki. Along with the wiki and this mod, I've created a youtube channel show how to use the item of interest. This mod and the youtube channel follow the section contents of the community wiki.
+
+Middle
+[HOW-TO] Use
+1. Open Enfusion Workbench, and world editor. 
+2. Open the mod's world. 
+3. Refer to the scenario framework community wiki, listed in the description. 
+4. Go to the world layer that corresponds to the section contents. 
+5. And if more help is needed go to my youtube channel, listed in the description. 

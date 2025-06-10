@@ -1,0 +1,136 @@
+GenericEntity LogicCounterEndMission : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+   m_iRandomPercent 100
+   m_bShowDebugShapesDuringRuntime 1
+  }
+ }
+ coords 10657.915 148.749 2330.389
+ {
+  $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+   MoveC {
+    components {
+     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+      m_iRandomPercent 100
+      m_bShowDebugShapesDuringRuntime 1
+      m_bShowDebugShapesInWorkbench 1
+      m_sTaskTitle "#AR-CombatScenario_ExfilTask_Title"
+      m_sTaskDescription "#AR-CombatScenario_ExfilTask_Description_NoLimit"
+     }
+    }
+    coords -1.427 -0.032 -0.411
+    {
+     GenericEntity SlotExtraction_1 : "{9C47DECB98FDA4DA}Prefabs/Systems/ScenarioFramework/Components/SlotExtraction.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_sFactionKey "US"
+        m_iRandomPercent 100
+        m_bShowDebugShapesDuringRuntime 1
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_fAreaRadius 10
+          m_eActivationPresence PLAYER
+          m_sActivatedByThisFaction "US"
+         }
+        }
+        m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+        m_sTaskTitle "#AR-CombatScenario_ExfilTask_Title"
+        m_sTaskDescription "#AR-CombatScenario_ExfilTask_Description_NoLimit"
+        m_aActionsOnFinished {
+         SCR_ScenarioFrameworkActionPlaySound "{5A96DC4CC736B5F0}" {
+          m_sSound "SOUND_CPTEC"
+         }
+         SCR_ScenarioFrameworkActionEndMission "{64E10ACFF4F1C165}" {
+          m_eOverriddenGameOverType SERVER_RESTART
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   MoveB {
+    coords -28.581 -1.276 -19.746
+    {
+     GenericEntity SlotMoveTo7 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_eActivationPresence PLAYER
+         }
+        }
+       }
+      }
+      coords 0.122 0.012 -0.784
+     }
+    }
+   }
+   MoveA {
+    coords -13.384 -4.549 -87.088
+    {
+     GenericEntity SlotMoveTo9 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_eActivationPresence PLAYER
+         }
+        }
+       }
+      }
+      coords 0.122 0.012 -0.784
+     }
+    }
+   }
+  }
+  GenericEntity Layer5 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    SCR_ScenarioFrameworkLogicCounter LogicCounter1 : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
+     coords 3082.39 38.667 2361.927
+     m_aInputs {
+      SCR_ScenarioFrameworkLogicInput "{64E10DE7E6234915}" {
+       m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{64E10DE7FC743065}" {
+       }
+      }
+     }
+     m_iCountTo 3
+     m_aOnIncreaseActions {
+      SCR_ScenarioFrameworkActionCompareCounterAndExecute "{5AFC76BA791531CC}" {
+       m_eComparisonOperator EQUAL
+       m_iValue 1
+       m_aActions {
+        SCR_ScenarioFrameworkActionSetMissionEndScreen "{5AFC76BA69848A2A}" {
+         m_eGameOverType COMBATPATROL_DRAW
+        }
+       }
+      }
+      SCR_ScenarioFrameworkActionCompareCounterAndExecute "{5AFC76BA675DC4B2}" {
+       m_eComparisonOperator EQUAL
+       m_iValue 2
+       m_aActions {
+        SCR_ScenarioFrameworkActionSetMissionEndScreen "{5AFC76BA9C1F5FF9}" {
+         m_eGameOverType COMBATPATROL_PARTIAL_SUCCESS
+        }
+       }
+      }
+      SCR_ScenarioFrameworkActionCompareCounterAndExecute "{5AFC76BA940387A7}" {
+       m_eComparisonOperator GREATER_OR_EQUAL
+       m_iValue 3
+       m_aActions {
+        SCR_ScenarioFrameworkActionSetMissionEndScreen "{5AFC76BA86B567FB}" {
+         m_eGameOverType COMBATPATROL_VICTORY
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

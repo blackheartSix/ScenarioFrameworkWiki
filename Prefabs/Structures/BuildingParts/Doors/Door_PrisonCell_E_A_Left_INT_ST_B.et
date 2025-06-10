@@ -1,0 +1,8 @@
+GenericEntity : "{F1793FE006FDF888}Prefabs/Structures/BuildingParts/Doors/Door_Base.et" {
+ ID "0000000000000001"
+ components {
+  SCR_AISmartActionComponent "{5890ED6117CBB20D}" {
+   Enabled 0
+  }
+ }
+}

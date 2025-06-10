@@ -1,0 +1,160 @@
+SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramework/GameModeSF.et" {
+ components {
+  SCR_CommunicationSoundComponent "{5A96D5C2D1670EEF}" {
+   Filenames {
+    "{91D53896F5AD5DB4}Sounds/RadioProtocol/RadioProtocol_CombatPatrol_US.acp" "{6C46716BAD0C61A3}Sounds/Props/Military/Generators/Props_GeneratorFloodlight.acp"
+   }
+  }
+  SCR_CampaignBuildingManagerComponent "{646AD9E3C1224612}" : "{F07437CC1A5BF612}ComponentsCopied/SCR_CampBuildManagerComp.ct" {
+  }
+  SCR_CompositionSlotManagerComponent "{646AD9E3BAF64399}" {
+  }
+  SCR_GameModeSFManager "{5A96783ABCA252AE}" {
+   m_aTaskTypesAvailable {
+    SCR_ScenarioFrameworkTaskType "{62E30A9114976B93}" {
+     m_eTypeOfTask DELIVER
+    }
+    SCR_ScenarioFrameworkTaskType "{62E30A916168E1D9}" {
+     m_eTypeOfTask DESTROY
+    }
+    SCR_ScenarioFrameworkTaskType "{62E30A917ED8D7F3}" {
+     m_eTypeOfTask KILL
+    }
+    SCR_ScenarioFrameworkTaskType "{62E30A9171C8F6C5}" {
+     m_eTypeOfTask CLEAR_AREA
+    }
+    SCR_ScenarioFrameworkTaskType "{651CFC9B4AA05EBA}" {
+     m_eTypeOfTask DEFAULT
+    }
+   }
+   m_aAfterTasksInitActions {
+    SCR_ScenarioFrameworkActionShowPopupNotification "{6520F5415D573760}" {
+     m_sTitle "Tasks Initialized"
+     m_sText "Tasks Initialized"
+     m_sFactionKey "US"
+    }
+   }
+   m_bDynamicDespawn 1
+   m_sVoiceOverDataConfig "{092EC725D384BD1F}Configs/Voiceover/Intro.conf"
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+    m_sForcedFaction "US"
+    m_bWaitForSpawnPoints 1
+    m_bUseFadeEffect 1
+   }
+  }
+  SCR_SaveLoadComponent "{655B06EE6F129989}" {
+   m_Struct SCR_MissionStruct "{655B06EE6B43C4C0}" {
+    m_Struct0 SCR_ScenarioFrameworkStruct "{655B06EE64A3490F}" {
+    }
+   }
+   m_iAutosavePeriod 120
+  }
+  SCR_TimeAndWeatherHandlerComponent "{62E30A908B35AC36}" {
+   m_iStartingHours 12
+   m_iStartingMinutes 30
+   m_iRangeHoursStart 6
+   m_iRangeHoursEnd 20
+   m_bRandomWeatherChanges 1
+  }
+  SCR_TimedSpawnPointComponent "{6462A3F2846766F5}" {
+   m_fRespawnTime 30
+  }
+  SCR_WelcomeScreenComponent "{64FEB5A80E0EF295}" {
+   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{64FEB5A814672A61}" {
+    m_LeftColumn SCR_WelcomeScreenIntroductionContent "{64FEB5A866D1AA58}" {
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{64FEB5A863FCE4AA}" {
+       m_sContentTitleText "Welcome to the Scenario Framework Community WIki"
+       m_sContentDescriptionText "The purpose of this modification is educational. It was designed to give examples of the entries in the Scenario Framework Community Wiki. Along with the wiki and this mod, I've created a youtube channel show how to use the item of interest. This mod and the youtube channel follow the section contents of the community wiki."
+      }
+     }
+    }
+    m_MiddleColumn SCR_WelcomeScreenIntroductionContent "{64FEB5AAA5E3496F}" {
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{64FEB5AAA738C38F}" {
+       m_sContentTitleText "[HOW-TO] Use"
+       m_sContentDescriptionText "1. Open Enfusion Workbench, and world editor. "\
+       "2. Open the mod's world. "\
+       "3. Refer to the scenario framework community wiki, listed in the description. "\
+       "4. Go to the world layer that corresponds to the section contents. "\
+       "5. And if more help is needed go to my youtube channel, listed in the description. "
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 9277.176 54.612 2011.418
+ m_bUseSpawnPreload 1
+ m_aDisabledResourceTypes {
+  0
+ }
+}
+GenericEntity HierarchyExamples : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   m_iRandomPercent 50
+  }
+ }
+ coords 9214.473 66.206 1803.418
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   LayerA {
+    coords -4267.556 -37.973 10120.479
+    {
+     GenericEntity Slot10 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sFactionKey "CIV"
+        m_sObjectToSpawn "{A6B0D2923262E755}Prefabs/Vehicles/Wheeled/S105/S105_yellow.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType VEHICLE
+        m_aIncludedEditableEntityLabels {
+         50
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   LayerB {
+    coords 0 0 0
+    {
+     GenericEntity USSpawnpoint : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sFactionKey "US"
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{652698CA8C9C79BA}" {
+          m_bDebug 1
+          m_fSpawnRadius 20
+          m_aActionsOnSpawnPointUsed {
+           SCR_ScenarioFrameworkActionWaitAndExecute "{652698CA90AB6119}" {
+            m_iDelayInSeconds 15
+            m_aActions {
+             SCR_ScenarioFrameworkActionSpawnObjects "{652698CAEB781C6F}" {
+              m_aNameOfObjectsToSpawnOnActivation {
+               "A1_CheckPointA"
+              }
+             }
+             SCR_ScenarioFrameworkActionPlaySound "{6528F540CF955AA3}" {
+              m_sSound "SOUND_CP_IPL_1"
+             }
+            }
+           }
+          }
+         }
+        }
+        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+       }
+      }
+      coords -4636.21 -51.661 8194.011
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,101 @@
+Projectile : "{EEF8495A9A6787A6}Prefabs/Weapons/Core/Ammo_MortarShell_Base.et" {
+ ID "5098E3DEA78F878B"
+ components {
+  CollisionTriggerComponent "{60AC9441243E3504}" {
+   PROJECTILE_EFFECTS {
+    ExplosionEffect "{60AC944154EC2E35}" {
+     EffectPrefab "{6B8EE808E69A69E0}Prefabs/Weapons/Warheads/Warhead_Shell_HE_M821.et"
+     ParticleEffect "{318510C6FB1633D9}Particles/Weapon/Explosion_Mortar_Base.ptc"
+    }
+   }
+  }
+  MagazineComponent "{51A2B9D6DA866EF0}" {
+   MagazineWell MagazineWellMortar81mm "{646AF51B56F73140}" {
+   }
+   UIInfo MagazineUIInfo "{60AC9440C81EC976}" {
+    Name "#AR-Magazine_M821_Name"
+    Description "#AR-Magazine_M821_Description"
+    m_sAmmoCaliber "#AR-AmmunitionID_81mm"
+    m_sAmmoType "#AR-AmmoType_M821"
+   }
+  }
+  MeshObject "{5098E3DEA78F87BE}" {
+   Object "{299588829D57B4DD}Assets/Weapons/Ammo/Shells/81mm_Mortar_M252/Shell_81mm_HE_M821.xob"
+  }
+  RigidBody "{60AC9440016FD3D4}" {
+   Mass 4.14
+  }
+  SCR_MortarShellGadgetComponent "{60AC94402A1A228B}" {
+   m_aChargeRingConfig {
+    0 1 0 1 1.531 0 2 2.085 0 3 2.541 0 4 2.977 1
+   }
+  }
+  SCR_VisibleInventoryItemComponent "{52627A115A9FDADB}" {
+   Attributes SCR_ItemAttributeCollection "{52627A1159C64CDD}" {
+    ItemDisplayName UIInfo "{646AF51B56F70EB0}" {
+     Name "#AR-Magazine_M821_Name"
+     Description "#AR-Magazine_M821_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{60AC94417B58CB7F}" {
+     Weight 4.06
+     ItemDimensions 8 8 18
+     ItemVolume 2000
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{61267CEBCD285422}" {
+     AnimationAttachments {
+      AnimationAttachmentInfo "{5D2AE4CEE3FC959E}" {
+       AnimGraph "{A5EA68B1344023BE}Assets/Weapons/Ammo/Shells/workspaces/Shell_Mortar_81mm_US.agr"
+       AnimInstance "{2AB705A268301ECD}Assets/Weapons/Ammo/Shells/workspaces/Shell_Mortar_81mm_US_player.asi"
+      }
+     }
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{60AC9440A0FA2A65}" {
+      CameraDistanceToItem 0.45
+     }
+    }
+    m_Size SLOT_2x1
+   }
+  }
+  ShellMoveComponent "{5098E3DEA78F87A3}" {
+   InitSpeed 66
+   Mass 4.06
+   BallisticTableConfig "{9924A554000C4555}Configs/Weapons/Ammo/M821_Shell_81mm_HE.conf"
+   BallisticTableGenerationConfig "{CFC9C954C39D6434}Configs/Weapons/Ammo/MortarBallisticTableGeneratorConfig_M821.conf"
+   AirDrag 0.000462
+   Diameter 81
+  }
+  SlotManagerComponent "{629C6AA0D8D852AB}" {
+   Slots {
+    EntitySlotInfo chargeRing0 {
+     Offset 0 0 -0.2722
+     Prefab "{4B94AD7F5B4055DF}Prefabs/Weapons/Ammo/Shell_81mm_Charge_Ring.et"
+    }
+    EntitySlotInfo chargeRing1 {
+     Offset 0 0 -0.2512
+     Angles 0 0 90
+     Prefab "{4B94AD7F5B4055DF}Prefabs/Weapons/Ammo/Shell_81mm_Charge_Ring.et"
+    }
+    EntitySlotInfo chargeRing2 {
+     Offset 0 0 -0.2302
+     Angles 0 0 -45
+     Prefab "{4B94AD7F5B4055DF}Prefabs/Weapons/Ammo/Shell_81mm_Charge_Ring.et"
+    }
+    EntitySlotInfo chargeRing3 {
+     Offset 0 0 -0.2092
+     Angles 0 0 150
+     Prefab "{4B94AD7F5B4055DF}Prefabs/Weapons/Ammo/Shell_81mm_Charge_Ring.et"
+    }
+   }
+  }
+  ActionsManagerComponent "{51A2B9D50D603C79}" {
+   Enabled 0
+   additionalActions {
+    SCR_AdjustShellChargeRingsAction "{629C6AB1194F002B}" {
+    }
+   }
+  }
+ }
+ ProjectileModel "{299588829D57B4DD}Assets/Weapons/Ammo/Shells/81mm_Mortar_M252/Shell_81mm_HE_M821.xob"
+ CartridgeModel "{299588829D57B4DD}Assets/Weapons/Ammo/Shells/81mm_Mortar_M252/Shell_81mm_HE_M821.xob"
+}

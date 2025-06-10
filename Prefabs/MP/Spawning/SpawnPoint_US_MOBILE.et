@@ -1,0 +1,9 @@
+SCR_SpawnPoint : "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et" {
+ ID "544EB04DCBFBD126"
+ m_sFaction "US"
+ m_bShowInDeployMapOnly 1
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "#AR-PauseMenu_Respawn"
+  Icon "{46FB2FB2C2125A3C}UI/Textures/Flags/US-flag-base-3it.edds"
+ }
+}

@@ -1,0 +1,141 @@
+Projectile : "{EEF8495A9A6787A6}Prefabs/Weapons/Core/Ammo_MortarShell_Base.et" {
+ ID "5098E3DEA78F878B"
+ components {
+  CollisionTriggerComponent "{60AC9441243E3504}" {
+   PROJECTILE_EFFECTS {
+    ExplosionEffect "{60AC944154EC2E35}" {
+     EffectPrefab "{F5D96D52DC3251F6}Prefabs/Weapons/Warheads/Warhead_Shell_HE_O832DU.et"
+     ParticleEffect "{318510C6FB1633D9}Particles/Weapon/Explosion_Mortar_Base.ptc"
+    }
+   }
+  }
+  MagazineComponent "{51A2B9D6DA866EF0}" {
+   MagazineWell MagazineWellMortar82mm "{60AC9440C3F831DF}" {
+   }
+   UIInfo MagazineUIInfo "{60AC9440C81EC976}" {
+    Name "#AR-Magazine_O832DU_Name"
+    Description "#AR-Magazine_O832DU_Description"
+    m_sAmmoCaliber "#AR-AmmunitionID_82mm"
+    m_sAmmoType "#AR-AmmoType_O832DU"
+   }
+   ItemModel "{F977B12D68012E95}Assets/Weapons/Ammo/Shells/82mm_Mortar_2B14/Shell_82mm_HE_O832DU.xob"
+  }
+  MeshObject "{5098E3DEA78F87BE}" {
+   Object "{F977B12D68012E95}Assets/Weapons/Ammo/Shells/82mm_Mortar_2B14/Shell_82mm_HE_O832DU.xob"
+  }
+  SCR_MortarShellGadgetComponent "{60AC94402A1A228B}" {
+   m_aChargeRingConfig {
+    0 1 0 1 1.321 0 2 1.736 0 3 2.087 0 4 2.455 1
+   }
+  }
+  SCR_VisibleInventoryItemComponent "{52627A115A9FDADB}" {
+   Attributes SCR_ItemAttributeCollection "{52627A1159C64CDD}" {
+    ItemDisplayName UIInfo "{657AA6504AA14A07}" {
+     Name "#AR-Magazine_O832DU_Name"
+     Description "#AR-Magazine_O832DU_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{60AC94417B58CB7F}" {
+     Weight 3.1
+     ItemDimensions 8 8 16
+     ItemVolume 1600
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{61267CEBCD285422}" {
+     AnimationAttachments {
+      AnimationAttachmentInfo "{5D2AE4CEE3FC959E}" {
+       AnimGraph "{34B1492B691D59D1}Assets/Weapons/Ammo/Shells/workspaces/Shell_Mortar_82mm_USSR.agr"
+       AnimInstance "{CE3E2D0E117FC2F5}Assets/Weapons/Ammo/Shells/workspaces/Shell_Mortar_82mm_USSR_player.asi"
+      }
+     }
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{60AC9440A0FA2A65}" {
+      CameraOffset -0.035 -0.01 0
+     }
+    }
+   }
+  }
+  ShellMoveComponent "{5098E3DEA78F87A3}" {
+   InitSpeed 76
+   Mass 3.1
+   BallisticTableConfig "{3B8528B7CD63EE4D}Configs/Weapons/Ammo/O832DU_Shell_82mm_HE.conf"
+   BallisticTableGenerationConfig "{230BE00BA697B169}Configs/Weapons/Ammo/MortarBallisticTableGeneratorConfig_O832DU.conf"
+   AirDrag 0.000615
+   Diameter 82
+  }
+  SlotManagerComponent "{629C6AA0D8D852AB}" {
+   Slots {
+    EntitySlotInfo chargeRing0 {
+     Offset 0 0 -0.1782
+     Prefab "{0D0EF81F5F5DCC67}Prefabs/Weapons/Ammo/Shell_82mm_Charge_Ring.et"
+    }
+    EntitySlotInfo chargeRing1 {
+     Offset 0 0 -0.1724
+     Angles -2.7156 0 0
+     Prefab "{0D0EF81F5F5DCC67}Prefabs/Weapons/Ammo/Shell_82mm_Charge_Ring.et"
+    }
+    EntitySlotInfo chargeRing2 {
+     Offset 0 0 -0.1655
+     Angles 0.8565 -2.0311 0
+     Prefab "{0D0EF81F5F5DCC67}Prefabs/Weapons/Ammo/Shell_82mm_Charge_Ring.et"
+    }
+    EntitySlotInfo chargeRing3 {
+     Offset 0 0 -0.1604
+     Angles 1.4118 1.7667 -38.0915
+     Prefab "{0D0EF81F5F5DCC67}Prefabs/Weapons/Ammo/Shell_82mm_Charge_Ring.et"
+    }
+   }
+  }
+  ActionsManagerComponent "{51A2B9D50D603C79}" {
+   additionalActions {
+    SCR_EquipItemAction "{61788121A49C6CB0}" {
+     ParentContextList {
+     }
+    }
+    SCR_AdjustShellChargeRingsAction "{629C6AB1194F002B}" {
+     ParentContextList {
+     }
+    }
+    SCR_BaseAudioScriptedUserAction "{657AA6512A3CE62B}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{657AA6510D8B90D0}" {
+      Name "Cut Wire 1"
+     }
+     Duration 1
+     "Sort Priority" 3
+    }
+    SCR_BaseAudioScriptedUserAction "{657AA65126644CF8}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{657AA6510D8B90D0}" {
+      Name "Cut Wire 2"
+     }
+     Duration 1
+     "Sort Priority" 4
+    }
+   }
+  }
+ }
+ coords 0 0.003 0
+ SpawnAsCartridge 1
+ ProjectileModel "{F977B12D68012E95}Assets/Weapons/Ammo/Shells/82mm_Mortar_2B14/Shell_82mm_HE_O832DU.xob"
+ CartridgeModel "{F977B12D68012E95}Assets/Weapons/Ammo/Shells/82mm_Mortar_2B14/Shell_82mm_HE_O832DU.xob"
+ {
+  GenericEntity : "{5C053ACAE9D17683}Prefabs/Items/Equipment/Detonators/BlastingMachine_KPM_3U1/ArmedDetonatorWires_KPM_3U1.et" {
+   ID "657AB70CEC0E433C"
+   coords 0.008 0.013 -0.083
+   angleX -85.247
+   angleY 109.136
+   angleZ 71.653
+   scale 0.5
+  }
+  GenericEntity : "{CE0AF733722B3978}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34.et" {
+   ID "657AB70F5EA229C8"
+   coords 0 0.026 -0.092
+   angleX -74.636
+   scale 0.5
+  }
+ }
+}

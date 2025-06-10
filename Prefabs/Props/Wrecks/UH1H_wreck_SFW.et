@@ -1,0 +1,16 @@
+GenericEntity : "{3619812B192CCAE9}Prefabs/Props/Core/Wreck_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{97B6EE1A45A88A89}Assets/Vehicles/Helicopters/UH1H/UH1H_Wreck.xob"
+   LODFactors {
+    20 10 5 1 1
+   }
+  }
+  RplComponent "{65932C26F55C84A7}" {
+  }
+  Hierarchy "{65932C26F10490FB}" {
+  }
+ }
+ coords 2.326 5.692 -2.385
+}

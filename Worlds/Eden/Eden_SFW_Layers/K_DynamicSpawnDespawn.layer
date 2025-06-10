@@ -1,0 +1,65 @@
+GenericEntity Area2 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   m_bShowDebugShapesDuringRuntime 1
+   m_bShowDebugShapesInWorkbench 1
+   m_bDynamicDespawn 1
+   m_iDynamicDespawnRange 120
+  }
+ }
+ coords 5822.202 7.967 9725.904
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   Layer25 {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_bShowDebugShapesInWorkbench 1
+      m_iDynamicDespawnRange 50
+     }
+    }
+    coords -26.944 -3.405 -48.457
+    {
+     GenericEntity SlotAI14 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{3BF36BDEEB33AEC9}Prefabs/Groups/BLUFOR/Group_US_SentryTeam.et"
+        m_sWPToSpawn "{B049D4C74FBC0C4D}Prefabs/AI/Waypoints/AIWaypoint_GetInNearest.et"
+       }
+      }
+      coords 0.229 0 -5.571
+     }
+     GenericEntity Slot49 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   Layer29 {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_bShowDebugShapesInWorkbench 1
+      m_bDynamicDespawn 1
+      m_iDynamicDespawnRange 50
+     }
+    }
+    coords 14 -3.405 40.994
+    {
+     GenericEntity SlotAI15 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,41 @@
+GenericEntity Area9 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+  }
+ }
+ coords 1120.653 41.801 11521.818
+ {
+  GenericEntity LayerTaskMove1 : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+     Enabled 0
+    }
+   }
+   coords 35.152 -0.993 154.371
+   {
+    GenericEntity SlotMoveTo11 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+     components {
+      SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+       m_bShowDebugShapesDuringRuntime 1
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+  GenericEntity Layer48 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity Slot57 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     components {
+      SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+       m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}

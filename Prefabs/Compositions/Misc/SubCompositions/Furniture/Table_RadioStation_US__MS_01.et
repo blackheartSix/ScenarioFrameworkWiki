@@ -1,0 +1,53 @@
+StaticModelEntity : "{7762F50A860DD074}Prefabs/Props/Military/Furniture/TableMilitary_US_01.et" {
+ ID "5272E314F01B2DBE"
+ components {
+  SCR_SlotCompositionComponent "{6466E2D4240E954E}" {
+   m_bOrientChildrenToTerrain 0
+  }
+  Hierarchy "{6466E2D4240E92BB}" {
+  }
+ }
+ coords 1193.1 51.001 1352.012
+ {
+  GenericEntity : "{0133284E3BDEAEC4}Prefabs/Props/Civilian/Ashtray_01_Full_yellow.et" {
+   ID "6466E2D4240E9557"
+   components {
+    Hierarchy "{6466E2D4240E92BF}" {
+     Enabled 1
+    }
+   }
+   coords -0.519 0.9 0.185
+   angleY -50.378
+  }
+  GenericEntity : "{7183F1A80BC18B7C}Prefabs/Props/Military/Compositions/US/RadioStation_US.et" {
+   ID "6466E2D4240E9555"
+   components {
+    Hierarchy "{6466E2D4240E92B3}" {
+     Enabled 1
+    }
+   }
+   coords -0.104 0.9 -0.162
+   angleY 4.26
+  }
+  GenericEntity : "{C2C1CEA73A4D8779}Prefabs/Props/Civilian/Notebook_01_Stack.et" {
+   ID "6466E2D4240E954B"
+   components {
+    Hierarchy "{6466E2D4240E92B7}" {
+     Enabled 1
+    }
+   }
+   coords 0.304 0.9 -0.118
+   angleY -173.864
+  }
+  GenericEntity : "{C84DF17F96616C76}Prefabs/Props/Military/Manuals/Manual_US_01.et" {
+   ID "6466E2D4240E954A"
+   components {
+    Hierarchy "{6466E2D4240E92A9}" {
+     Enabled 1
+    }
+   }
+   coords 0.435 0.9 0.132
+   angleY -44.211
+  }
+ }
+}

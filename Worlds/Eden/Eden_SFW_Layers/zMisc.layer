@@ -1,0 +1,298 @@
+$grp GenericEntity {
+ BaseStationRadio5 {
+  components {
+   SoundComponent "{61FEC10E7ECD183E}" {
+    Filenames {
+     "{CEA788D79A641BBF}Sounds/UI/UI.acp"
+    }
+   }
+   MeshObject "{61FEC1022126D577}" {
+    Object "{DBE3AEFE90AC25D0}Assets/Props/Military/Radios/RadioStation_R123M_01.xob"
+   }
+   ActionsManagerComponent "{61FEC10D82AC12C4}" {
+    ActionContexts {
+     UserActionContext "{64F17A98AD729D40}" {
+      ContextName "Default"
+      Position PointInfo "{64F17A98AE93C81F}" {
+       Offset -0.0427 0.0815 0.1666
+      }
+     }
+    }
+    additionalActions {
+     SCR_BaseAudioScriptedUserAction "{64F17A9845A9BAFD}" {
+      ParentContextList {
+       "Default"
+      }
+      UIInfo UIInfo "{61FEC10C2028762C}" {
+       Name "Download"
+      }
+      Duration 5
+      m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
+     }
+    }
+   }
+   RplComponent "{61FEC10CE6C7120B}" {
+   }
+  }
+  coords 4944.893 29.77 11758.444
+  angleY -170.398
+ }
+ BaseStationRadio6 {
+  components {
+   SoundComponent "{61FEC10E7ECD183E}" {
+    Filenames {
+     "{CEA788D79A641BBF}Sounds/UI/UI.acp"
+    }
+   }
+   MeshObject "{61FEC1022126D577}" {
+    Object "{DBE3AEFE90AC25D0}Assets/Props/Military/Radios/RadioStation_R123M_01.xob"
+   }
+   ActionsManagerComponent "{61FEC10D82AC12C4}" {
+    ActionContexts {
+     UserActionContext "{64F17A98AD729D40}" {
+      ContextName "Default"
+      Position PointInfo "{64F17A98AE93C81F}" {
+       Offset -0.0427 0.0815 0.1666
+      }
+     }
+    }
+    additionalActions {
+     SCR_BaseAudioScriptedUserAction "{64F17A989052CB51}" {
+      ParentContextList {
+       "Default"
+      }
+      UIInfo UIInfo "{61FEC10C2028762C}" {
+       Name "Upload"
+      }
+      Duration 5
+      "Sort Priority" 1
+      m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
+     }
+    }
+   }
+   RplComponent "{61FEC10CE6C7120B}" {
+   }
+  }
+  coords 4941.421 28.509 11795.362
+  angleY -170.398
+ }
+}
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ VehDepotModify {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
+  coords 7452.376 164.562 4317.7
+  {
+   GenericEntity Layer54 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     GenericEntity Slot62 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{FB18EFE9C1A81E29}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_US_01.et"
+       }
+      }
+      coords 8.031 0 -1.007
+      angleY 103.28
+     }
+    }
+   }
+  }
+ }
+ NestingAndBranching_WIP {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
+  coords 8444.575 229.24 2002.995
+  {
+   $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+    A_StartPoint {
+     components {
+      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+       m_aTriggerActionsOnFinish {
+        SCR_ScenarioFrameworkActionWaitAndExecute "{6566D38417203FFB}" {
+         m_iDelayInSeconds 1
+         m_aActions {
+          SCR_ScenarioFrameworkActionRandomAction "{6566D3846D872A88}" {
+           m_aActions {
+            SCR_ScenarioFrameworkActionSpawnObjects "{6566D384693FB7C9}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "MoveLeftA"
+             }
+            }
+            SCR_ScenarioFrameworkActionSpawnObjects "{6566D3846A394302}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "MoveRightA"
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+     coords 1911.964 -194.792 -1605.924
+     {
+      GenericEntity SlotMoveTo14 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+       coords 0 0 0
+      }
+     }
+    }
+    B_MoveLeft {
+     components {
+      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
+     coords -861.663 -115.961 59.532
+     {
+      GenericEntity SlotMoveTo18 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+       coords 0 0 0
+      }
+     }
+    }
+    B_MoveRight {
+     components {
+      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
+     coords 1079.561 -198.311 -235.511
+     {
+      GenericEntity SlotMoveTo19 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+       coords 0 0 0
+      }
+     }
+    }
+    C__MoveLeft {
+     components {
+      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
+     coords -1471.797 -137.682 2675.99
+     {
+      GenericEntity SlotMoveTo21 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+       coords 0 0 0
+      }
+     }
+    }
+    C_MoveRight {
+     components {
+      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
+     coords 394.324 -134.19 690.175
+     {
+      GenericEntity SlotMoveTo22 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+       coords 0 0 0
+      }
+     }
+    }
+   }
+  }
+ }
+ DownloadDataAction_WIP {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+    m_bShowDebugShapesInWorkbench 1
+    m_iDynamicDespawnRange 15
+   }
+  }
+  coords 4931.427 28.776 11761.785
+  {
+   GenericEntity Layer55 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+      DownloadTask1 {
+       components {
+        SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionOnUserActionEvent "{65729098B94BBB1C}" {
+           m_Getter SCR_ScenarioFrameworkGetEntityByName "{65729094EB2FEA94}" {
+            m_sEntityName "BaseStationRadio5"
+           }
+           m_aActions {
+            SCR_ScenarioFrameworkActionChangeTaskState "{657290988AFC4F58}" {
+             m_Getter SCR_ScenarioFrameworkGetTask "{6572909884DA1C29}" {
+              m_sLayerTaskName "DownloadTask1"
+             }
+            }
+            SCR_ScenarioFrameworkActionSpawnObjects "{6572909A66AAC313}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "UploadTask1"
+             }
+            }
+           }
+          }
+         }
+         m_sTaskTitle "Download Data"
+         m_sTaskDescription "Download Data"
+         m_bPlaceMarkerOnSubjectSlot 1
+        }
+       }
+       coords 13.539 1.04 -3.27
+       {
+        GenericEntity SlotTask8 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
+         components {
+          SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{6572909B9B2D9E63}" {
+             m_fAreaRadius 1
+            }
+           }
+           m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+          }
+         }
+         coords 0 0 0
+        }
+       }
+      }
+      UploadTask1 {
+       components {
+        SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionOnUserActionEvent "{65729098B94BBB1C}" {
+           m_Getter SCR_ScenarioFrameworkGetEntityByName "{65729094FE53420A}" {
+            m_sEntityName "BaseStationRadio6"
+           }
+           m_aActions {
+            SCR_ScenarioFrameworkActionChangeTaskState "{657290988AFC4F58}" {
+             m_Getter SCR_ScenarioFrameworkGetTask "{6572909884DA1C29}" {
+              m_sLayerTaskName "LayerTask1"
+             }
+            }
+           }
+          }
+         }
+         m_sTaskTitle "Upload Data"
+         m_sTaskDescription "Upload Data"
+         m_bPlaceMarkerOnSubjectSlot 1
+        }
+       }
+       coords 10.053 -0.25 33.545
+       {
+        GenericEntity SlotTask10 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
+         coords 0 0 0
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{D4DDD345A352E97B}Prefabs/Compositions/Slotted/SlotFlatSmall/Headquarters_S_US_01.et" {
+ coords 4881.032 28.594 11742.22
+}

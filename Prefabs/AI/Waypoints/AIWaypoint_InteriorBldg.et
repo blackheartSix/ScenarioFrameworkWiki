@@ -1,0 +1,24 @@
+SCR_SearchAndDestroyWaypoint {
+ ID "64E7025AD60867F6"
+ coords 2687.019 389.014 5186.562
+ Type "SearchAndDestroy"
+ Title "SearchAndDestroy Waypoint"
+ AIBehaviorTree "{573614D962C311BB}AI/BehaviorTrees/Waypoints/WP_SearchAndDestroy.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 7
+ Autocomplete 0
+ CompletionType Any
+ m_aSettings {
+  SCR_AICharacterStanceSetting "{64E7025A351D0B8B}" {
+   m_eCause SAFE
+   m_eStance STAND
+  }
+  SCR_AICharacterMovementSpeedSetting "{64E7025A0A133573}" {
+   m_eCause SAFE
+   m_eSpeed WALK
+  }
+ }
+ m_TimedWaypointParameters SCR_AITimedWaypointParameters "{64E7025AD60867EF}" {
+  m_holdingTime 600
+ }
+}

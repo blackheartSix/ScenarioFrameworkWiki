@@ -1,0 +1,74 @@
+Vehicle : "{1B8EB269EECA2DF9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+   DoorInfoList {
+    CompartmentDoorInfo "{50B8D5DDA17EB35D}" {
+    }
+   }
+   CompartmentSlots {
+    CargoCompartmentSlot Passenger_r03 {
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      Offset -0.0581 0 0
+     }
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{5EDC86E4AF8908B6}" {
+      m_Value 1800
+     }
+    }
+   }
+  }
+  VehicleWheeledSimulation "{731B26FCA2F19855}" {
+   Animation VehicleAnimation "{617CBBC422754474}" {
+    AnimVariables {
+     AnimationVariable "{64F364A8FD38F7F6}" {
+      VariableName "Yaw"
+      SignalName "AimTurnTurret"
+     }
+    }
+   }
+  }
+ }
+ coords 0 0 0
+ angleY 48.5
+ {
+  GenericEntity {
+   ID "64F364A814524CB2"
+   components {
+    MeshObject "{64F364A833C30ABF}" {
+     Object "{CF7BC644B0B84580}Assets/Structures/Military/CamoNets/CamoNet_Folded.xob"
+    }
+    ActionsManagerComponent "{64F364A86E396E1A}" {
+     ActionContexts {
+      UserActionContext "{64F364A8799A37CC}" {
+       ContextName "Default"
+       Position PointInfo "{64F364A78ED9654F}" {
+        Offset 0.0112 0.1451 0.6298
+       }
+      }
+     }
+     additionalActions {
+      SCR_BaseAudioScriptedUserAction "{64F364A8726717AF}" {
+       ParentContextList {
+        "Default"
+       }
+       ActionTitle "Deploy Camonet"
+       Duration 3
+      }
+     }
+    }
+    RplComponent "{64F364A86B104340}" {
+    }
+    Hierarchy "{64F364A8672F6C58}" {
+    }
+   }
+   coords -0.108 2.162 -1.9
+   angleY -89.93
+  }
+ }
+}

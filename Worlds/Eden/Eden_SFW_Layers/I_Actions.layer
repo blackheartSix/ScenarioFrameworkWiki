@@ -1,0 +1,649 @@
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ Actions {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
+  coords 6500 161.875 6500
+  {
+   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    MedicalActions {
+     coords -2633.335 -146.969 1989.144
+     {
+      GenericEntity SlotAI2 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionMedical "{64491DF3EDFE25EE}" {
+           m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{64491DF355B880A4}" {
+            m_sLayerName "SlotAI2"
+           }
+           m_aMedicalActions {
+            SCR_ScenarioFrameworkMedicalActionSetPermitUnconsciousness "{64491DF3F7652B00}" {
+            }
+            SCR_ScenarioFrameworkMedicalActionAddFallDamage "{64491DF3CBDEDC47}" {
+             m_fFallDamage 200
+            }
+            SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{64491DF3C05C0D9C}" {
+             m_sHitZoneName "Head"
+            }
+            SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{64491DF326FE5DEF}" {
+             m_sHitZoneName "RForearm"
+            }
+            SCR_ScenarioFrameworkMedicalActionSetBlood "{64491DF330E13173}" {
+             m_fBloodValue 1000
+            }
+           }
+          }
+         }
+         m_sObjectToSpawn "{2F912ED6E399FF47}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Unarmed.et"
+        }
+       }
+       coords 0 0 0
+       angleY 176.423
+      }
+     }
+    }
+    ShootFlare {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_bShowDebugShapesDuringRuntime 1
+       m_bShowDebugShapesInWorkbench 1
+       m_iDynamicDespawnRange 350
+      }
+     }
+     coords -622.254 -156.782 -3102.338
+     {
+      GenericEntity Layer12 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       coords 209.75 -0.879 -35.878
+       {
+        GenericEntity Slot6 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_sObjectToSpawn "{254289B9C09904AB}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2.et"
+          }
+         }
+         coords 0 0 0
+        }
+       }
+      }
+      GenericEntity SlotAI3 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionAI "{644E9C10598C6479}" {
+           m_bDebug 1
+           m_aAIActions {
+            SCR_ScenarioFrameworkAIActionShootFlare "{644E9C11A446B83E}" {
+             m_bDebug 1
+             m_TargeOffset PointInfo "{644E9C0EAD854F63}" {
+              Offset 226.0674 170 -8.4468
+             }
+            }
+           }
+          }
+         }
+         m_sObjectToSpawn "{78149A76D073D4C7}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Suppressed/Character_US_SF_GL_S.et"
+         m_sWPToSpawn ""
+        }
+       }
+       coords 0 0 0
+      }
+     }
+    }
+    VoiceOver {
+     coords -3614.04 -154.746 -4315.045
+     {
+      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       VoiceOverPlayLine {
+        coords 0 0 0
+        {
+         GenericEntity SlotAI7 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_aActivationActions {
+             SCR_ScenarioFrameworkActionVoiceOverPlayLine "{648D62C10373340F}" {
+              m_sVoiceOverDataConfig "{C1BFF5B4A027CED9}Configs/VoiceData/Tutorial/Tutorial_BasicTutorial_VoiceData.conf"
+              m_sLineName "SOUND_TUTORIAL_HINT_CRAWLING"
+             }
+            }
+            m_sObjectToSpawn "{2F912ED6E399FF47}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Unarmed.et"
+           }
+          }
+          coords 0 0 0
+         }
+        }
+       }
+       VoiceOverPlaySequence {
+        coords 0 0 0
+        {
+         GenericEntity SlotAI8 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+          coords 0 0 0
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ UserActionEventFinishTask {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
+    m_aActivationActions {
+     SCR_ScenarioFrameworkActionCountInventoryItemsAndExecuteAction "{6522D4B1F8259244}" {
+     }
+    }
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 50
+   }
+  }
+  coords 11258.647 3.365 1268.62
+  {
+   GenericEntity BaseStationRadio {
+    components {
+     SoundComponent "{61FEC10E7ECD183E}" {
+      Filenames {
+       "{CEA788D79A641BBF}Sounds/UI/UI.acp"
+      }
+     }
+     MeshObject "{61FEC1022126D577}" {
+      Object "{0F55504A35401163}Assets/Props/Military/Radios/RadioStation_ANPRC77_01.xob"
+     }
+     ActionsManagerComponent "{61FEC10D82AC12C4}" {
+      ActionContexts {
+       UserActionContext "{61FEC10D853200D2}" {
+        ContextName "Press"
+        Position PointInfo "{61FEC10DE8E7D0B7}" {
+         Offset -0.0795 0.1853 0.0742
+        }
+        Radius 0.7
+       }
+      }
+      additionalActions {
+       SCR_BaseAudioScriptedUserAction "{61FEC10C3DFEB291}" {
+        ParentContextList {
+         "Press"
+        }
+        UIInfo UIInfo "{61FEC10C2028762C}" {
+         Name "Press"
+        }
+        Duration 5
+        m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
+       }
+      }
+     }
+     RplComponent "{61FEC10CE6C7120B}" {
+     }
+    }
+    coords -31.078 0.714 23.299
+    angleY 102.688
+   }
+   StaticModelEntity : "{81100D3283842E4B}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Food_US_02.et" {
+    coords -31.252 -0.186 23.233
+    angleY -78.057
+   }
+   GenericEntity TaskDeliver2 : "{88821DCA414AF4C7}Prefabs/Systems/ScenarioFramework/Components/LayerTaskDeliver.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+      Enabled 0
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionOnUserActionEvent "{64F16D9D85FDBA70}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61FEC1094E38E027}" {
+         m_sEntityName "BaseStationRadio"
+        }
+        m_iActionID 0
+        m_aActions {
+         SCR_ScenarioFrameworkActionPlaySound "{64F16D9CA05D6673}" {
+          m_sSound "SOUND_HQ_RIF_US"
+         }
+         SCR_ScenarioFrameworkActionSpawnObjects "{64F16D9CB75E2D17}" {
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer18"
+          }
+         }
+         SCR_ScenarioFrameworkActionWaitAndExecute "{64F16D9DF1C5B137}" {
+          m_iDelayInSeconds 10
+          m_aActions {
+           SCR_ScenarioFrameworkActionChangeTaskState "{64F16D9DCECED660}" {
+            m_Getter SCR_ScenarioFrameworkGetTask "{64F16D9DC92841CD}" {
+             m_sLayerTaskName "TaskDeliver2"
+            }
+           }
+           SCR_ScenarioFrameworkActionRemoveItemFromInventory "{64F16D9DC2F92E85}" {
+            m_Getter SCR_ScenarioFrameworkGetPlayerEntity "{64F16D9DD593F4D5}" {
+            }
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilterCount "{64F16D9DD4576F26}" {
+              m_sSpecificPrefabName "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
+              m_bIncludeChildren 1
+             }
+            }
+           }
+           SCR_ScenarioFrameworkActionPlaySound "{64F16D9D3B9B7A21}" {
+            m_sSound "SOUND_CP_TACC"
+           }
+          }
+         }
+        }
+       }
+      }
+      m_sTaskTitle "Locate Intel"
+      m_sTaskDescription "Find the radio code book"
+      m_sTaskTitleUpdated "Deliver Intel"
+      m_sTaskDescriptionUpdated "Take intel is CIA Ground Branch Operator."
+      m_iIntelMapMarkerUpdateDelay 5
+     }
+    }
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+      Layer17 {
+       coords 0 0 0
+       {
+        GenericEntity SlotPick2 : "{9F70B00322910AED}Prefabs/Systems/ScenarioFramework/Components/SlotPick.et" {
+         components {
+          SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+           m_sObjectToSpawn "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
+           m_sTaskTitle "Locate Intel"
+           m_sTaskDescription "Find the radio code book"
+           m_sTaskTitleUpdated1 "Deliver Intel"
+           m_sTaskDescriptionUpdated1 "Take intel is CIA Ground Branch Operator."
+           m_sTaskTitleUpdated2 "Intel Lost"
+           m_sTaskDescriptionUpdated2 "Intel is in the open. Recover the dropped intel. "
+          }
+         }
+         coords 0 0.652 0
+        }
+       }
+      }
+      Layer18 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_eActivationType ON_TRIGGER_ACTIVATION
+        }
+       }
+       coords -30.726 -0.151 22.79
+       {
+        GenericEntity SlotDelivery3 : "{4C2EF5C1E53FE511}Prefabs/Systems/ScenarioFramework/Components/SlotDelivery.et" {
+         components {
+          SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+           m_bShowDebugShapesDuringRuntime 1
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
+             m_sActivatedByThisFaction "US"
+            }
+           }
+           m_aAssociatedTaskLayers {
+            "TaskDeliver2"
+           }
+          }
+         }
+         coords 0 -0.001 0
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ UserActionEventRadio {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
+    m_iDynamicDespawnRange 50
+   }
+  }
+  coords 11293.063 3.717 1270.911
+  {
+   GenericEntity BaseStationRadio2 {
+    components {
+     SoundComponent "{61FEC10E7ECD183E}" {
+      Filenames {
+       "{CEA788D79A641BBF}Sounds/UI/UI.acp"
+      }
+     }
+     MeshObject "{61FEC1022126D577}" {
+      Object "{0F55504A35401163}Assets/Props/Military/Radios/RadioStation_ANPRC77_01.xob"
+     }
+     ActionsManagerComponent "{61FEC10D82AC12C4}" {
+      ActionContexts {
+       UserActionContext "{64F17A98AD729D40}" {
+        ContextName "Default"
+        Position PointInfo "{64F17A98AE93C81F}" {
+         Offset -0.0427 0.0815 0.1666
+        }
+       }
+      }
+      additionalActions {
+       SCR_BaseAudioScriptedUserAction "{64F17A9845A9BAFD}" {
+        ParentContextList {
+         "Default"
+        }
+        UIInfo UIInfo "{61FEC10C2028762C}" {
+         Name "Request Task Cancellation"
+        }
+        Duration 0.1
+        m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
+       }
+       SCR_BaseAudioScriptedUserAction "{64F17A989052CB51}" {
+        ParentContextList {
+         "Default"
+        }
+        UIInfo UIInfo "{61FEC10C2028762C}" {
+         Name "Request Attack Task"
+        }
+        Duration 0.1
+        m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
+       }
+       SCR_BaseAudioScriptedUserAction "{64F17A983947570D}" {
+        ParentContextList {
+         "Default"
+        }
+        UIInfo UIInfo "{61FEC10C2028762C}" {
+         Name "Request Kill Task"
+        }
+        Duration 0.1
+        m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
+       }
+      }
+     }
+     RplComponent "{61FEC10CE6C7120B}" {
+     }
+    }
+    coords -0.266 0.901 -0.129
+    angleY 179.577
+   }
+   GenericEntity Layer21 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionOnUserActionEvent "{64F17A9B87067F21}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{64F17A96D5077F26}" {
+         m_sEntityName "BaseStationRadio2"
+        }
+        m_iActionID 0
+        m_aActions {
+         SCR_ScenarioFrameworkActionWaitAndExecute "{64F17A9B995D3F8F}" {
+          m_iDelayInSeconds 1
+          m_aActions {
+           SCR_ScenarioFrameworkActionRestoreLayerToDefault "{64F17A9B96F7F4F0}" {
+            m_Getter SCR_ScenarioFrameworkGetLayerBase "{64F17A9B916377C0}" {
+             m_sLayerBaseName "Layer21"
+            }
+            m_bReinitAfterRestoration 1
+           }
+          }
+         }
+        }
+       }
+       SCR_ScenarioFrameworkActionOnUserActionEvent "{64F17A97BA48C978}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{64F17A97C9FDC2BF}" {
+         m_sEntityName "BaseStationRadio2"
+        }
+        m_iActionID 1
+        m_aActions {
+         SCR_ScenarioFrameworkActionSpawnObjects "{64F17A97E64B0B0E}" {
+          m_aNameOfObjectsToSpawnOnActivation {
+           "LayerTaskClearArea1"
+          }
+         }
+        }
+       }
+       SCR_ScenarioFrameworkActionOnUserActionEvent "{64F17A96DF882C47}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{64F17A96D5077F26}" {
+         m_sEntityName "BaseStationRadio2"
+        }
+        m_iActionID 2
+        m_aActions {
+         SCR_ScenarioFrameworkActionSpawnObjects "{64F17A96301A94B4}" {
+          m_aNameOfObjectsToSpawnOnActivation {
+           "LayerTaskKill1"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    coords 0 0 0
+    {
+     GenericEntity LayerTaskKill1 : "{2008B4EE6C4D528E}Prefabs/Systems/ScenarioFramework/Components/LayerTaskKill.et" {
+      components {
+       SCR_ScenarioFrameworkLayerTaskKill "{5B02763B6A6D6C4B}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_sTaskDescription ""
+       }
+      }
+      coords -6643.788 24.127 9908.402
+      {
+       GenericEntity SlotKill1 : "{C70DC6CBD1AAEC9A}Prefabs/Systems/ScenarioFramework/Components/SlotKill.et" {
+        components {
+         SCR_ScenarioFrameworkSlotKill "{5B02763C1EAA0BF1}" {
+          m_bShowDebugShapesInWorkbench 0
+          m_sObjectToSpawn "{98EB9CDD85B8C92C}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Unarmed.et"
+          m_aFinishConditions {
+           SCR_ScenarioFrameworEntitykDamageStateCondition "{631F06A614339D51}" {
+            m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{631F06A6132438E3}" {
+             m_sLayerName "SlotKill1"
+            }
+            m_eDamageState DESTROYED
+           }
+           SCR_ScenarioFrameworEntitykDamageStateCondition "{631F06A6645D5AB6}" {
+            m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{631F06A6132438E3}" {
+             m_sLayerName "SlotKill2"
+            }
+            m_eDamageState DESTROYED
+           }
+          }
+         }
+        }
+        coords 2.333 0 0
+       }
+      }
+     }
+     GenericEntity Slot12 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{ED4439D23F40A165}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Food_US_01.et"
+       }
+      }
+      coords 0 0 0
+     }
+     GenericEntity LayerTaskClearArea1 : "{CDC0845AD90BA073}Prefabs/Systems/ScenarioFramework/Components/LayerTaskClearArea.et" {
+      components {
+       SCR_ScenarioFrameworkLayerTaskClearArea "{5A6513F46D132331}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+       }
+      }
+      coords -6696.247 21.025 9872.4
+      {
+       GenericEntity Layer7 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+        coords -1.122 0 0.133
+        angleY -175.659
+        {
+         GenericEntity SlotAI1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{98EB9CDD85B8C92C}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Unarmed.et"
+            m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
+           }
+          }
+          coords 0 0 0
+         }
+        }
+       }
+       GenericEntity SlotClearArea1 : "{E53456990A756229}Prefabs/Systems/ScenarioFramework/Components/SlotClearArea.et" {
+        components {
+         SCR_ScenarioFrameworkSlotClearArea "{5A633AF525D5B972}" {
+          m_bShowDebugShapesInWorkbench 0
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5A633AF5368D26A3}" {
+            m_fAreaRadius 5
+            m_sActivatedByThisFaction "US"
+           }
+          }
+          m_aIgnoredFactionKeys {
+           "CIV"
+          }
+         }
+        }
+        coords 0 0 0
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ UserActionEventMap {
+  coords 9321.283 229.202 1162.852
+  {
+   GenericEntity BaseStationRadio3 {
+    components {
+     SoundComponent "{61FEC10E7ECD183E}" {
+      Filenames {
+       "{CEA788D79A641BBF}Sounds/UI/UI.acp"
+      }
+     }
+     MeshObject "{61FEC1022126D577}" {
+      Object "{599B4D48FED538FC}Assets/Items/Equipment/Maps/Map_Paper_01/Map_Paper_01_unfolded_table.xob"
+     }
+     ActionsManagerComponent "{61FEC10D82AC12C4}" {
+      ActionContexts {
+       UserActionContext "{64F17A98AD729D40}" {
+        ContextName "North"
+        Position PointInfo "{64F17A98AE93C81F}" {
+         Offset 0.0435 0.0084 -0.1608
+        }
+       }
+       UserActionContext "{64F364AE9EDD6D1A}" {
+        ContextName "Central"
+        Position PointInfo "{64F17A98AE93C81F}" {
+         Offset 0.0506 0.0084 -0.0077
+        }
+        Height 0
+       }
+       UserActionContext "{64F364AE81951E19}" {
+        ContextName "South"
+        Position PointInfo "{64F17A98AE93C81F}" {
+         Offset -0.1162 -0.0017 0.1216
+        }
+        Height 0
+       }
+      }
+      additionalActions {
+       SCR_BaseAudioScriptedUserAction "{64F17A9845A9BAFD}" {
+        ParentContextList {
+         "North"
+        }
+        UIInfo UIInfo "{61FEC10C2028762C}" {
+         Name "Select OPLAN FIRE BUG"
+        }
+        Duration 2
+        m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
+       }
+       SCR_BaseAudioScriptedUserAction "{64F17A989052CB51}" {
+        ParentContextList {
+         "Central"
+        }
+        UIInfo UIInfo "{61FEC10C2028762C}" {
+         Name "Select OPLAN JUNK BALL"
+        }
+        Duration 2
+        m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
+       }
+       SCR_BaseAudioScriptedUserAction "{64F17A983947570D}" {
+        ParentContextList {
+         "South"
+        }
+        UIInfo UIInfo "{61FEC10C2028762C}" {
+         Name "Select OPLAN MOON SHOT"
+        }
+        Duration 2
+        m_sActionSoundEffectEventName "SOUND_HUD_GADGET_SELECT"
+       }
+      }
+     }
+     RplComponent "{61FEC10CE6C7120B}" {
+     }
+    }
+    coords -0.096 0.899 -0.329
+    angleX 0.391
+    angleY -98.73
+   }
+   GenericEntity Layer23 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionOnUserActionEvent "{64F17A9B87067F21}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{64F17A96D5077F26}" {
+         m_sEntityName "BaseStationRadio3"
+        }
+        m_iActionID 0
+        m_aActions {
+         SCR_ScenarioFrameworkActionShowHint "{64F364AD67BD7AAE}" {
+          m_sTitle "OPLAN FIRE BUG"
+          m_sText "You've selected OPLAN FIRE BUG. Main objectives are to release version 1.3 on Thursday. "
+          m_iTimeout 10
+         }
+         SCR_ScenarioFrameworkActionPlaySound "{64F4F0BCC9D4B58C}" {
+          m_sSound "SOUND_CP_IPL_1"
+         }
+        }
+       }
+       SCR_ScenarioFrameworkActionOnUserActionEvent "{64F17A97BA48C978}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{64F17A97C9FDC2BF}" {
+         m_sEntityName "BaseStationRadio3"
+        }
+        m_iActionID 1
+        m_aActions {
+         SCR_ScenarioFrameworkActionShowHint "{64F364AD67BD7AAE}" {
+          m_sTitle "OPLAN JUNK BALL"
+          m_sText "You've selected OPLAN JUNK BALL. Main objectives are to secure the 2 major ports at Morton and Lamentin, then prepare to sweep and clear  Montignac"
+          m_iTimeout 10
+         }
+         SCR_ScenarioFrameworkActionPlaySound "{64F4F0BCDC1ACAE2}" {
+          m_sSound "SOUND_CP_IPL_2"
+         }
+        }
+       }
+       SCR_ScenarioFrameworkActionOnUserActionEvent "{64F17A96DF882C47}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{64F17A96D5077F26}" {
+         m_sEntityName "BaseStationRadio3"
+        }
+        m_iActionID 2
+        m_aActions {
+         SCR_ScenarioFrameworkActionShowHint "{64F364AD5153C032}" {
+          m_sTitle "OPLAN MOON SHOT"
+          m_sText "You've selected OPLAN MOON SHOT. Main objectives are to attack the port of Saint Pierre, move up the Green Valley. "
+          m_iTimeout 10
+         }
+         SCR_ScenarioFrameworkActionPlaySound "{64F4F0BCD2CF8FBB}" {
+          m_sSound "SOUND_CP_IPL_3"
+         }
+        }
+       }
+      }
+     }
+    }
+    coords -0.091 0 -0.015
+    {
+     GenericEntity Slot18 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{ED4439D23F40A165}Prefabs/Compositions/Misc/SubCompositions/Furniture/Table_Food_US_01.et"
+       }
+      }
+      coords -0.041 0 0.021
+      angleY -97.33
+     }
+    }
+   }
+  }
+ }
+}

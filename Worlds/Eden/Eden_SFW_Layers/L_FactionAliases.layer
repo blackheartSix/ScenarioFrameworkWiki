@@ -1,0 +1,35 @@
+GenericEntity FactionAliases : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+  }
+ }
+ coords 1126.671 41.875 11528.566
+ {
+  GenericEntity Layer16 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity Slot5 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     components {
+      SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+       m_sFactionKey "REDFOR"
+       m_sObjectToSpawn "{254289B9C09904AB}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2.et"
+       m_aFactionSwitchedObjects {
+        SCR_ScenarioFrameworkFactionSwitchedObject "{644CC4097DEE2A2B}" {
+         m_sFactionKey "USSR"
+         m_sObjectToSpawn "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
+        }
+       }
+       m_bRandomizePerFaction 1
+       m_eEntityCatalogType VEHICLE
+       m_aIncludedEditableEntityLabels {
+        53
+       }
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}

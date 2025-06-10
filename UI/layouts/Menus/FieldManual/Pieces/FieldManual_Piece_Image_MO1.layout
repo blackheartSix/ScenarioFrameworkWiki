@@ -1,0 +1,114 @@
+VerticalLayoutWidgetClass {
+ Name "VerticalLayout"
+ Slot LayoutSlot "{566CD38004A67985}" {
+  VerticalAlign 2
+  Padding 10 10 10 10
+ }
+ {
+  SizeLayoutWidgetClass "{64A8ABB3F13D2096}" {
+   Name "SizeLayout"
+   Slot LayoutSlot "{590EE2C131BA02FD}" {
+   }
+   AllowMaxDesiredWidth 1
+   MaxDesiredWidth 900
+   AllowMaxDesiredHeight 1
+   MaxDesiredHeight 800
+   {
+    OverlayWidgetClass "{64A8ABB3F13D208A}" {
+     Name "Overlay0"
+     Slot LayoutSlot "{5E2A6DC69C559DB2}" {
+      HorizontalAlign 1
+      VerticalAlign 1
+      Padding 10 0 10 0
+     }
+     {
+      SizeLayoutWidgetClass "{64A8ABB3F13D48DE}" {
+       Name "SizeLayout0"
+       Slot OverlayWidgetSlot "{5E4CE897A33191B0}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       MinDesiredWidth 1000
+       MinDesiredHeight 568
+       AllowMaxDesiredWidth 1
+       MaxDesiredWidth 2000
+       AllowMaxDesiredHeight 1
+       MaxDesiredHeight 1600
+       {
+        ImageWidgetClass "{64A8ABB3F13D48DC}" {
+         Name "Image0"
+         Slot AlignableSlot "{5E4CE897A3043A8F}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         Opacity 0
+         Size 0 0
+        }
+       }
+      }
+      ScaleWidgetClass "{64A8ABB3F13D48DA}" {
+       Name "Scale0"
+       Slot OverlayWidgetSlot "{5E4CE8948D0FCF23}" {
+       }
+       {
+        SizeLayoutWidgetClass "{64A8ABB3F13DCDDC}" {
+         Name "SizeLayout1"
+         Slot AlignableSlot "{5E4CE8948D13AAFD}" {
+         }
+         AllowWidthOverride 1
+         WidthOverride 440
+         AllowHeightOverride 1
+         HeightOverride 224
+         AllowMinDesiredWidth 1
+         MinDesiredWidth 440
+         AllowMinDesiredHeight 1
+         MinDesiredHeight 224
+         {
+          ImageWidgetClass "{64A8ABB3F13DC06A}" {
+           Name "Image"
+           Slot AlignableSlot "{5E4CE897074CF3EE}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+           }
+           Texture "{7508571BABBE0200}Images/FM_MO1_PageHeader.edds"
+           Size 880 448
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  HorizontalLayoutWidgetClass "{64A8ABB3F13DC069}" {
+   Name "HorizontalLayout"
+   Slot LayoutSlot "{591098B6BEBABF39}" {
+   }
+   {
+    FrameWidgetClass "{64A8ABB3F13E1498}" {
+     Name "Left"
+     Slot LayoutSlot "{591098B6BB610FC8}" {
+      SizeMode Fill
+     }
+    }
+    RichTextWidgetClass "{64A8ABB3F13E1499}" : "{4EDAA3BB065DA5A9}UI/layouts/Menus/FieldManual/Pieces/FieldManual_RichText.layout" {
+     Name "Caption"
+     Slot LayoutSlot "{566CD3803CFBDCCC}" {
+      Padding 5 5 5 5
+      SizeMode Fill
+      FillWeight 9
+     }
+     "Horizontal Alignment" Center
+    }
+    FrameWidgetClass "{64A8ABB3F13E474D}" {
+     Name "Right"
+     Slot LayoutSlot "{591098B6A41865E5}" {
+      SizeMode Fill
+      FillWeight 1
+     }
+    }
+   }
+  }
+ }
+}

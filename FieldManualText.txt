@@ -1,0 +1,25 @@
+<b>Introduction</b>
+Military Operations 1 - ARLAND is a standard cooperative multi-player combat patrol scenario that consists of random missions. 
+
+You are a member of a Special Forces Operational Detachment Alpha(ODA) deployed to the Island of Arland. Each ODA consists of twelve special forces operators. The CSTO has occupied Arland to use it as a forward operations post for Distance Early Warning sites, and nuclear submarine operations base. 
+
+<b>Role and Loadouts</b>
+There are six different roles and loadout to chose from at the start. ODA Team Leader, Automatic Rifleman, Grenadier, Engineer, Medic and RTO. Once you pick a role, that is your role throughout the game until you leave the scenario/server and start/join again. At the infiltration point you will have supplies to add to your combat loadout.
+
+<b>Beginning</b>
+You will be deployed to the area of operation at a randomly selected infiltration point. There is a chance you might be deployed to the wrong location. Once you get your supplies, begin by conducting a zone reconnaissance of the island. Beware of roving dismounted and mounted patrols. 
+
+<b>Limited Game Master</b>
+Access to character, groups, vehicles and objects have been shut off. This is to keep with my intention of how the scenario should be played. Admins can still access basic functions like teleport and heal if they want.
+
+<b>Saving Progress</b>
+The scenario has the save/load component added to the scenario framework game mode. The autosave period is set to 300 seconds (5 minutes). The save file name is MilOps1_Arland. 
+
+<b>Spawn Point</b>
+Objective Rally Points are automatically create as you move inland and around the island. Your RTO also has a deployable rally point with the radio.  
+
+<b>Supplies</b>
+All supplies are at the infiltration point. No logistics support on the island, as you are operating behind enemy lines. 
+
+<b>Tasks</b>
+TBD. Reworking task system at this time. 3 tasks are issued at start. 

@@ -1,0 +1,14 @@
+SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_BaseLoadout.et" {
+ ID "520EC961A090BBD5"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_VariantData SCR_EditableEntityVariantData "{647F39EFE9C8115F}" {
+    m_aVariants {
+     SCR_EditableEntityVariant "{647F39EFE80628FB}" {
+      m_sVariantPrefab "{6E1E87ECA5F5A7EA}Prefabs/Characters/Factions/BLUFOR/US_Army/GreenBerets/Character_US_SF_LMG.et"
+     }
+    }
+   }
+  }
+ }
+}

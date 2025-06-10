@@ -1,0 +1,66 @@
+FrameWidgetClass {
+ Name "HintInfoDisplay"
+ Slot FrameWidgetSlot "{5D4A70D3F2C9DAED}" {
+  PositionX 0
+  OffsetLeft 0
+  PositionY 0
+  OffsetTop 0
+  SizeX 1920
+  OffsetRight -1920
+  SizeY 1080
+  OffsetBottom -1080
+ }
+ {
+  OverlayWidgetClass "{6550C4FA54C4A68B}" : "{EA1CC57D868E94F9}UI/layouts/HUD/Hint/Hint.layout" {
+   Name "Hint0"
+   Slot FrameWidgetSlot "{56226146619D317F}" {
+    Anchor 1 0 1 0
+    PositionX -32
+    OffsetLeft -32
+    PositionY 20
+    OffsetTop 20
+    SizeX 320
+    OffsetRight -288
+    SizeY 1024
+    OffsetBottom -1044
+    Alignment 1 0
+    SizeToContent 1
+   }
+   {
+    OverlayWidgetClass "{58D2E132C29FFA32}" {
+     Prefab "{58D2E132C29FFA32}"
+     {
+      SizeLayoutWidgetClass "{56226B9A3936166C}" {
+       Prefab "{56226B9A3936166C}"
+       {
+        VerticalLayoutWidgetClass "{56226145864E0958}" {
+         Prefab "{56226145864E0958}"
+         {
+          OverlayWidgetClass "{562654A5EE852252}" {
+           Prefab "{562654A5EE852252}"
+           {
+            TextWidgetClass "{5626566653EB7FA2}" {
+             Prefab "{5626566653EB7FA2}"
+             Text "My Hint"
+            }
+           }
+          }
+          ImageWidgetClass "{5622656111439F02}" {
+           Prefab "{5622656111439F02}"
+           Texture "{2A06DB6C5CD7B3BF}Images/SFWPreviewImage.edds"
+           Size 128 72
+          }
+          RichTextWidgetClass "{5626510F4FEC56A6}" {
+           Prefab "{5626510F4FEC56A6}"
+           Text "Custom Hint Text"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

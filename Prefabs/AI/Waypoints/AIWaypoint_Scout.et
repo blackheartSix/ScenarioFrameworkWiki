@@ -1,0 +1,5 @@
+SCR_TimedWaypoint {
+ ID "51F6BCFD78CB388E"
+ AIBehaviorTree "{573614D962C311BB}AI/BehaviorTrees/Waypoints/WP_SearchAndDestroy.bt"
+ AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+}

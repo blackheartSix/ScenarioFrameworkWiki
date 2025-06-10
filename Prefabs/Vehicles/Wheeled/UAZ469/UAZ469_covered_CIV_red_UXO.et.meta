@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{330563FC98C56D3C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_red_UXO.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

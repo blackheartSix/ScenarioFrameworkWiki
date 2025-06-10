@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{66F11AB5E317F5E6}UI/layouts/Menus/FieldManual/Pieces/FieldManual_Piece_Image_MO2.layout"
+ Configurations {
+  LayoutResourceClass PC {
+  }
+  LayoutResourceClass XBOX_ONE : PC {
+  }
+  LayoutResourceClass XBOX_SERIES : PC {
+  }
+  LayoutResourceClass PS4 : PC {
+  }
+  LayoutResourceClass PS5 : PC {
+  }
+  LayoutResourceClass HEADLESS : PC {
+  }
+ }
+}
