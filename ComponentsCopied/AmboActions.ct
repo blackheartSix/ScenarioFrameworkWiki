@@ -1,0 +1,313 @@
+ActionsManagerComponent {
+ ActionContexts {
+  UserActionContext "{50CAED54AE16697F}" {
+   ContextName "driver"
+   Position PointInfo "{50CAED5486B29300}" {
+    PivotID "driver_idle"
+    Offset -0.05 0.1 0
+   }
+   Radius 0.25
+  }
+  UserActionContext "{50CAED54AE52EB24}" {
+   ContextName "passenger_r01"
+   Position PointInfo "{50CAED5480B6C2C5}" {
+    PivotID "codriver_idle"
+   }
+  }
+  UserActionContext "{50CAED54AE8C929C}" {
+   Position PointInfo "{50CAED5483556767}" {
+    PivotID "patient_left_idle"
+    Offset 0 0 0
+   }
+  }
+  UserActionContext "{50CAED54AEC6E194}" {
+   Position PointInfo "{50CAED5482AD94BF}" {
+    PivotID "patient_right_idle"
+   }
+  }
+  UserActionContext "{51B0DCD7349FC95F}" {
+   ContextName "fuel_cap"
+   Position PointInfo "{51B0DCD72F7F9247}" {
+    Offset 1.09 1.05 -1.255
+    Angles 0 90 0
+   }
+   Radius 0.3
+   Omnidirectional 0
+  }
+  UserActionContext "{51B0DCCEEE9AA49E}" {
+   ContextName "starter_switch"
+   Position PointInfo "{51B0DCCEEE9A67B8}" {
+    PivotID "v_starter_switch"
+    Angles 0 180 0
+   }
+   Radius 0.08
+   Omnidirectional 0
+  }
+  UserActionContext "{51B0DCCEEE9A4A8C}" {
+   ContextName "tcase_shifter"
+   Position PointInfo "{51B0DCCEEE9A3F17}" {
+    PivotID "v_stick_01"
+    Offset -0.02 0.15 0
+    Angles 45 -135 0
+   }
+   Radius 0.1
+   Omnidirectional 0
+  }
+  UserActionContext "{51B0DCCEEE99E3FC}" {
+   ContextName "handbrake"
+   Position PointInfo "{51B0DCCEEE99D763}" {
+    PivotID "v_handbrake"
+    Offset 0 0 0.12
+    Angles 45 -120 0
+   }
+   Radius 0.1
+   Omnidirectional 0
+  }
+  UserActionContext "{51B0DCCEEE99BBF5}" {
+   ContextName "light_switch"
+   Position PointInfo "{51B0DCCEEE996C7D}" {
+    PivotID "v_light_switch"
+    Angles 0 180 0
+   }
+   Radius 0.1
+   Omnidirectional 0
+  }
+  UserActionContext "{5292D6FA1BF8AA9B}" {
+   ContextName "light_turn_signal_switch"
+   Position PointInfo "{5292D6FA1F8E3ACB}" {
+    Offset -0.73 1.242 0.46
+   }
+   Radius 0.08
+  }
+  UserActionContext "{51B11EAAC1D5E3CA}" {
+   ContextName "wipers_switch"
+   Position PointInfo "{51B11EAA3BA96B25}" {
+    Offset -0.02 1.61 0.52
+    Angles 0 200 0
+   }
+   Radius 0.1
+   Omnidirectional 0
+  }
+  UserActionContext "{51B0DCCEEE995070}" {
+   ContextName "horn"
+   Position PointInfo "{51B0DCCEEE9904B7}" {
+    PivotID "v_steering_wheel"
+    Angles 90 0 0
+   }
+   Radius 0.08
+   Omnidirectional 0
+  }
+  UserActionContext "{51B0DCCEEE98E970}" {
+   Position PointInfo "{51B0DCCEEE98D918}" {
+    PivotID "v_door_L01_handle"
+    Offset 0 0 0.2
+   }
+  }
+  UserActionContext "{51B0DCCEEE98824D}" {
+   ContextName "door_l01_int"
+   Position PointInfo "{51B0DCCEEE9876A1}" {
+    PivotID "v_door_l01_handle_interior"
+    Offset 0.05 -0.1 0.5
+    Angles 0 90 0
+   }
+   Radius 0.2
+   Omnidirectional 0
+  }
+  UserActionContext "{51B0DCCEEE985B10}" {
+   Position PointInfo "{51B0DCCEEE980C6F}" {
+    PivotID "v_door_rear_L_handle"
+    Offset 0.0004 0 -0.0206
+    Angles 0 180 0
+   }
+  }
+  UserActionContext "{51B0DCCEEE9FF0FD}" {
+   Position PointInfo "{51B0DCCEEE9FA41D}" {
+    Offset 0.9178 0.3717 -1.8774
+    Angles 0 0 0
+   }
+  }
+  UserActionContext "{51B0DCCEEE9F88AD}" {
+   Position PointInfo "{51B0DCCEEE9F7D7F}" {
+    PivotID "v_door_R01_handle"
+    Offset 0 0 0.2
+   }
+  }
+  UserActionContext "{51B0DCCEEE9F2384}" {
+   ContextName "door_r01_int"
+   Position PointInfo "{51B0DCCEEE9F140C}" {
+    PivotID "v_door_r01_handle_interior"
+    Offset -0.05 -0.1 0.5
+    Angles 0 -90 0
+   }
+   Radius 0.2
+   Omnidirectional 0
+  }
+  UserActionContext "{51B0DCCEEE9EF8F1}" {
+   Position PointInfo "{51B0DCCEEE9EAD7D}" {
+    Offset -0.9399 0.5504 -2.1462
+    Angles 0 180 0
+   }
+  }
+  UserActionContext "{51B0DCCEEE9E9114}" {
+   Position PointInfo "{51B0DCCEEE9E458D}" {
+    PivotID "v_root"
+    Offset 0 1.5952 -3.1306
+    Angles 0 0 0
+   }
+   Radius 0.5
+  }
+  UserActionContext "{51B1243A911B29F3}" {
+   ContextName "wheel_l01"
+   Position PointInfo "{51B1243A911AEE4A}" {
+    PivotID "v_wheel_L01"
+    Offset -0.1 0 0
+    Angles 0 -90 0
+   }
+   Omnidirectional 0
+  }
+  UserActionContext "{51B1243A911ADF99}" {
+   ContextName "wheel_r01"
+   Position PointInfo "{51B1243A911A801C}" {
+    PivotID "v_wheel_R01"
+    Offset 0.1 0 0
+    Angles 0 90 0
+   }
+   Omnidirectional 0
+  }
+  UserActionContext "{51B1243A911A743F}" {
+   ContextName "wheel_l02"
+   Position PointInfo "{51B1243A911A5B46}" {
+    PivotID "v_wheel_L02"
+    Offset -0.1 0 0
+    Angles 0 -90 0
+   }
+   Omnidirectional 0
+  }
+  UserActionContext "{51B1243A911A09B4}" {
+   ContextName "wheel_r02"
+   Position PointInfo "{51B1243A9119F26B}" {
+    PivotID "v_wheel_R02"
+    Offset 0.1 0 0
+    Angles 0 90 0
+   }
+   Omnidirectional 0
+  }
+  UserActionContext "{51B13A121D0882F1}" {
+   ContextName "tow_hook"
+   Position PointInfo "{51B13A1210A44A72}" {
+    Offset 0 0.65 -2.55
+    Angles 0 180 0
+   }
+   Omnidirectional 0
+  }
+  UserActionContext "{5916C587AEBAE8E1}" {
+   Position PointInfo "{5916C587A59D8477}" {
+    Offset 0 1 -3.08
+   }
+  }
+  UserActionContext "{659699DDD10A6E78}" {
+   UIInfo SCR_ActionContextUIInfo "{61C4AB1DF9E2E6ED}" : "{7CD00B230573CAC6}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/SCR_ActionContextUIInfo.conf" {
+   }
+   ContextName "door_rear"
+   Position PointInfo "{659699DDD10A6E60}" {
+    PivotID "v_root"
+    Offset 0 1.5952 -3.1306
+    Angles 0 180 0
+   }
+   Radius 0.5
+   Height 0
+   Omnidirectional 0
+  }
+  UserActionContext "{659699DDD10A6E65}" {
+   UIInfo SCR_ActionContextUIInfo "{61C4AB1DF5661330}" : "{7CD00B230573CAC6}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/SCR_ActionContextUIInfo.conf" {
+   }
+   ContextName "door_rear_int"
+   Position PointInfo "{659699DDD10A6E6B}" {
+    PivotID "v_root"
+    Offset 0 1.5952 -3.1306
+   }
+   Radius 0.7
+   Height 0
+   Omnidirectional 0
+  }
+  UserActionContext "{659699DDD10A6E6A}" {
+   ContextName "over_passenger_l02"
+   Position PointInfo "{659699DDD10A6E68}" {
+    PivotID "patient_left_idle"
+    Offset -0.3 0.3 0
+    Angles 0 45 0
+   }
+   Omnidirectional 0
+   VisibilityAngle 45
+  }
+  UserActionContext "{659699DDD10A6E6E}" {
+   ContextName "over_passenger_r02"
+   Position PointInfo "{659699DDD10A8BB5}" {
+    PivotID "patient_right_idle"
+    Offset 0.3 0.3 0
+    Angles 0 -45 0
+   }
+   Omnidirectional 0
+   VisibilityAngle 45
+  }
+  UserActionContext "{659699DDD10A8BB7}" {
+   ContextName "light_interior_rear_L01"
+   Position PointInfo "{659699DDD10A8BC8}" {
+    Offset -0.9624 2.4436 -0.9557
+    Angles 0 135 0
+   }
+   Omnidirectional 0
+   VisibilityAngle 45
+  }
+  UserActionContext "{659699DDD10A8BCA}" {
+   ContextName "light_interior_rear_L02"
+   Position PointInfo "{659699DDD10A8BCB}" {
+    Offset -0.9624 2.4436 -2.5548
+    Angles 0 45 0
+   }
+   Omnidirectional 0
+   VisibilityAngle 45
+  }
+  UserActionContext "{659699DDD10A8BCD}" {
+   ContextName "light_interior_rear_R01"
+   Position PointInfo "{659699DDD10A8BCE}" {
+    Offset 0.9721 2.4436 -0.9557
+    Angles 0 -135 0
+   }
+   Omnidirectional 0
+   VisibilityAngle 45
+  }
+  UserActionContext "{659699DDD10A8BC6}" {
+   ContextName "light_interior_rear_R02"
+   Position PointInfo "{659699DDD10A8BC7}" {
+    Offset 0.9721 2.4436 -2.5572
+    Angles 0 -45 0
+   }
+   Omnidirectional 0
+   VisibilityAngle 45
+  }
+  UserActionContext "{659699DDD10A8BD9}" {
+   ContextName "doctor"
+   Position PointInfo "{659699DDD10A8BDA}" {
+    Offset 0.0026 1.3028 -1.1848
+   }
+  }
+ }
+ additionalActions {
+  SCR_ResourceContainerVehicleLoadAction "{5DAD751A3D2FE182}" {
+   ParentContextList {
+    "door_rear"
+   }
+  }
+  SCR_ResourceContainerVehicleUnloadAction "{5DAD751A3BF8492E}" {
+   ParentContextList {
+    "door_rear"
+   }
+  }
+  SCR_OpenVehicleStorageAction "{5916C587945AD3E6}" {
+   ParentContextList {
+    "door_rear"
+   }
+  }
+ }
+}

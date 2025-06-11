@@ -1,0 +1,31 @@
+Vehicle : "{00C9BBE426F7D459}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{659699DBE7F875D1}" {
+     SourceMaterial "Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body"
+     AssignedMaterial "{036B6135DAF74E00}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Body_Merdc.emat"
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    m_Image "{73BB4D0EC07D80DA}UI/Textures/EditorPreviews/Vehicles/Wheeled/M998/M997_maxi_ambulance_MERDC.edds"
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Antenna_rear {
+    }
+    RegisteringComponentSlotInfo Tailgate {
+    }
+    RegisteringComponentSlotInfo MaxiAmbuBox {
+    }
+    RegisteringComponentSlotInfo Doors_front {
+     Prefab "{3F903AF6FB521851}Prefabs/Vehicles/Wheeled/M998/VehParts/M997_doors_front_MERDC.et"
+    }
+   }
+  }
+ }
+}

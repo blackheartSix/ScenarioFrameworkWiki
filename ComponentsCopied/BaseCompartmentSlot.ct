@@ -1,0 +1,224 @@
+SCR_BaseCompartmentManagerComponent {
+ DoorInfoList {
+  CompartmentDoorInfo "{60E47D679D55B7AD}" {
+   OpenDoorAction SCR_OpenVehicleDoorUserAction "{659699DCF7A5F12D}" {
+    ParentContextList {
+     "door_l01"
+     "door_l01_int"
+    }
+    UIInfo SCR_ActionUIInfo "{6168A3B7A9503B57}" : "{6404F19156C91DC4}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Open.conf" {
+    }
+    "Sort Priority" 13
+   }
+   CloseDoorAction SCR_CloseVehicleDoorUserAction "{659699DCF7A5F124}" {
+    ParentContextList {
+     "door_l01"
+     "door_l01_int"
+    }
+    UIInfo SCR_ActionUIInfo "{6168A3B7AD84CC74}" : "{9D90716578926759}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Close.conf" {
+    }
+    "Sort Priority" 11
+   }
+   FakeDoor 0
+  }
+  CompartmentDoorInfo "{60E47D679ED85916}" {
+   OpenDoorAction SCR_OpenVehicleDoorUserAction "{659699DCF7A5F127}" {
+    ParentContextList {
+     "door_r01"
+     "door_r01_int"
+    }
+    UIInfo SCR_ActionUIInfo "{6168A3B653BB096E}" : "{6404F19156C91DC4}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Open.conf" {
+    }
+    "Sort Priority" 13
+   }
+   CloseDoorAction SCR_CloseVehicleDoorUserAction "{659699DCF7A5F138}" {
+    ParentContextList {
+     "door_r01"
+     "door_r01_int"
+    }
+    UIInfo SCR_ActionUIInfo "{6168A3B655F90F56}" : "{9D90716578926759}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Close.conf" {
+    }
+    "Sort Priority" 11
+   }
+   FakeDoor 0
+  }
+  CompartmentDoorInfo "{659699DCF7A5F13A}" {
+   AnimDoorIndex 2
+   ContextName "door_rear"
+   OpenDoorAction SCR_OpenVehicleDoorUserAction "{659699DCF7A5F13C}" {
+    ParentContextList {
+     "door_rear"
+     "door_rear_int"
+    }
+    UIInfo SCR_ActionUIInfo "{6168A3B65CB7612D}" : "{6404F19156C91DC4}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Open.conf" {
+    }
+    "Sort Priority" 13
+   }
+   CloseDoorAction SCR_CloseVehicleDoorUserAction "{659699DCF7A5F13D}" {
+    ParentContextList {
+     "door_rear_int"
+     "door_rear"
+    }
+    UIInfo SCR_ActionUIInfo "{6168A3B65EAB5D29}" : "{9D90716578926759}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Close.conf" {
+    }
+    "Sort Priority" 11
+   }
+   EntryPositionInfo PointInfo "{659699DCF7A5F13E}" {
+    PivotID "passenger_rear_getIn"
+   }
+   ExitPositionInfo PointInfo "{659699DCF7A5F13F}" {
+    PivotID "passenger_rear_getIn"
+    Offset 0 0 0
+   }
+   PortalPositionInfo PointInfo "{659699DCF7A5F131}" {
+    PivotID "v_door_rear_L_handle"
+   }
+   AlignDuringGetOut 1
+   GetInAligningTeleport 1
+   GetOutAligningTeleport 1
+   GetInSeatAligningOnEvent 1
+  }
+ }
+ CompartmentSlots {
+  PilotCompartmentSlot PilotCompartment {
+   CompartmentAction SCR_GetInUserAction "{5086DB209BDE8253}" {
+    ParentContextList +{
+     "driver"
+    }
+   }
+   CharactersCanFallOutOnFlip 0
+  }
+  CargoCompartmentSlot Passenger_r01 {
+   CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+    ParentContextList +{
+     "passenger_r01"
+    }
+   }
+   CharactersCanFallOutOnFlip 0
+  }
+  SCR_PatientCompartmentSlot Passenger_l02 {
+   CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+    ParentContextList {
+     "door_rear"
+    }
+   }
+   GetOutAction SCR_GetOutAction "{509D56665A8C6923}" {
+    ParentContextList {
+     "door_rear_int"
+    }
+   }
+   AdditionalActions {
+    SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+     ParentContextList {
+      "over_passenger_l02"
+     }
+    }
+    SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+     ParentContextList {
+      "door_rear"
+     }
+    }
+   }
+   PassengerPositionInfo EntitySlotInfo "659699DCF7A5F101" {
+    PivotID "patient_left_idle"
+   }
+   SkipCharacterDoorAnimationsFromSeat 1
+   CharactersCanFallOutOnFlip 0
+   DoorInfoList {
+    4
+   }
+   UIInfo UIInfo "{50870A10CE897250}" {
+    Name "#AR-VehiclePosition_Patient"
+   }
+   m_iCompartmentSection 1
+   m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCC41A88D86}" {
+    m_bEnabled 0
+   }
+  }
+  SCR_PatientCompartmentSlot Passenger_r02 {
+   CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+    ParentContextList {
+     "door_rear"
+    }
+   }
+   GetOutAction SCR_GetOutAction "{509D56665A8C6923}" {
+    ParentContextList {
+     "door_rear_int"
+    }
+   }
+   AdditionalActions {
+    SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+     ParentContextList {
+      "over_passenger_r02"
+     }
+    }
+    SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+     ParentContextList {
+      "door_rear"
+     }
+    }
+   }
+   PassengerPositionInfo EntitySlotInfo "659699DCF7A5F11C" {
+    PivotID "patient_right_idle"
+   }
+   SkipCharacterDoorAnimationsFromSeat 1
+   CharactersCanFallOutOnFlip 0
+   DoorInfoList {
+    4
+   }
+   UIInfo UIInfo "{50870A10CE897250}" {
+    Name "#AR-VehiclePosition_Patient"
+   }
+   m_iCompartmentSection 1
+   m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCC5F699BAD}" {
+    m_bEnabled 0
+   }
+  }
+  SCR_DoctorCompartmentSlot Doctor : "{947BA1327F79D513}Prefabs/Vehicles/Wheeled/M998/MedicCompartment_M997.conf" {
+   CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+    UIInfo SCR_ActionUIInfo "{5086CC2FC26F3322}" {
+    }
+    "Sort Priority" 7
+   }
+   GetOutAction SCR_GetOutAction "{509D56665A8C6923}" {
+    "Sort Priority" 12
+   }
+   JumpOutAction SCR_JumpOutAction "{5D0B1D46E1FC958A}" {
+    "Sort Priority" 12
+   }
+   SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+    ParentContextList {
+     "doctor"
+    }
+    "Sort Priority" 7
+   }
+   AdditionalActions {
+    SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+     ParentContextList {
+      "doctor"
+     }
+     "Sort Priority" 6
+    }
+    SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+     ParentContextList {
+      "door_rear"
+     }
+     "Sort Priority" 6
+    }
+   }
+   PassengerPositionInfo EntitySlotInfo "659699DCF7A5F112" {
+    PivotID "doctor_idle"
+    Angles 0 180 0
+   }
+   SkipCharacterDoorAnimationsFromSeat 1
+   SeatType 4
+   UIInfo UIInfo "{50870A10CE897250}" {
+    Name "#AR-VehiclePosition_Doctor"
+   }
+   m_iCompartmentSection 1
+   m_DefaultOccupantData SCR_DefaultOccupantData "{659699DCF7A5F158}" {
+    m_bEnabled 0
+   }
+  }
+ }
+}

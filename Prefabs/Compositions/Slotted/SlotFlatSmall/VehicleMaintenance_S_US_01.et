@@ -1,0 +1,21 @@
+GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposition_Base.et" {
+ ID "5282DCB5DFC8538F"
+ {
+  GenericEntity {
+   ID "5D22B94009C6AE81"
+   components {
+    SCR_CampaignBuildingProviderComponent "{5ED49CDEA85A0083}" {
+     m_aBudgetsToEvaluate {
+      SCR_CampaignBuildingCooldownWithRankBudgetToEvaluateData "{5EE71CAB5BFCF9A3}" {
+       m_aCustomCooldownData {
+        SCR_CooldownData "{5EEEF52515996867}" {
+         m_fDefaultTimeMultiplier 15
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

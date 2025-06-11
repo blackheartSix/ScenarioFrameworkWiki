@@ -8,85 +8,42 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      GenericEntity MEDEVACPICK_A1 : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
       coords 0 0 0
       {
-       $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-        MEDEVACPAX1 {
-         coords 0 0 0
-         {
-          GenericEntity PAXA1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-           components {
-            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-             m_sFactionKey "US"
-             m_bShowDebugShapesInWorkbench 0
-             m_aActivationActions {
-              SCR_ScenarioFrameworkActionMedical "{6226A2F006E23F4B}" {
-               m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65952AC92331AE59}" {
-                m_sLayerName "PAXA1"
+       GenericEntity MEDEVACPAX1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+        coords 0 0 0
+        {
+         GenericEntity PAXA1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sFactionKey "US"
+            m_bShowDebugShapesInWorkbench 0
+            m_aActivationActions {
+             SCR_ScenarioFrameworkActionMedical "{6226A2F006E23F4B}" {
+              m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65952AC92331AE59}" {
+               m_sLayerName "PAXA1"
+              }
+              m_aMedicalActions {
+               SCR_ScenarioFrameworkMedicalActionSetBlood "{6226A2F01ED14FC5}" {
+                m_fBloodValue 1700
                }
-               m_aMedicalActions {
-                SCR_ScenarioFrameworkMedicalActionSetBlood "{6226A2F01ED14FC5}" {
-                 m_fBloodValue 1700
-                }
-                SCR_ScenarioFrameworkMedicalActionSetBleedingRate "{6226A2FE4F6B0E2F}" {
-                 m_fBleedingRate 0
-                }
-                SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{6226A2FE537F361A}" {
-                 m_sHitZoneName "Head"
-                }
-                SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{6226A2FF191C2FA5}" {
-                 m_sHitZoneName "Leg"
-                }
+               SCR_ScenarioFrameworkMedicalActionSetBleedingRate "{6226A2FE4F6B0E2F}" {
+                m_fBleedingRate 0
+               }
+               SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{6226A2FE537F361A}" {
+                m_sHitZoneName "Head"
+               }
+               SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{6226A2FF191C2FA5}" {
+                m_sHitZoneName "Leg"
                }
               }
              }
-             m_sObjectToSpawn "{42A502E3BB727CEB}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_HeliPilot.et"
-             m_bCanBeGarbageCollected 0
-             m_aIncludedEditableEntityLabels {
-             }
             }
-           }
-           coords 1.549 0.137 5.547
-          }
-         }
-        }
-        MEDEVACREDFOR1 {
-         components {
-          SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-           Enabled 0
-           m_SpawnChildren RANDOM_ONE
-          }
-         }
-         coords 0 0 0
-         {
-          $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-           YESREDFOR1 {
-            coords 0 0 0
-            {
-             GenericEntity MEDEVACREDORAI1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-              components {
-               SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-                m_sObjectToSpawn "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
-                m_sWPToSpawn "{FAD1D789EE291964}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large.et"
-               }
-              }
-              coords 0 0 0
-              angleY 93.881
-             }
-            }
-           }
-           NOREDFOR1 {
-            coords 0 0 0
-            {
-             GenericEntity Trash1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-              components {
-               SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-                m_sObjectToSpawn "{0F1DCC6D94AF0B17}PrefabLibrary/Vegetation/Plants/c_branches_debris_large_01.et"
-               }
-              }
-              coords 0 0.157 0
-             }
+            m_sObjectToSpawn "{42A502E3BB727CEB}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_HeliPilot.et"
+            m_bCanBeGarbageCollected 0
+            m_aIncludedEditableEntityLabels {
             }
            }
           }
+          coords 1.549 0.137 5.547
          }
         }
        }
@@ -173,7 +130,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   }
  }
  AreaB1 {
-  coords 3900.957 15.265 8447.224
+  coords 4985.113 174.688 7043.201
   {
    GenericEntity RTBLayer1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
@@ -259,29 +216,39 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           m_sWPToSpawn ""
          }
         }
-        coords 0.661 0.041 41.661
-        angleY 94.122
+        coords -2.201 0.268 -1.132
+        angleY 50.6
        }
-       GenericEntity Ambo1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-        components {
-         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-          m_aActivationActions {
-           SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{6590D5AB25A28DFB}" {
-            m_fMaxCruiseSpeed 15
+       $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+        Ambo1 {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_aActivationActions {
+            SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{6590D5AB25A28DFB}" {
+             m_fMaxCruiseSpeed 20
+            }
            }
+           m_sObjectToSpawn "{3B1EB924602C7A07}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance_MERDC.et"
           }
-          m_sObjectToSpawn "{3B1EB924602C7A07}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance_MERDC.et"
          }
+         coords 44.467 0.001 -13.252
+         angleX 0.636
+         angleY 135.241
+         angleZ -0.63
         }
-        coords -3.455 -0.069 23.219
-        angleX 0.888
-        angleY -82.933
-        angleZ 0.11
+        BAS1 {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_sObjectToSpawn "{36B55E2B9C47373C}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_Medical_US_01.et"
+          }
+         }
+         coords 0 0 0
+         angleY 41.721
+        }
        }
        GenericEntity SlotTask1 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
         components {
          SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-          m_bShowDebugShapesInWorkbench 0
           m_aPlugins {
            SCR_ScenarioFrameworkPluginTrigger "{6590D5AB519B848D}" {
             m_fAreaRadius 100
@@ -329,16 +296,16 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           m_sTaskTitle "Operation Slow Ride"
           m_sTaskDescription "Situation: The %1 pilot has been recovered and needs immediate medical attention at the CASH. "\
           ""\
-          "Mission: Safely fly all PAX back to FOB Michigan. Land near the marker and place all causalities in the awaiting ambulance.  "\
+          "Mission: Take the patient to the Battalion Aid Station and transfer him to the awaiting ambulance. Charlie Med will take them to the CASH. "\
           ""\
           "Execution:"\
           "1. Depart the Operation Caduceus PZ."\
-          "2. Move to FOB Michigan. "\
-          "3. Land the MEDEVAC flight LZ marked on map."\
-          "4. Remove PAX from MEDEVAC vehicle and place in awaiting M997 ambulance."
+          "2. Move to Battalion Aid Station. "\
+          "4. Transfer PAX from CASEVAC vehicle and place in awaiting M997 ambulance."
          }
         }
-        coords 0 0 0
+        coords 41.525 0 -11.33
+        angleY 136.541
        }
       }
      }
@@ -350,16 +317,16 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          components {
           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
            m_bShowDebugShapesDuringRuntime 1
-           m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{659109827FE05EB1}" {
-            m_fCompletionRadius 5
+           m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{659699D2F3DD027D}" {
+            m_fCompletionRadius 1
             m_fPriorityLevel 2000
-            m_fHoldingTime -1
             m_bGunnerAllowed 0
             m_bCargoAllowed 0
            }
           }
          }
-         coords -3.583 -0.111 23.108
+         coords 45.991 -0.1 -12.701
+         angleY 47.363
         }
         SlotWaypointB1 {
          components {
@@ -370,7 +337,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
            }
           }
          }
-         coords -81.897 -3.228 8.144
+         coords 72.979 0.099 55.995
         }
        }
       }

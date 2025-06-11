@@ -7450,3 +7450,6 @@ GenericEntity SlotPlayerTrigger6 : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFr
  }
  coords 6484.046 160.149 6389.367
 }
+GenericEntity : "{ECB8E313DFBD3415}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_US_01.et" {
+ coords 4862.673 28.594 11709.178
+}
