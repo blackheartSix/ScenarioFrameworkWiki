@@ -1,0 +1,22 @@
+SCR_UniversalInventoryStorageComponent {
+ Attributes SCR_ItemAttributeCollection "{5916C587FF082FC8}" {
+  ItemDisplayName SCR_InventoryUIInfo "{5916C587F9499861}" {
+   m_aItemHints {
+    SCR_SupplyAvailableItemHintUIInfo "{5EB0DD02BA8035EE}" : "{B7797523D7C78623}Configs/Inventory/ItemHints/SupplyAvailable_ItemHint.conf" {
+    }
+   }
+  }
+  CustomAttributes {
+   PreviewRenderAttributes "{5916C587E61024B6}" {
+    CameraDistanceToItem 5
+    CameraOffset -0.5 -0.5 0
+   }
+  }
+ }
+ MaxCumulativeVolume 100000
+ MultiSlots {
+  MultiSlotConfiguration "{5A60CECB549327C1}" {
+  }
+ }
+ m_fMaxWeight 870
+}

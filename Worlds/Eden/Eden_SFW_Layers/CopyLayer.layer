@@ -1,0 +1,11 @@
+GenericEntity Area1 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 5483.608 96.314 5173.076
+}
+GenericEntity : "{FFFC0CFF3F85A846}Prefabs/Structures/Signs/Tourist/TouristSign_01/TouristSign_Pole_01_I16_Chotain.et" {
+ coords 6903.635 130.967 6140.046
+ angleY 47.02
+}
+GenericEntity : "{FFFDC163BE13E55F}Prefabs/Structures/Infrastructure/Roads/Runway/Runway_Line_6x30.et" {
+ coords 4781.523 27.855 11214.268
+ angleY 90
+}

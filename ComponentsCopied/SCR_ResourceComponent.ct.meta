@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BF96DC0504166205}ComponentsCopied/SCR_ResourceComponent.ct"
+ Configurations {
+  ComponentTemplateResourceClass PC {
+  }
+  ComponentTemplateResourceClass XBOX_ONE : PC {
+  }
+  ComponentTemplateResourceClass XBOX_SERIES : PC {
+  }
+  ComponentTemplateResourceClass PS4 : PC {
+  }
+  ComponentTemplateResourceClass PS5 : PC {
+  }
+  ComponentTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

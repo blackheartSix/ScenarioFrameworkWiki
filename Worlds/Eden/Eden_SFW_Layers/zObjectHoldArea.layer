@@ -5,3 +5,6 @@ SCR_DoorOpenerEntity {
 GenericEntity : "{377EB906F591E4BA}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Weapons_US.et" {
  coords 4918.193 28.594 11882.133
 }
+Projectile : "{D6F93E839C9B1955}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_HE_IED.et" {
+ coords 6424.087 162.031 6476.657
+}

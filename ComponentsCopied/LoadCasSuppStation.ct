@@ -1,0 +1,10 @@
+SCR_LoadCasualtySupportStationComponent {
+ m_bIsVehicle 1
+ m_bSendNotificationOnUse 0
+ m_bAllowGetFactionFromParent 1
+ m_eSupportStationPriority MEDIUM
+ m_fRange 7.5
+ m_vOffset 0 0 -0.5
+ m_eFactionUsageCheck 3
+ m_sOverrideUserActionName "#AR-UserAction_LoadCasualtyInAmbulance"
+}

@@ -30,7 +30,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      GenericEntity SlotPlayerTrigger5 : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
       components {
        SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
-        m_bShowDebugShapesDuringRuntime 1
+        m_bShowDebugShapesInWorkbench 0
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
           m_fAreaRadius 10000
