@@ -275,6 +275,10 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
     Enabled 0
+    m_aActivationActions {
+     SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65A3400B0A62B7E6}" {
+     }
+    }
    }
   }
   coords 9322.191 52.729 1817.085

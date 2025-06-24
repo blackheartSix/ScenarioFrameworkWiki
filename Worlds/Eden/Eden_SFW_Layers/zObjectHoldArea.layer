@@ -5,6 +5,442 @@ SCR_DoorOpenerEntity {
 GenericEntity : "{377EB906F591E4BA}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Weapons_US.et" {
  coords 4918.193 28.594 11882.133
 }
+GenericEntity IntelDossiers1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+ components {
+  SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+   Enabled 0
+  }
+ }
+ coords 7505.612 170.931 4321.876
+ {
+  GenericEntity IntelDossierA1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+   components {
+    SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+     m_bShowDebugShapesInWorkbench 0
+     m_aActivationActions {
+      SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65B0B4B194FFE2FB}" {
+       m_iMaxNumberOfActivations 1
+       m_bVisible 0
+      }
+      SCR_ScenarioFrameworkActionOnUserActionEvent "{65AE060A5847F3B0}" {
+       m_iMaxNumberOfActivations 1
+       m_iActionID 1
+       m_aActions {
+        SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65B0B4B34E3A168D}" {
+         m_iActionID 1
+         m_bVisible 0
+        }
+        SCR_ScenarioFrameworkActionShowHint "{65AE060B8791CFA3}" {
+         m_iMaxNumberOfActivations 1
+         m_sTitle "SItuation Report"
+         m_sText "Mechanized units are moving to sector B for refueling and rearming. "
+         m_sFactionKey "US"
+        }
+        SCR_ScenarioFrameworkActionWaitAndExecute "{65AE060DA79E1929}" {
+         m_iMaxNumberOfActivations 1
+         m_iDelayInSeconds 16
+         m_aActions {
+          SCR_ScenarioFrameworkActionSpawnObjects "{65AE060DBF36BF8B}" {
+           m_iMaxNumberOfActivations 1
+           m_aNameOfObjectsToSpawnOnActivation {
+            "IntelDiscoveryA1"
+           }
+          }
+          SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65B0B4B1F4D84EC7}" {
+           m_iMaxNumberOfActivations 1
+          }
+         }
+        }
+       }
+      }
+     }
+     m_sObjectToSpawn "{CE22E2FB6274128F}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelDossier.et"
+    }
+   }
+   coords 0 0 0
+  }
+ }
+}
+GenericEntity Three_Body_Problem : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 10904.847 21.682 8753.007
+ {
+  GenericEntity IntelTask1 : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+     m_eActivationType ON_TRIGGER_ACTIVATION
+    }
+   }
+   coords 0 0 0
+   {
+    GenericEntity SlotMoveTo15 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+     coords 0 0 0
+    }
+   }
+  }
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   Sector2 {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      Enabled 0
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords -78.11 -14.809 -169.605
+    angleY -145.497
+    {
+     $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+      LayerTaskMoveE {
+       components {
+        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+         m_sTaskTitle "E"
+        }
+       }
+       coords 2.965 0.901 -16.312
+       {
+        GenericEntity SlotMoveTo2 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+          }
+         }
+         coords 0 0 0
+        }
+       }
+      }
+      LayerTaskMoveD {
+       components {
+        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+         m_sTaskTitle "D"
+        }
+       }
+       coords 38.536 0.628 -54.967
+       {
+        GenericEntity SlotMoveTo12 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+          }
+         }
+         coords 0 0 0
+        }
+       }
+      }
+      LayerTaskMoveF {
+       components {
+        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+         m_sTaskTitle "F"
+        }
+       }
+       coords -29.31 -2.467 32.188
+       {
+        GenericEntity SlotMoveTo13 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+          }
+         }
+         coords 0 0 0
+        }
+       }
+      }
+     }
+    }
+   }
+   Sector1 {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      Enabled 0
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionRandomAction "{65A51A743B818E48}" {
+        m_aActions {
+         SCR_ScenarioFrameworkCreateVariable "{65A51A7437D45D4E}" {
+          m_sVariableName "varA"
+          m_sVariableValue "True"
+         }
+         SCR_ScenarioFrameworkCreateVariable "{65A51A7431549649}" {
+          m_sVariableName "varB"
+          m_sVariableValue "True"
+         }
+         SCR_ScenarioFrameworkCreateVariable "{65A51A7432EEFA69}" {
+          m_sVariableName "varC"
+          m_sVariableValue "True"
+         }
+        }
+       }
+      }
+     }
+    }
+    coords 39.349 4.179 -66.923
+    angleY 32.549
+    {
+     $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+      LayerTaskMoveA {
+       components {
+        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+         m_aActivationConditions {
+          SCR_ScenarioFrameworkVariableValueCondition "{65A51A767BAF3906}" {
+           m_sVariableName "varA"
+           m_sVariableValueToCheck "True"
+          }
+          SCR_ScenarioFrameworkVariableValueCondition "{65A51A764CA6C409}" {
+           m_sVariableName "varB"
+           m_sVariableValueToCheck "False"
+          }
+          SCR_ScenarioFrameworkVariableValueCondition "{65A51A7649B56090}" {
+           m_sVariableName "varC"
+           m_sVariableValueToCheck "False"
+          }
+         }
+         m_aActivationActions {
+          SCR_ScenarioFrameworkCreateVariable "{65A51A696E8469FC}" {
+           m_sVariableName "varA"
+           m_sVariableValue "True"
+          }
+          SCR_ScenarioFrameworkCreateVariable "{65A51A696420E3B7}" {
+           m_sVariableName "varA"
+           m_sVariableValue "False"
+          }
+         }
+         m_sTaskTitle "A"
+        }
+       }
+       coords 3.742 -6.217 36.787
+       {
+        GenericEntity SlotMoveToA : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+            }
+           }
+           m_aActionsOnFinished {
+            SCR_ScenarioFrameworkSetVariable "{65A51A7E6F0BB4EF}" {
+             m_sVariableName "varA"
+             m_sVariableValue "False"
+            }
+            SCR_ScenarioFrameworkActionSpawnObjectBasedOnDistance "{65A51A728059C75F}" {
+             m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65A51A725863B81E}" {
+              m_sLayerName "SlotZ"
+             }
+             m_iMaxDistance 100
+             m_aListOfObjects {
+              "LayerTaskMoveB" "LayerTaskMoveC"
+             }
+             m_eActivationType SAME_AS_PARENT
+            }
+           }
+          }
+         }
+         coords -0.001 0 0
+        }
+       }
+      }
+      LayerTaskMoveB {
+       components {
+        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+         m_aActivationConditions {
+          SCR_ScenarioFrameworkVariableValueCondition "{65A51A68A5B8BC07}" {
+           m_sVariableName "varA"
+           m_sVariableValueToCheck "True"
+          }
+         }
+         m_aActivationActions {
+          SCR_ScenarioFrameworkCreateVariable "{65A51A698CD1749F}" {
+           m_sVariableName "varB"
+           m_sVariableValue "True"
+          }
+          SCR_ScenarioFrameworkCreateVariable "{65A51A691D6FCBC3}" {
+           m_sVariableName "varB"
+           m_sVariableValue "False"
+          }
+         }
+         m_sTaskTitle "B"
+        }
+       }
+       coords -7.305 0.348 -16.781
+       {
+        GenericEntity SlotMoveToB : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+            }
+           }
+           m_aActionsOnFinished {
+            SCR_ScenarioFrameworkSetVariable "{65A51A7E6F0BB4EF}" {
+             m_sVariableName "varB"
+             m_sVariableValue "False"
+            }
+            SCR_ScenarioFrameworkActionSpawnObjectBasedOnDistance "{65A51A728059C75F}" {
+             m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65A51A725863B81E}" {
+              m_sLayerName "SlotZ"
+             }
+             m_iMinDistance 0
+             m_iMaxDistance 100
+             m_aListOfObjects {
+              "LayerTaskMoveA" "LayerTaskMoveC"
+             }
+             m_eActivationType SAME_AS_PARENT
+            }
+           }
+          }
+         }
+         coords 0 0 0.001
+        }
+       }
+      }
+      LayerTaskMoveC {
+       components {
+        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+         m_aActivationConditions {
+          SCR_ScenarioFrameworkVariableValueCondition "{65A51A69D073DDDE}" {
+           m_sVariableName "varC"
+           m_sVariableValueToCheck "True"
+          }
+         }
+         m_aActivationActions {
+          SCR_ScenarioFrameworkCreateVariable "{65A51A69A261F7A4}" {
+           m_sVariableName "varC"
+           m_sVariableValue "True"
+          }
+          SCR_ScenarioFrameworkCreateVariable "{65A51A693E3C2EEA}" {
+           m_sVariableName "varC"
+           m_sVariableValue "False"
+          }
+         }
+         m_sTaskTitle "C"
+        }
+       }
+       coords 62.846 -12.151 -28.641
+       angleX 0.563
+       angleY 0.042
+       angleZ 4.243
+       {
+        GenericEntity SlotMoveToC : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+            }
+           }
+           m_aActionsOnFinished {
+            SCR_ScenarioFrameworkSetVariable "{65A51A7E6F0BB4EF}" {
+             m_sVariableName "varC"
+             m_sVariableValue "False"
+            }
+            SCR_ScenarioFrameworkActionSpawnObjectBasedOnDistance "{65A51A728059C75F}" {
+             m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65A51A725863B81E}" {
+              m_sLayerName "SlotZ"
+             }
+             m_iMinDistance 0
+             m_iMaxDistance 100
+             m_aListOfObjects {
+              "LayerTaskMoveA" "LayerTaskMoveB"
+             }
+             m_eActivationType SAME_AS_PARENT
+            }
+           }
+          }
+         }
+         coords -0.001 0 0
+        }
+       }
+      }
+      LayerTaskMove2 {
+       coords 0 0 0
+      }
+     }
+    }
+   }
+   Logics {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      Enabled 0
+     }
+    }
+    coords 0 0 0
+    {
+     SCR_ScenarioFrameworkLogicCounter LogicCounter5 : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
+      coords 0 0 0
+      m_aInputs {
+       SCR_ScenarioFrameworkLogicInput "{65A3400EA556C297}" {
+        m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{65A3400EA70E09FA}" {
+        }
+       }
+      }
+      m_aActions {
+       SCR_ScenarioFrameworkActionShowPopupNotification "{65A49AB1AA7D6647}" {
+        m_sTitle "Finished!"
+        m_sText "Good Job, Bob!"
+        m_sFactionKey "US"
+       }
+       SCR_ScenarioFrameworkActionSpawnObjects "{65A4ADCD529A7F8A}" {
+        m_aNameOfObjectsToSpawnOnActivation {
+         "Sector2"
+        }
+       }
+      }
+      m_iCountTo 3
+      m_aOnIncreaseActions {
+       SCR_ScenarioFrameworkActionShowPopupNotification "{65A49ABFBF20CA21}" {
+        m_sTitle "Counter Increased +1"
+        m_sFactionKey "US"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{65A51A7B06F2F9BE}" {
+        m_Getter SCR_ScenarioFrameworkGetLastFinishedTaskEnity "{65A51A7B1E8FDDEB}" {
+        }
+       }
+      }
+     }
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      SlotA {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{3D7FB651C9C11CCA}Prefabs/Vegetation/Plant/c_branches_debris_sparse_01.et"
+        }
+       }
+       coords 62.294 -2.037 -37.926
+       angleY 32.549
+      }
+      SlotC {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{3D7FB651C9C11CCA}Prefabs/Vegetation/Plant/c_branches_debris_sparse_01.et"
+        }
+       }
+       coords 76.914 -7.972 -124.877
+       angleX -2.187
+       angleY 32.387
+       angleZ 0.971
+      }
+      SlotB {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{3D7FB651C9C11CCA}Prefabs/Vegetation/Plant/c_branches_debris_sparse_01.et"
+        }
+       }
+       coords 24.162 4.527 -77.138
+       angleY 32.549
+      }
+     }
+    }
+   }
+  }
+  GenericEntity SlotZ : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+   components {
+    SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+     m_sObjectToSpawn "{3D7FB651C9C11CCA}Prefabs/Vegetation/Plant/c_branches_debris_sparse_01.et"
+    }
+   }
+   coords 39.349 4.177 -66.923
+   angleY 32.549
+  }
+ }
+}
 Projectile : "{D6F93E839C9B1955}Prefabs/Weapons/Ammo/Ammo_Shell_82mm_HE_IED.et" {
  coords 6424.087 162.031 6476.657
 }

@@ -1,0 +1,130 @@
+GenericEntity SlotWaypoints : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+   m_bShowDebugShapesDuringRuntime 1
+   m_bShowDebugShapesInWorkbench 1
+   m_iDynamicDespawnRange 500
+   m_sTriggerResource "{9DB5EBFFEC1A54B4}Prefabs/Systems/ScenarioFramework/Triggers/TriggerAnyPlayerSlow.et"
+   m_fAreaRadius 200
+   m_aTriggerActions {
+    SCR_ScenarioFrameworkActionWaitAndExecute "{64D2B742C17A7F55}" {
+     m_iDelayInSeconds 3
+     m_aActions {
+      SCR_ScenarioFrameworkActionSpawnObjects "{64D2B742D9533A91}" {
+       m_aNameOfObjectsToSpawnOnActivation {
+        "Patrol1"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ coords 10224.948 258.353 2594.901
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   Patrol1 {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords 0 0 0
+    {
+     GenericEntity SlotAI10 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "USSR"
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionAI "{64D0AA872A091D23}" {
+          m_aAIActions {
+           SCR_ScenarioFrameworkAIActionDisableLOD "{64D0AA873F4FB2A1}" {
+           }
+          }
+         }
+        }
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType GROUP
+        m_aIncludedEditableEntityLabels {
+         70 71 72
+        }
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{64D0AA87E7287210}" {
+         m_aLayerName {
+          "SlotWaypoint13"
+         }
+        }
+       }
+      }
+      coords -50.274 8.228 8.823
+     }
+    }
+   }
+   PatrolWPs {
+    coords 0 0 0
+    {
+     GenericEntity PatrolWaypoints : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+      coords 0 0 0
+      {
+       $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+        SlotWaypoint14 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{64D0AA87BABF0A1C}" {
+            m_sWaypointPrefab "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et"
+           }
+          }
+         }
+         coords -38.949 10.048 50.5
+        }
+        SlotWaypoint15 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{64D0AA87BABF0A1C}" {
+            m_sWaypointPrefab "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et"
+           }
+          }
+         }
+         coords 58.992 2.351 9.582
+        }
+        SlotWaypoint16 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{64D0AA87BABF0A1C}" {
+            m_sWaypointPrefab "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et"
+           }
+          }
+         }
+         coords 16.874 2.01 -37.498
+        }
+        SlotWaypoint17 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{64D0AA87BABF0A1C}" {
+            m_sWaypointPrefab "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et"
+           }
+          }
+         }
+         coords -49.233 9.148 -18.622
+        }
+       }
+      }
+     }
+     GenericEntity SlotWaypoint13 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{64D0AA8658F0DC95}" {
+         m_aLayersWithWaypointsToCycle {
+          "PatrolWaypoints"
+         }
+         m_bUseRandomOrder 1
+        }
+       }
+      }
+      coords 0 -1.721 0
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,56 @@
+GenericEntity : "{5CF603986376EAA9}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "#AR-Intel_Name"
+     Description "#AR-Intel_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.25
+     SizeSetupStrategy Size
+     ItemDimensions 10 1 10
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{65AE060AC012E274}" {
+      CameraOrbitAngles 0 0 0
+      CameraDistanceToItem 0.4
+      ItemRenderRotation -90 -90 -90
+     }
+    }
+    m_bRefundable 0
+   }
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   ActionContexts {
+    UserActionContext "{508AC2ABEC97066C}" {
+     Position PointInfo "{508AC2ABEAC4A0F5}" {
+      Offset 0 0.0216 0
+     }
+     LineOfSightCheck 1
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{51EC842E3A187379}" {
+    }
+    SCR_BaseAudioScriptedUserAction "{65AE060A0A53A288}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{65AE060A07A7DCDB}" {
+      Name "Open Intel"
+     }
+     ActionTitle "OpenIntel"
+     Duration 1
+     m_bLowerWeaponOnUse 1
+     m_bSameVehicleOnly 0
+    }
+   }
+  }
+  GadgetGamepadEffectsManagerComponent "{61E103D57E322BB5}" {
+   Enabled 0
+  }
+ }
+ coords 0 0 0
+}

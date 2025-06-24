@@ -1,246 +1,93 @@
-GenericEntity AmbushVehicle : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
- coords 11186.049 18.817 11765.843
+GenericEntity AlternativeIntelTask : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 7505.612 170.931 4321.877
  {
-  GenericEntity AmbushVehicle1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-   coords -0.259 -0.004 1.426
+  GenericEntity IntelDiscoverySelector1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords -1324.848 -67.72 605.738
    {
-    $grp GenericEntity : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
-     AmbushTaskA1 {
-      coords 194.006 -1.503 86.452
-      {
-       GenericEntity AmbushTaskSlotA1 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
-        components {
-         SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-          m_aPlugins {
-           SCR_ScenarioFrameworkPluginTrigger "{659962AC266AB634}" {
-            m_fAreaRadius 15
-            m_sActivatedByThisFaction "US"
-            m_fActivationCountdownTimer 15
-            m_bNotificationEnabled 1
-            m_sPlayerActivationNotificationTitle "Prepare your ambush"
-            m_aFinishedActions {
-             SCR_ScenarioFrameworkActionWaitAndExecute "{659962AC0AEFD75B}" {
-              m_iDelayInSeconds 1
-              m_aActions {
-               SCR_ScenarioFrameworkActionChangeTaskState "{659962A8FB94B92B}" {
-                m_Getter SCR_ScenarioFrameworkGetTask "{659962A8F4BC668C}" {
-                 m_sLayerTaskName "AmbushTaskA1"
-                }
-               }
-               SCR_ScenarioFrameworkActionSpawnObjects "{659962AC062D9787}" {
-                m_aNameOfObjectsToSpawnOnActivation {
-                 "AmbushTaskB1" "AmbushTargets1"
-                }
-               }
-              }
-             }
-            }
-           }
-          }
-          m_sObjectToSpawn "{DA58C3DF4455555E}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkTrigger.et"
-          m_sTaskTitle "Operation Anvil"
-          m_sTaskDescription "Situation: Battalion S-2 has time sensitive intelligence that the person know as \"The Bomb Maker\" will be moving a civilian car loaded with explosives. "\
-          " "\
-          "Mission: Conduct an ambush on the vehicle and kill the bomb maker and destroy the car. "\
-          ""\
-          "Execution: "\
-          "1. Conduct a map recon of the area. "\
-          "2. Move to the ambush area and setup. "\
-          "3. Ensure you stay in the setup ambush area."
-         }
-        }
-        coords 0 0 0
-       }
+    GenericEntity IntelDiscoveryA1 : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+     components {
+      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
+       m_sTaskTitle "Intel Discovery Task"
+       m_sTaskDescription "Intel was found and led you here. "
       }
      }
-     AmbushTaskB1 {
-      components {
-       SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
-        m_eActivationType ON_TRIGGER_ACTIVATION
-       }
-      }
-      coords 194.006 -1.505 86.452
-      {
-       GenericEntity AmbushTaskSlotB1 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
-        components {
-         SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-          m_aPlugins {
-           SCR_ScenarioFrameworkPluginTrigger "{659ADEA29C73104A}" {
-            m_fAreaRadius 100
-            m_aCustomTriggerConditions {
-             SCR_ScenarioFrameworEntitykDamageStateCondition "{659CA104D0FB5424}" {
-              m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{659CA1042EA5A88C}" {
-               m_sLayerName "AmbushVeh1"
-              }
-              m_eDamageState DESTROYED
-             }
-             SCR_ScenarioFrameworEntitykDamageStateCondition "{659CA104D220426B}" {
-              m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{659CA1043BA3B9E1}" {
-               m_sLayerName "AmbushAI1"
-              }
-              m_eDamageState DESTROYED
-             }
-            }
-            m_aFinishedActions {
-             SCR_ScenarioFrameworkActionChangeTaskState "{659CA1076D276066}" {
-              m_Getter SCR_ScenarioFrameworkGetTask "{659CA1076E5C0C65}" {
-               m_sLayerTaskName "AmbushTaskB1"
-              }
-             }
-            }
-           }
-          }
-          m_sObjectToSpawn "{DA58C3DF4455555E}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkTrigger.et"
-          m_sTaskTitle "Operation Hammer"
-          m_sTaskDescription "Situation: Once you establish the ambush site, wait for the target."\
-          " "\
-          "Mission: Conduct the ambush on the target, kill the bomb maker and destroy the car. "\
-          ""\
-          "Execution: "\
-          "1. Move to concealed positions. Ensure you are not seen. "\
-          "2. Wait for the target to get in the kill zone. "\
-          "3. Execute the ambush. "\
-          "4. Verify death. "
-         }
-        }
-        coords 0 0 0
-       }
+     coords -275.29 -14.078 411.084
+     {
+      GenericEntity IntelDiscoverSlot1 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
+       coords 0 0 0
       }
      }
     }
-    GenericEntity AmbushTargets1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   }
+  }
+  GenericEntity LayerTaskDeliver1 : "{88821DCA414AF4C7}Prefabs/Systems/ScenarioFramework/Components/LayerTaskDeliver.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+     m_sTaskTitleUpdated "#AR-CombatScenario_Intel_Title"
+     m_sTaskDescriptionUpdated "#AR-CombatScenario_Intel_Description_A"
+     m_iIntelMapMarkerUpdateDelay 5
+    }
+   }
+   coords 0 0 -0.001
+   {
+    GenericEntity SlotDelivery4 : "{4C2EF5C1E53FE511}Prefabs/Systems/ScenarioFramework/Components/SlotDelivery.et" {
      components {
-      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-       m_eActivationType ON_TRIGGER_ACTIVATION
+      SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+       m_aAssociatedTaskLayers {
+        "LayerTaskDeliver1"
+       }
+      }
+     }
+     coords -28.812 -6.392 -57.956
+    }
+    GenericEntity SlotPick3 : "{9F70B00322910AED}Prefabs/Systems/ScenarioFramework/Components/SlotPick.et" {
+     components {
+      SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+       m_aActivationActions {
+        SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65B0B4BC271245E8}" {
+         m_iMaxNumberOfActivations 1
+         m_iActionID 0
+         m_bVisible 0
+        }
+        SCR_ScenarioFrameworkActionOnUserActionEvent "{65B0B4BC3A1C9F39}" {
+         m_iMaxNumberOfActivations 1
+         m_iActionID 1
+         m_aActions {
+          SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65B0B4B34E3A168D}" {
+           m_iActionID 1
+           m_bVisible 0
+          }
+          SCR_ScenarioFrameworkActionShowHint "{65AE060B8791CFA3}" {
+           m_iMaxNumberOfActivations 1
+           m_sTitle "SItuation Report"
+           m_sText "Mechanized units are moving to sector B for refueling and rearming. "
+           m_sFactionKey "US"
+          }
+          SCR_ScenarioFrameworkActionWaitAndExecute "{65AE060DA79E1929}" {
+           m_iMaxNumberOfActivations 1
+           m_iDelayInSeconds 16
+           m_iDelayInSecondsMax 0
+           m_aActions {
+            SCR_ScenarioFrameworkActionSpawnObjects "{65AE060DBF36BF8B}" {
+             m_iMaxNumberOfActivations 1
+             m_aNameOfObjectsToSpawnOnActivation {
+              "IntelDiscoveryA1"
+             }
+            }
+            SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65B0B4B1F4D84EC7}" {
+             m_iMaxNumberOfActivations 1
+             m_iActionID 0
+            }
+           }
+          }
+         }
+        }
+       }
+       m_sObjectToSpawn "{CE22E2FB6274128F}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelDossier.et"
       }
      }
      coords 0 0 0
-     {
-      GenericEntity AmbushAIWP1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-       coords 0 0 0
-       {
-        $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-         AmbushCycle1 {
-          components {
-           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-            m_bShowDebugShapesInWorkbench 0
-            m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{659962AF6CE05894}" {
-             m_bUseRandomOrder 1
-            }
-           }
-          }
-          coords 0 0 0
-         }
-         AmbushPatrolWPA1 {
-          components {
-           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-            m_bShowDebugShapesInWorkbench 0
-            m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{659962AF6546F38B}" {
-             m_fPriorityLevel 2000
-            }
-           }
-          }
-          coords -275.664 4.781 10.675
-         }
-         AmbushPatrolWPB1 {
-          components {
-           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-            m_bShowDebugShapesInWorkbench 0
-            m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{659962AF6546F38B}" {
-             m_fPriorityLevel 2000
-            }
-           }
-          }
-          coords -0.828 -3.804 252.09
-          angleY 119.841
-         }
-         AmbushPatrolWPC1 {
-          components {
-           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-            m_bShowDebugShapesInWorkbench 0
-            m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{659962AF6546F38B}" {
-             m_fPriorityLevel 2000
-            }
-           }
-          }
-          coords 193.811 -1.099 8.833
-          angleY 119.841
-         }
-         AmbushPatrolWPD1 {
-          components {
-           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-            m_bShowDebugShapesInWorkbench 0
-            m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{659962AF6546F38B}" {
-             m_fPriorityLevel 2000
-            }
-           }
-          }
-          coords 74.923 16.457 -306.454
-          angleY 119.841
-         }
-        }
-       }
-      }
-      GenericEntity AmbushAI1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sFactionKey "FIA"
-         m_aActivationActions {
-          SCR_ScenarioFrameworkActionAI "{659A816C1A318B5D}" {
-           m_aAIActions {
-            SCR_ScenarioFrameworkAIActionDisableLOD "{659A816C169B39D9}" {
-            }
-           }
-          }
-         }
-         m_bRandomizePerFaction 1
-         m_eEntityCatalogType CHARACTER
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{659962AE41A225E1}" {
-          m_aLayerName {
-           "AmbushGetIn1" "AmbushCycle1" "AmbushAIWP1"
-          }
-         }
-        }
-       }
-       coords -213.658 6.245 -82.503
-       angleY -174.594
-      }
-      GenericEntity AmbushVeh1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_sFactionKey "CIV"
-         m_aActivationActions {
-          SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{659A816C075B69EB}" {
-           m_fMaxCruiseSpeed 30
-          }
-          SCR_ScenarioFrameworkActionSetFuelConsumption "{659CA10726F75D67}" {
-           m_fFuelConsumption 0
-           m_fFuelConsumptionIdle 0
-          }
-         }
-         m_bRandomizePerFaction 1
-         m_eEntityCatalogType VEHICLE
-         m_aIncludedEditableEntityLabels {
-          50
-         }
-        }
-       }
-       coords -214.543 6.499 -87.582
-       angleY -176.609
-      }
-      GenericEntity AmbushGetIn1 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-       components {
-        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{659962AF17799DF4}" {
-          m_fCompletionRadius 10
-          m_fPriorityLevel 2000
-         }
-        }
-       }
-       coords -214.505 6.496 -87.609
-       angleY -178.151
-      }
-     }
     }
    }
   }

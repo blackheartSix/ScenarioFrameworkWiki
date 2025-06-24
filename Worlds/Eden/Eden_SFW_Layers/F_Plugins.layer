@@ -47,7 +47,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              }
             }
            }
-           m_sObjectToSpawn "{2735E03F8148E792}Prefabs/Vehicles/Wheeled/LAV25/LAV25_MOBILETOC.et"
+           m_sObjectToSpawn "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
           }
          }
          coords 0 0 0
