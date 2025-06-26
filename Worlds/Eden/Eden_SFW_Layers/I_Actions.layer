@@ -646,4 +646,156 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    }
   }
  }
+ Actions_Variables {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_aActivationActions {
+     SCR_ScenarioFrameworkCreateVariable "{65B2DBA6DA2FC7D2}" {
+      m_sVariableName "varGuardPresent"
+      m_sVariableValue "True"
+     }
+    }
+    m_iDynamicDespawnRange 50
+   }
+  }
+  coords 7548.585 2.413 6701.001
+  angleY 123.207
+  {
+   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    LayerAA {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_iDynamicDespawnRange 35
+      }
+     }
+     coords 0 0 0
+     {
+      GenericEntity SlotTrigger4 : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+       components {
+        SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+           m_fAreaRadius 50
+           m_eActivationPresence ANY_CHARACTER
+           m_aCustomTriggerConditions {
+            SCR_ScenarioFrameworkVariableValueCondition "{65B2DBA6EE792439}" {
+             m_sVariableName "varGuardPresent"
+             m_sVariableValueToCheck "False"
+            }
+           }
+           m_fUpdateRate 5
+           m_aEntityEnteredActions {
+            SCR_ScenarioFrameworkSetVariable "{65B2DBA63CAE99F6}" {
+             m_sVariableName "varGuardPresent"
+             m_sVariableValue "True"
+            }
+           }
+           m_aEntityLeftActions {
+            SCR_ScenarioFrameworkSetVariable "{65B2DBA60F508BCF}" {
+             m_sVariableName "varGuardPresent"
+             m_sVariableValue "False"
+            }
+           }
+          }
+         }
+         m_aTriggerActions {
+          SCR_ScenarioFrameworkActionWaitAndExecute "{65B2DBB9B688A900}" {
+           m_iDelayInSeconds 5
+           m_aActions {
+            SCR_ScenarioFrameworkActionSpawnObjects "{65B2DBB98FE4BE84}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "LayerAB"
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+       coords 0 0 0
+      }
+      GenericEntity GuardPatrolWPS : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+         SlotWaypoint1 {
+          components {
+           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+            m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{65B2DBA7FAF1E682}" {
+             m_bUseRandomOrder 1
+            }
+           }
+          }
+          coords 0 0 0
+         }
+         SlotWaypoint3 {
+          components {
+           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+            m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65B2DBA7F2AC2AFC}" {
+             m_fPriorityLevel 2000
+            }
+           }
+          }
+          coords -37.32 -0.244 13.253
+         }
+         SlotWaypoint9 {
+          components {
+           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+            m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65B2DBA7F2AC2AFC}" {
+             m_fPriorityLevel 2000
+            }
+           }
+          }
+          coords 58.453 0.843 -41.183
+         }
+         SlotWaypoint23 {
+          components {
+           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+            m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65B2DBA7F2AC2AFC}" {
+             m_fPriorityLevel 2000
+            }
+           }
+          }
+          coords 95.86 1.495 -48.9
+         }
+        }
+       }
+      }
+      GenericEntity GuardAA : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65B2DBA73AF044ED}" {
+          m_aLayerName {
+           "GuardPatrolWPS"
+          }
+         }
+        }
+       }
+       coords 0 0 0
+      }
+     }
+    }
+    LayerAB {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
+     coords -60.393 0.413 2.296
+     {
+      GenericEntity POWAB : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{2F912ED6E399FF47}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Unarmed.et"
+        }
+       }
+       coords 23.924 -0.271 -6.022
+      }
+     }
+    }
+   }
+  }
+ }
 }

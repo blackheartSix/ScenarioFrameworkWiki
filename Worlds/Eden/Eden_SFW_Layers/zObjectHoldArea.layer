@@ -5,62 +5,6 @@ SCR_DoorOpenerEntity {
 GenericEntity : "{377EB906F591E4BA}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Weapons_US.et" {
  coords 4918.193 28.594 11882.133
 }
-GenericEntity IntelDossiers1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
- components {
-  SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-   Enabled 0
-  }
- }
- coords 7505.612 170.931 4321.876
- {
-  GenericEntity IntelDossierA1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-   components {
-    SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-     m_bShowDebugShapesInWorkbench 0
-     m_aActivationActions {
-      SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65B0B4B194FFE2FB}" {
-       m_iMaxNumberOfActivations 1
-       m_bVisible 0
-      }
-      SCR_ScenarioFrameworkActionOnUserActionEvent "{65AE060A5847F3B0}" {
-       m_iMaxNumberOfActivations 1
-       m_iActionID 1
-       m_aActions {
-        SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65B0B4B34E3A168D}" {
-         m_iActionID 1
-         m_bVisible 0
-        }
-        SCR_ScenarioFrameworkActionShowHint "{65AE060B8791CFA3}" {
-         m_iMaxNumberOfActivations 1
-         m_sTitle "SItuation Report"
-         m_sText "Mechanized units are moving to sector B for refueling and rearming. "
-         m_sFactionKey "US"
-        }
-        SCR_ScenarioFrameworkActionWaitAndExecute "{65AE060DA79E1929}" {
-         m_iMaxNumberOfActivations 1
-         m_iDelayInSeconds 16
-         m_aActions {
-          SCR_ScenarioFrameworkActionSpawnObjects "{65AE060DBF36BF8B}" {
-           m_iMaxNumberOfActivations 1
-           m_aNameOfObjectsToSpawnOnActivation {
-            "IntelDiscoveryA1"
-           }
-          }
-          SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65B0B4B1F4D84EC7}" {
-           m_iMaxNumberOfActivations 1
-          }
-         }
-        }
-       }
-      }
-     }
-     m_sObjectToSpawn "{CE22E2FB6274128F}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelDossier.et"
-    }
-   }
-   coords 0 0 0
-  }
- }
-}
 GenericEntity Three_Body_Problem : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  coords 10904.847 21.682 8753.007
  {

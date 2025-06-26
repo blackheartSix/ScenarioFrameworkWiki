@@ -39,8 +39,32 @@ SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 7114.536 102.942 6284.017
 }
-SCR_FactionManager FactionManager_USxUSSR1 : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
- coords 6500 161.875 6500
+SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+ components {
+  SCR_FactionAliasComponent "{65B2DBB1D1A549A4}" {
+   m_aFactionAliases {
+    SCR_ScenarioFrameworkFactionAliasConfig "{65B2DBB1D220C5D6}" {
+     m_sAlias "REDFOR"
+     m_sFactionKey "USSR"
+    }
+    SCR_ScenarioFrameworkFactionAliasConfig "{65B2DBB12AE61B5A}" {
+     m_sAlias "REDFOR"
+     m_sFactionKey "FIA"
+    }
+    SCR_ScenarioFrameworkFactionAliasConfig "{65B2DBB17EAAAE28}" {
+     m_sAlias "BLUFOR"
+     m_sFactionKey "US"
+    }
+   }
+  }
+ }
+ coords 6897.092 123.43 6628.313
+ Factions {
+  SCR_Faction "{56DEAC40D2DBC8B1}" {
+   m_bIsPlayable 1
+  }
+ }
+ m_bCanChangeFactionsPlayable 0
 }
 RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
  coords 7114.536 103.058 6283.017
