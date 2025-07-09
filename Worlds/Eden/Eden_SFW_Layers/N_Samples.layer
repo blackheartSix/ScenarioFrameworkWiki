@@ -1,3 +1,346 @@
+GenericEntity Kill_Entity_RemoteDetonation1 : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+ coords 9917.521 296.576 2598.855
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   Step2_SovietGuard1 {
+    coords 0 0 0
+    {
+     GenericEntity SovietGuardWPS1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+      coords 0 0 0
+      {
+       GenericEntity SovietGuardCycleWPS1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+        coords 0 0 0
+        {
+         GenericEntity SovietGuardCycleWPA1 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+          components {
+           SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+            m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{65D2D22800858659}" {
+             m_fCompletionRadius 5
+             m_aLayersWithWaypointsToCycle {
+              "SovietGuardWPS1"
+             }
+             m_bUseRandomOrder 1
+            }
+           }
+          }
+          coords 5.396 0.236 22.292
+         }
+        }
+       }
+       $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+        SovietWPA1 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65D2D2281AA8D8EC}" {
+           }
+          }
+         }
+         coords 7.166 -0.438 -16.239
+        }
+        SovietWPB1 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65D2D2281AA8D8EC}" {
+           }
+          }
+         }
+         coords -3.042 0.183 19.652
+        }
+        SovietWPC1 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointWait "{65D2D23D8303B28B}" {
+            m_aSettings {
+             SCR_AICharacterMovementSpeedSetting "{65D2D23D69FC8FE8}" {
+              m_eCause ALWAYS
+              m_eSpeed WALK
+             }
+            }
+            m_fHoldingTime 10
+           }
+          }
+         }
+         coords 18.911 0.53 14.476
+        }
+        SovietWPD1 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65D2D2281AA8D8EC}" {
+           }
+          }
+         }
+         coords 24.317 0.226 -13.189
+        }
+       }
+      }
+     }
+     GenericEntity SovietGuardA1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionAI "{65D2D2298401989F}" {
+          m_Getter SCR_ScenarioFrameworkGetLayerBase "{65D2D2299E873593}" {
+           m_sLayerBaseName "SovietGuardA1"
+          }
+          m_aAIActions {
+           SCR_ScenarioFrameworkAIActionDisableLOD "{65D2D2298065272C}" {
+           }
+           SCR_ScenarioFrameworkAIActionOnThreatStateChanged "{65D31CAB9D71623D}" {
+            m_eAIThreatState ALERTED
+            m_aActionsOnThreatStateChanged {
+             SCR_ScenarioFrameworkActionChangeTaskState "{65D32DBD047F8CA3}" {
+              m_Getter SCR_ScenarioFrameworkGetTask "{65D32DBD62B6E2D9}" {
+               m_sLayerTaskName "Kill_Entity_RemoteDetonation1"
+              }
+              m_eTaskState CANCELLED
+             }
+            }
+           }
+           SCR_ScenarioFrameworkAIActionOnThreatStateChanged "{65D31CAB9E57CC8D}" {
+            m_aActionsOnThreatStateChanged {
+             SCR_ScenarioFrameworkActionChangeTaskState "{65D32DBD6703A5B0}" {
+              m_Getter SCR_ScenarioFrameworkGetTask "{65D32DBD724C12FC}" {
+               m_sLayerTaskName "Kill_Entity_RemoteDetonation1"
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        m_sObjectToSpawn "{6C1FFF78CD4E4ADA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Spetsnaz/Suppressed/Character_USSR_SF_SL_S.et"
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65D2D2286E5D23E1}" {
+         m_aLayerName {
+          "SovietGuardCycleWPA1"
+         }
+        }
+       }
+      }
+      coords 19.144 0.142 9.542
+      angleY 164.33
+     }
+    }
+   }
+   Step3_SovietOfficer1 {
+    coords -8.167 0.233 5.008
+    angleY 159.513
+    {
+     GenericEntity SovietOfficerTrigger1 : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+          m_fAreaRadius 10
+          m_aPrefabFilter {
+           SCR_ScenarioFrameworkPrefabFilter "{618672E7FF8E940C}" {
+            m_sSpecificPrefabName "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+           }
+          }
+         }
+        }
+        m_aTriggerActions {
+         SCR_ScenarioFrameworkActionCountInventoryItemsAndExecuteAction "{618672E7D04D431A}" {
+          m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{618672E7CE5E760C}" {
+           m_sLayerName "StaffCar1"
+          }
+          m_aPrefabFilter {
+           SCR_ScenarioFrameworkPrefabFilterCount "{618672E7DABA090E}" {
+            m_sSpecificPrefabName "{E155A472A144C7AC}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112_Remote.et"
+            m_bIncludeChildren 1
+           }
+          }
+          m_aActionsToExecute {
+           SCR_ScenarioFrameworkActionWaitAndExecute "{65D2D2084C6EE9C6}" {
+            m_iDelayInSeconds 30
+            m_iDelayInSecondsMax 60
+            m_aActions {
+             SCR_ScenarioFrameworkActionSpawnObjects "{65D2D2084A606D56}" {
+              m_aNameOfObjectsToSpawnOnActivation {
+               "SovietOfficer1"
+              }
+             }
+             SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65D2D20E981A9CDC}" {
+              m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65D2D20E96990DDE}" {
+               m_sLayerName "RemoteDetonator1"
+              }
+              m_iActionID 6
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      coords -1.884 0.012 -2.973
+      angleY -159.513
+     }
+     GenericEntity SovietOfficerWPS1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+      coords 0 0 0
+      {
+       $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+        SovietOfficerWPA1 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65D2D23FA94F3CD3}" {
+            m_fPriorityLevel 2000
+           }
+          }
+         }
+         coords 0 0 0
+        }
+        SovietOfficerWPB1 {
+         components {
+          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+           m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65D2D233547A6AA8}" {
+            m_fPriorityLevel 2000
+           }
+          }
+         }
+         coords 1598.175 -132.848 -2509.694
+        }
+       }
+      }
+     }
+     GenericEntity SovietOfficer1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionAI "{65D2D23E65ABFBEE}" {
+          m_aAIActions {
+           SCR_ScenarioFrameworkAIAddWaypoint "{65D2D23E60142FD7}" {
+            m_Getter SCR_ScenarioFrameworkGetLayerBase "{65D2D23E7FDA0F62}" {
+             m_sLayerBaseName "SovietOfficerWPA1"
+            }
+            m_bAddOnTopOfQueue 1
+            m_bClearPreviousWaypoints 1
+           }
+           SCR_ScenarioFrameworkAIActionOnWaypointCompleted "{65D2D23C6B169F99}" {
+            m_Getter SCR_ScenarioFrameworkGetLayerBase "{65D2D23C654E5C93}" {
+             m_sLayerBaseName "SovietOfficerWPA1"
+            }
+            m_aActionsOnWaypointCompleted {
+             SCR_ScenarioFrameworkActionAI "{65D2D230B65B67DA}" {
+              m_aAIActions {
+               SCR_ScenarioFrameworkAIAddWaypoint "{65D2D2308ED87DF5}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65D2D230841EFD8C}" {
+                 m_sLayerBaseName "SovietOfficerWPB1"
+                }
+                m_bAddOnTopOfQueue 1
+                m_bClearPreviousWaypoints 1
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        m_sObjectToSpawn "{5117311FB822FD1F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Officer.et"
+       }
+      }
+      coords -17.865 0.641 -6.787
+      angleY 85.179
+     }
+     GenericEntity StaffCar1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{65D2D230A598F508}" {
+          m_fMaxCruiseSpeed 35
+         }
+        }
+        m_sObjectToSpawn "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   Step4_RemoteDetonation1 {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      RemoteDetonator1 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_bShowDebugShapesInWorkbench 0
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65D2D2225F43AA2A}" {
+           m_iActionID 2
+           m_bVisible 0
+          }
+          SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65D2D2225B65F071}" {
+           m_iActionID 3
+           m_bVisible 0
+          }
+          SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65D2D22256C444D2}" {
+           m_iActionID 4
+           m_bVisible 0
+          }
+          SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65D2D22253878CA8}" {
+           m_iActionID 5
+           m_bVisible 0
+          }
+          SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65D2D23D48C44EEB}" {
+           m_iActionID 6
+           m_bVisible 0
+          }
+          SCR_ScenarioFrameworkActionOnUserActionEvent "{65D2D22739E67DF1}" {
+           m_iActionID 6
+           m_aActions {
+            SCR_ScenarioFrameworkActionKillEntity "{65D2D22708EE2646}" {
+             m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65D2D2270743AC81}" {
+              m_sLayerName "DemoBlock1"
+             }
+             m_bRandomizeRagdoll 1
+            }
+            SCR_ScenarioFrameworkActionChangeTaskState "{65D2D23DAC416E59}" {
+             m_Getter SCR_ScenarioFrameworkGetTask "{65D2D23DAE4B839B}" {
+              m_sLayerTaskName "Kill_Entity_RemoteDetonation1"
+             }
+            }
+           }
+          }
+         }
+         m_sObjectToSpawn "{48BA788AFEC7F417}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34_Remote.et"
+        }
+       }
+       coords -5038.263 -266.869 9145.24
+      }
+      DemoBlock1 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{E155A472A144C7AC}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112_Remote.et"
+        }
+       }
+       coords -5038.542 -266.944 9145.277
+       angleY 53.122
+      }
+     }
+    }
+   }
+  }
+  GenericEntity AlphaProtocolTaskSlot1 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
+   components {
+    SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
+     m_aPlugins {
+      SCR_ScenarioFrameworkPluginTrigger "{65D2D2081F791EFA}" {
+      }
+     }
+     m_sObjectToSpawn "{DA58C3DF4455555E}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkTrigger.et"
+     m_sOverrideObjectDisplayName "Soviet Nuclear Surety Officer"
+     m_sTaskTitle "Alpha Protocol"
+     m_sTaskDescription "Task: Assassinate %1. "\
+     "Condition: As a CIA Ground Branch Operator, and given 1 block of C4, 1 Remote Detonator, 1 UAZ Staff Vehicle and a %1 in the vehicle. "\
+     "Standard: Without being detected, place 1 block of C4 in the trunk of the assigned staff car of the %1. When the %1 is in the vehicle, detonate the C4 via remote detonator, and eliminate the %1."
+    }
+   }
+   coords -8.669 0.248 7.064
+  }
+ }
+}
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  A_ON_OFF_Switch {
   components {
@@ -879,84 +1222,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         }
        }
        coords 0 0 -0.006
-      }
-     }
-    }
-   }
-  }
- }
- SpecificPrefabInTrigger {
-  components {
-   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    Enabled 0
-    m_bShowDebugShapesDuringRuntime 1
-   }
-  }
-  coords 11219.285 10.74 1637.399
-  {
-   GenericEntity LayerTaskMove7 : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
-    components {
-     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-      m_bShowDebugShapesDuringRuntime 1
-     }
-    }
-    coords -0.707 0.133 -2.065
-    {
-     GenericEntity SlotMoveTo4 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-      components {
-       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-        m_bShowDebugShapesDuringRuntime 1
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_eActivationPresence SPECIFIC_PREFAB_NAME
-          m_aCustomTriggerConditions {
-           SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
-            m_aPrefabFilter {
-             SCR_ScenarioFrameworkPrefabFilterCount "{5E2C864E2C9ACE06}" {
-              m_sSpecificPrefabName "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
-              m_bIncludeChildren 1
-              m_iPrefabCount 2
-             }
-            }
-           }
-          }
-         }
-        }
-        m_sTaskTitle "Move to Release Point"
-        m_sTaskDescription "Move in LAV-25 to convoy Release Point"
-        m_aActionsOnProgress {
-         SCR_ScenarioFrameworkActionShowHint "{5E4EB0B50C1505AF}" {
-         }
-        }
-       }
-      }
-      coords 0 0 0
-     }
-    }
-   }
-   GenericEntity Layer6 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-    coords 0 0 0
-    {
-     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-      Slot11 {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_sObjectToSpawn "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
-        }
-       }
-       coords -185.362 2.569 -96.355
-       angleX 3.984
-       angleY 58.71
-       angleZ -0.329
-      }
-      Slot13 {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_sObjectToSpawn "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
-        }
-       }
-       coords -174.11 2.786 -92.267
-       angleY 63.703
       }
      }
     }
@@ -3589,7 +3854,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        Enabled 0
       }
      }
-     coords 0 0 -0
+     coords 0 0 0
      {
       GenericEntity IntelDossierA1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
        components {

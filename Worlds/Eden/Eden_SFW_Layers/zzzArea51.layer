@@ -1,0 +1,6 @@
+GenericEntity {
+ coords 9917.522 296.576 2598.855
+}
+GenericEntity GroomLake : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 9917.522 296.576 2598.855
+}

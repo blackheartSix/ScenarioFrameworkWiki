@@ -298,4 +298,147 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    }
   }
  }
+ SpecificPrefabInTrigger {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+    m_bShowDebugShapesDuringRuntime 1
+   }
+  }
+  coords 11219.285 10.74 1637.399
+  {
+   GenericEntity LayerTaskMove7 : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+      m_bShowDebugShapesDuringRuntime 1
+     }
+    }
+    coords -0.707 0.133 -2.065
+    {
+     GenericEntity SlotMoveTo4 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_eActivationPresence SPECIFIC_PREFAB_NAME
+          m_aCustomTriggerConditions {
+           SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilterCount "{5E2C864E2C9ACE06}" {
+              m_sSpecificPrefabName "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
+              m_bIncludeChildren 1
+              m_iPrefabCount 2
+             }
+            }
+           }
+          }
+         }
+        }
+        m_sTaskTitle "Move to Release Point"
+        m_sTaskDescription "Move in LAV-25 to convoy Release Point"
+        m_aActionsOnProgress {
+         SCR_ScenarioFrameworkActionShowHint "{5E4EB0B50C1505AF}" {
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   GenericEntity LayerTask1 : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_sTaskTitle "Build Defenses"
+      m_sTaskDescription "Build Defenses"
+     }
+    }
+    coords 184.676 52.752 9645.118
+    {
+     GenericEntity Slot25 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{2D74C39A650A3030}Prefabs/Vehicles/Wheeled/M923A1/M923A1_engineer.et"
+       }
+      }
+      coords -18.907 -0.601 -0.888
+      angleX -3.151
+      angleY -92.685
+     }
+     GenericEntity SlotTask1 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
+      components {
+       SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{65CEC6903E3F3E9F}" {
+          m_fAreaRadius 25
+          m_eActivationPresence SPECIFIC_PREFAB_NAME
+          m_aCustomTriggerConditions {
+           SCR_CustomTriggerConditionsSpecificPrefabCount "{65CD4975950A7FBE}" {
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilterCount "{65CD497596739D0D}" {
+              m_sSpecificPrefabName "{9721D32C8E5CDE9C}Prefabs/Compositions/Misc/FreeRoamBuilding/Layouts/FRB_BarbedTapeKnifeRest.et"
+              m_bIncludeChildren 1
+             }
+            }
+           }
+          }
+          m_bOnce 0
+          m_aFinishedActions {
+           SCR_ScenarioFrameworkActionChangeTaskState "{65CEC691831C31C1}" {
+            m_Getter SCR_ScenarioFrameworkGetTask "{65CEC6919C9F3A4A}" {
+             m_sLayerTaskName "LayerTask1"
+            }
+           }
+          }
+         }
+        }
+        m_sObjectToSpawn "{DA58C3DF4455555E}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkTrigger.et"
+        m_aActionsOnFinished {
+         SCR_ScenarioFrameworkActionWaitAndExecute "{65CEC696A14C7851}" {
+          m_iDelayInSeconds 5
+          m_aActions {
+           SCR_ScenarioFrameworkActionShowPopupNotification "{65CEC696BC4373CC}" {
+            m_sTitle "Defenses built"
+            m_sText "Defenses built"
+            m_sFactionKey "US"
+           }
+          }
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   GenericEntity Layer6 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      Slot11 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
+        }
+       }
+       coords -185.362 2.569 -96.355
+       angleX 3.984
+       angleY 58.71
+       angleZ -0.329
+      }
+      Slot13 {
+       components {
+        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+         m_sObjectToSpawn "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
+        }
+       }
+       coords -174.11 2.786 -92.267
+       angleY 63.703
+      }
+     }
+    }
+   }
+  }
+ }
 }

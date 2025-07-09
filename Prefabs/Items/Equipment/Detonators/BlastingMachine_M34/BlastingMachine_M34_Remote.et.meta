@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{48BA788AFEC7F417}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34_Remote.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

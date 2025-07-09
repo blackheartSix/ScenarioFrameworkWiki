@@ -1,0 +1,56 @@
+GenericEntity Area_ExplodingVehicles : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 9039.688 80.262 2354.751
+ angleY 48.569
+ {
+  GenericEntity Layer_ExplodingVehicle1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   angleY 1.218
+   {
+    GenericEntity SlotTrigger14 : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+     components {
+      SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+       m_bShowDebugShapesDuringRuntime 1
+       m_aPlugins {
+        SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+         m_fAreaRadius 10
+         m_aSpecificEntityNames {
+          "SlotExpl_Vehicle"
+         }
+         m_aCustomTriggerConditions {
+          SCR_CustomTriggerConditionsSpecificPrefabCount "{65CF5C56E71A06B8}" {
+           m_aPrefabFilter {
+            SCR_ScenarioFrameworkPrefabFilterCount "{65CF5C56F59F4953}" {
+             m_sSpecificPrefabName "{599DFCA424399DBF}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_CIV_red.et"
+             m_bIncludeChildren 1
+            }
+           }
+          }
+         }
+         m_bOnce 1
+         m_aEntityLeftActions {
+          SCR_ScenarioFrameworkActionKillEntity "{65CF53F56FF17BF2}" {
+           m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65CF5C56D6010A27}" {
+            m_sLayerName "SlotExpl_Vehicle"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+     coords 2.343 0.009 -8.733
+     angleY -54.144
+    }
+    GenericEntity SlotExpl_Vehicle : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     components {
+      SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+       m_sObjectToSpawn "{A4D16A62B432451A}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_red.et"
+      }
+     }
+     coords 2.343 0.009 -8.733
+     angleY -54.144
+    }
+   }
+  }
+ }
+}

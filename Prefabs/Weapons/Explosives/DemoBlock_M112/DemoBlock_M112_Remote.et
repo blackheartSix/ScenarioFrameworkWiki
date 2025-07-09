@@ -1,0 +1,35 @@
+GenericEntity : "{1CC0CBB56B9F7ADB}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112_base.et" {
+ ID "5968D2B6A82C6019"
+ components {
+  SCR_MineDamageManager "{5AA692DC30B9C651}" {
+   "Additional hit zones" {
+    SCR_HitZone Main {
+    }
+   }
+  }
+  ActionsManagerComponent "{5AA692DC30B9C623}" {
+   additionalActions {
+    SCR_EquipWeaponAction "{5AA692DC30B9C63E}" {
+     ParentContextList {
+     }
+    }
+    SCR_DisarmExplosiveChargeAction "{5F1CD13994BFA81F}" {
+     ParentContextList {
+     }
+    }
+    SCR_ArmExplosiveChargeWithRemoteFuzeAction "{5F1CD13997E320A5}" {
+     ParentContextList {
+     }
+    }
+    SCR_ArmExplosiveChargeWithTimedFuzeAction "{5F1CD1393FC36E3C}" {
+     ParentContextList {
+     }
+    }
+    SCR_AdjustTimedFuzeAction "{60D077AFA3844219}" {
+     ParentContextList {
+     }
+    }
+   }
+  }
+ }
+}

@@ -126,6 +126,145 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
      }
     }
+    KillEntity {
+     coords 4303.678 -56.267 -4359.635
+     {
+      GenericEntity SlotTrigger5 : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+       components {
+        SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+           m_fAreaRadius 2
+           m_aCustomTriggerConditions {
+            SCR_CustomTriggerConditionsSpecificPrefabCount "{65D2A20154B41D1E}" {
+             m_aPrefabFilter {
+              SCR_ScenarioFrameworkPrefabFilterCount "{65D2A20156698BE7}" {
+               m_sSpecificPrefabName "{85F0BD6AF0F42D6D}Prefabs/Vehicles/Wheeled/S105/S105_red.et"
+               m_bIncludeChildren 1
+              }
+             }
+            }
+           }
+           m_bOnce 1
+           m_aEntityEnteredActions {
+            SCR_ScenarioFrameworkActionKillEntity "{65D2A201F64A7961}" {
+             m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65D2A201F30C5A66}" {
+              m_sLayerName "CarBomb"
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+       coords -66.976 17.537 84.736
+       angleY -23.82
+      }
+      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       Layer32 {
+        coords -66.381 17.442 83.847
+        angleX -5.83
+        angleY 138.858
+        {
+         GenericEntity SlotAI4 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{2F912ED6E399FF47}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Unarmed.et"
+           }
+          }
+          coords -4.058 0.079 -5.624
+          angleY 51.41
+         }
+         $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          Slot26 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_aActivationActions {
+              SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{65D2A20418D1270E}" {
+               m_fMaxCruiseSpeed 25
+              }
+             }
+             m_sObjectToSpawn "{9B1BF9644E0378D6}Prefabs/Vehicles/Wheeled/M998/M998_covered_long.et"
+            }
+           }
+           coords 3.751 -0.066 -7.991
+           angleY -44.267
+          }
+          Slot27 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sObjectToSpawn "{E660DE914A7211EB}Prefabs/Compositions/Slotted/SlotRoadSmall/Checkpoint_S_US_01.et"
+            }
+           }
+           coords -0.25 -0.008 -1.061
+           angleY -49.804
+          }
+         }
+        }
+       }
+       Layer33 {
+        coords 13.079 -6.843 -22.699
+        {
+         GenericEntity SlotAI18 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{6D3138DA846660AE}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Generic_Base.et"
+            m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65D2A2034FE83788}" {
+             m_aLayerName {
+              "SlotWaypoint44" "SlotWaypoint45"
+             }
+            }
+           }
+          }
+          coords 0.123 0 -2.158
+         }
+         GenericEntity CarBomb : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          components {
+           SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+            m_sFactionKey "CIV"
+            m_aActivationActions {
+             SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{65D2A201B9051A6B}" {
+              m_fMaxCruiseSpeed 32.2
+             }
+            }
+            m_bRandomizePerFaction 1
+            m_eEntityCatalogType VEHICLE
+            m_aIncludedEditableEntityLabels {
+             50
+            }
+           }
+          }
+          coords 0.018 -0.001 -0.954
+          angleX 3.531
+          angleY -80.899
+          angleZ 0.565
+         }
+         $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+          SlotWaypoint44 {
+           components {
+            SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+             m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65D2A200560A8300}" {
+             }
+            }
+           }
+           coords 0 0 0
+          }
+          SlotWaypoint45 {
+           components {
+            SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+             m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65D2A201AD3CAC3F}" {
+             }
+            }
+           }
+           coords -157.541 50.017 214.494
+          }
+         }
+        }
+       }
+      }
+     }
+    }
    }
   }
  }

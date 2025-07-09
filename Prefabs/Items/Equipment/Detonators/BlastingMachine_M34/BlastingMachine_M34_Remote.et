@@ -1,0 +1,34 @@
+GenericEntity : "{CE0AF733722B3977}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  SCR_SoundDataComponent "{5B18D20ED0099A17}" {
+   Enabled 1
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   additionalActions {
+    SCR_DetonateChargesAction "{5F2693EABDE4FA5A}" {
+     ParentContextList {
+     }
+    }
+    SCR_DisconnectChargesAction "{5F1CD778E594EC55}" {
+     ParentContextList {
+     }
+    }
+    SCR_DismantleInventoryItemBaseAction "{5F2693EABA45864E}" {
+     ParentContextList {
+     }
+    }
+    SCR_BaseAudioScriptedUserAction "{65D2D22E1428582B}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{65D2D22E6D709992}" {
+      Name "Detonate Remotely"
+     }
+     ActionTitle "Remote Detonation"
+     Duration 3
+    }
+   }
+  }
+ }
+}

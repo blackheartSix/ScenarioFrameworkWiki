@@ -13,8 +13,6 @@ GenericEntity LogicCounterEndMission : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenar
     components {
      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
       m_iRandomPercent 100
-      m_bShowDebugShapesDuringRuntime 1
-      m_bShowDebugShapesInWorkbench 1
       m_sTaskTitle "#AR-CombatScenario_ExfilTask_Title"
       m_sTaskDescription "#AR-CombatScenario_ExfilTask_Description_NoLimit"
      }
@@ -26,7 +24,7 @@ GenericEntity LogicCounterEndMission : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenar
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_sFactionKey "US"
         m_iRandomPercent 100
-        m_bShowDebugShapesDuringRuntime 1
+        m_bShowDebugShapesInWorkbench 0
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_fAreaRadius 10
@@ -57,7 +55,7 @@ GenericEntity LogicCounterEndMission : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenar
      GenericEntity SlotMoveTo7 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-        m_bShowDebugShapesDuringRuntime 1
+        m_bShowDebugShapesInWorkbench 0
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_eActivationPresence PLAYER
@@ -75,7 +73,7 @@ GenericEntity LogicCounterEndMission : "{C72F956E4AC6A6E7}Prefabs/Systems/Scenar
      GenericEntity SlotMoveTo9 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-        m_bShowDebugShapesDuringRuntime 1
+        m_bShowDebugShapesInWorkbench 0
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_eActivationPresence PLAYER
