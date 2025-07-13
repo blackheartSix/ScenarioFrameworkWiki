@@ -1,0 +1,78 @@
+GenericEntity Area5 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   m_bShowDebugShapesInWorkbench 1
+   m_iDynamicDespawnRange 25
+  }
+ }
+ coords 4880.448 28.594 11916.78
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   Layer34 {
+    coords 0 0 0
+    {
+     GenericEntity SlotAI28 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{3BF36BDEEB33AEC9}Prefabs/Groups/BLUFOR/Group_US_SentryTeam.et"
+       }
+      }
+      coords 7.751 -0.437 1.472
+      angleY -88.372
+     }
+     GenericEntity Slot51 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{4A71F755A4513227}Prefabs/Vehicles/Wheeled/M998/M1025.et"
+       }
+      }
+      coords 0 0 0
+      angleY -87.779
+     }
+     GenericEntity SlotWaypoint46 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65DAD45E7E6F9A33}" {
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   Layer45 {
+    coords 0 0 0
+    {
+     GenericEntity Layer50 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+      coords 0 0 0
+      {
+       GenericEntity SlotWaypoint47 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{65DAD45E75B91EFC}" {
+          }
+         }
+        }
+        coords 0 0 0
+       }
+      }
+     }
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      SlotWaypoint48 {
+       coords 0 0 0
+      }
+      SlotWaypoint49 {
+       coords 0 0 0
+      }
+      SlotWaypoint50 {
+       coords 0 0 0
+      }
+      SlotWaypoint51 {
+       coords 0 0 0
+      }
+     }
+    }
+   }
+  }
+ }
+}

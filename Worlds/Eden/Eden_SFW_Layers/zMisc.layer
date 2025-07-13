@@ -296,6 +296,3 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   }
  }
 }
-GenericEntity : "{D4DDD345A352E97B}Prefabs/Compositions/Slotted/SlotFlatSmall/Headquarters_S_US_01.et" {
- coords 4881.032 28.594 11742.22
-}

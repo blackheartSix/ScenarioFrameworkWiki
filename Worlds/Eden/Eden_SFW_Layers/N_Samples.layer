@@ -1,3 +1,7 @@
+GenericEntity : "{2B9D1A21C0ABF950}Prefabs/Items/Equipment/Maps/Map_Paper_01/Map_Paper_01_unfolded_table_SFW.et" {
+ coords 4879.054 29.632 11743.37
+ angleY -91.001
+}
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  A_ON_OFF_Switch {
   components {
@@ -4313,6 +4317,249 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        }
       }
       coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ FastTravel_Sample {
+  coords 6500 40.22 6500
+  {
+   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    CampBragg {
+     coords 0 0 0
+     {
+      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       Bragg_FT {
+        coords 4446.743 -18.121 2212.86
+        {
+         GenericEntity FT_SpawnBragg : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          components {
+           SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+            m_aPlugins {
+             SCR_ScenarioFrameworkPluginSpawnPoint "{65DB125FE4DAD440}" {
+              m_Info SCR_UIInfo "{65DB125F90CDC27B}" {
+               Name "Camp Bragg"
+              }
+             }
+            }
+            m_sObjectToSpawn "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et"
+           }
+          }
+          coords 0 0 0
+         }
+        }
+       }
+       CampBraggObjects {
+        coords 4446.743 -18.121 2212.86
+        {
+         $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          Slot61 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sObjectToSpawn "{89230C660A90788F}Prefabs/Structures/Military/CamoNets/US/CamoNet_Large_Top_US.et"
+            }
+           }
+           coords 0 0 0
+          }
+          Slot64 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sObjectToSpawn "{88B3A9FF09D43C1B}Prefabs/Items/Equipment/Maps/PaperMap_FastTravel_CO.et"
+            }
+           }
+           coords 0.195 0.226 -0.915
+           angleX 81.502
+           angleY 17.395
+           angleZ -6.715
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    CampAPHill {
+     coords 0 0 0
+     {
+      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       APHill_FT {
+        coords -3621.672 -33.479 -4356.187
+        {
+         GenericEntity FT_SpawnAPHill : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          components {
+           SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+            m_aPlugins {
+             SCR_ScenarioFrameworkPluginSpawnPoint "{65DB125FF9E8655C}" {
+              m_Info SCR_UIInfo "{65DB125F90CDC27B}" {
+               Name "Camp A.P. Hill"
+              }
+             }
+            }
+            m_sObjectToSpawn "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et"
+           }
+          }
+          coords 0 0 0
+         }
+        }
+       }
+       CampAPHillObjects {
+        coords -3621.672 -33.479 -4356.187
+        {
+         $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          Slot54 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sObjectToSpawn "{89230C660A90788F}Prefabs/Structures/Military/CamoNets/US/CamoNet_Large_Top_US.et"
+            }
+           }
+           coords 0 0 0
+          }
+          Slot63 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sObjectToSpawn "{88B3A9FF09D43C1B}Prefabs/Items/Equipment/Maps/PaperMap_FastTravel_CO.et"
+            }
+           }
+           coords 0 0.498 0
+           angleX 83.757
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    CampHood {
+     coords 0 0 0
+     {
+      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       CampHoodObjects {
+        coords -5392.406 0.187 5010.996
+        {
+         $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          Slot60 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sObjectToSpawn "{89230C660A90788F}Prefabs/Structures/Military/CamoNets/US/CamoNet_Large_Top_US.et"
+            }
+           }
+           coords 0 0 0
+          }
+          Slot65 {
+           components {
+            SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+             m_sObjectToSpawn "{88B3A9FF09D43C1B}Prefabs/Items/Equipment/Maps/PaperMap_FastTravel_CO.et"
+            }
+           }
+           coords 0 0.138 0.009
+           angleX 86.41
+          }
+         }
+        }
+       }
+       Hood_FT {
+        coords -5392.406 0.187 5010.996
+        {
+         GenericEntity FT_SpawnHood : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          components {
+           SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+            m_aPlugins {
+             SCR_ScenarioFrameworkPluginSpawnPoint "{65DB125F946BF524}" {
+              m_Info SCR_UIInfo "{65DB125F90CDC27B}" {
+               Name "Camp Hood"
+              }
+             }
+            }
+            m_sObjectToSpawn "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et"
+           }
+          }
+          coords 0 0 0
+         }
+        }
+       }
+      }
+     }
+    }
+    FT_TaskArea {
+     coords 0 0 0
+     {
+      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       Layer51 {
+        components {
+         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+          m_eActivationType ON_TRIGGER_ACTIVATION
+         }
+        }
+        coords 74.694 -34.033 -3396.312
+        {
+         GenericEntity spawn2 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          components {
+           SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+            m_sFactionKey "US"
+            m_bExcludeFromDynamicDespawn 1
+            m_sObjectToSpawn "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et"
+           }
+          }
+          coords 5.103 0.748 -4.291
+          angleY 16.341
+         }
+        }
+       }
+       Layer53 {
+        coords 73.7 -34.033 -3395.318
+        {
+         GenericEntity SlotTrigger6 : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+          components {
+           SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+            m_aPlugins {
+             SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+              m_fAreaRadius 7
+              m_eActivationPresence ANY_CHARACTER
+              m_aSpecificClassNames {
+               "SCR_ChimeraCharacter"
+              }
+              m_sActivatedByThisFaction "US"
+              m_aEntityEnteredActions {
+               SCR_ScenarioFrameworkActionWaitAndExecute "{65DB1246BC8F8C55}" {
+                m_iDelayInSeconds 5
+                m_aActions {
+                 SCR_ScenarioFrameworkActionSpawnObjects "{65DB1243A0BD9C34}" {
+                  m_aNameOfObjectsToSpawnOnActivation {
+                   "Layer51"
+                  }
+                 }
+                }
+               }
+              }
+              m_aEntityLeftActions {
+               SCR_ScenarioFrameworkActionWaitAndExecute "{65DB12452A6D71E9}" {
+                m_iDelayInSeconds 5
+                m_aActions {
+                 SCR_ScenarioFrameworkActionRestoreLayerToDefault "{65DB12453DD8B2F3}" {
+                  m_Getter SCR_ScenarioFrameworkGetLayerBase "{65DB12453F8C81CE}" {
+                   m_sLayerBaseName "Layer51"
+                  }
+                  m_bReinitAfterRestoration 1
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          coords 6.475 0.748 -3.829
+         }
+        }
+       }
+      }
+      GenericEntity : "{88B3A9FF09D43C1B}Prefabs/Items/Equipment/Maps/PaperMap_FastTravel_CO.et" {
+       coords 81.683 -33.016 -3400.833
+       angleX 89.288
+       angleY 0
+       angleZ 30.042
+      }
      }
     }
    }
