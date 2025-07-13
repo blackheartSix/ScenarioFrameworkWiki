@@ -39,32 +39,8 @@ SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 7114.536 102.942 6284.017
 }
-SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
- components {
-  SCR_FactionAliasComponent "{65B2DBB1D1A549A4}" {
-   m_aFactionAliases {
-    SCR_ScenarioFrameworkFactionAliasConfig "{65B2DBB1D220C5D6}" {
-     m_sAlias "REDFOR"
-     m_sFactionKey "USSR"
-    }
-    SCR_ScenarioFrameworkFactionAliasConfig "{65B2DBB12AE61B5A}" {
-     m_sAlias "REDFOR"
-     m_sFactionKey "FIA"
-    }
-    SCR_ScenarioFrameworkFactionAliasConfig "{65B2DBB17EAAAE28}" {
-     m_sAlias "BLUFOR"
-     m_sFactionKey "US"
-    }
-   }
-  }
- }
- coords 6897.092 123.43 6628.313
- Factions {
-  SCR_Faction "{56DEAC40D2DBC8B1}" {
-   m_bIsPlayable 1
-  }
- }
- m_bCanChangeFactionsPlayable 0
+SCR_FactionManager FactionManager_USxUSSR1 : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
+ coords 6500 161.875 6500
 }
 RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
  coords 7114.536 103.058 6283.017
@@ -87,33 +63,6 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFra
   }
  }
 }
-SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+SCR_LoadoutManager : "{97EF4C1A41F63DDB}Prefabs/MP/Managers/Loadouts/LoadoutManager_USxUSSR.et" {
  coords 6500 161.875 6500
- m_aPlayerLoadouts {
-  SCR_FactionPlayerLoadout "{647F39EE0529FB16}" {
-   m_sLoadoutName "Team Leader"
-   m_sLoadoutResource "{E45F1E163F5CA080}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_SL.et"
-   m_sAffiliatedFaction "US"
-  }
-  SCR_FactionPlayerLoadout "{647F39EE07D39F37}" {
-   m_sLoadoutName "Automatic Rifleman"
-   m_sLoadoutResource "{5B1996C05B1E51A4}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_AR.et"
-   m_sAffiliatedFaction "US"
-  }
-  SCR_FactionPlayerLoadout "{647F39EE06B0F1B4}" {
-   m_sLoadoutName "Grenadier"
-   m_sLoadoutResource "{84029128FA6F6BB9}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_GL.et"
-   m_sAffiliatedFaction "US"
-  }
-  SCR_FactionPlayerLoadout "{647F39EE01B6367B}" {
-   m_sLoadoutName "Rifleman"
-   m_sLoadoutResource "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
-   m_sAffiliatedFaction "US"
-  }
-  SCR_PlayerArsenalLoadout "{65289C09E3D59487}" {
-   m_sLoadoutName "Saved Loadout"
-   m_sLoadoutResource "{BE7CA93E188A5B58}Prefabs/Characters/Campaign/Final/Campaign_US_Base.et"
-   m_sAffiliatedFaction "US"
-  }
- }
 }

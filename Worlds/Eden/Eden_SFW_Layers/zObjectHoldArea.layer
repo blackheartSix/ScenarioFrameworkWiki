@@ -10,6 +10,7 @@ $grp SCR_DoorOpenerEntity {
 GenericEntity SlotTrigger7 : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
  components {
   SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+   Enabled 0
    m_bShowDebugShapesDuringRuntime 1
    m_aPlugins {
     SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
