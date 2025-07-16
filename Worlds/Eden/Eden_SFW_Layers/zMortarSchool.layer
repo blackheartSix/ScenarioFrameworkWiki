@@ -1,0 +1,515 @@
+$grp StaticModelEntity : "{1A34A7A8677C3EC1}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_NightStand_US_02.et" {
+ {
+  coords 9359.963 46.115 1891.037
+  angleX 4.912
+  angleY -107.573
+  angleZ -2.681
+ }
+ {
+  coords 9357.701 46.202 1888.381
+  angleX 0.425
+  angleY -9.104
+  angleZ 2.65
+ }
+}
+GenericEntity : "{2323F9E4C524F047}Prefabs/Compositions/Slotted/SlotFlatSmall/MortarPlacement_S_US_01.et" {
+ coords 9357.647 46.199 1890.78
+ angleX 1.355
+ angleY -49.19
+ angleZ 1.17
+ {
+  GenericEntity {
+   ID "6186DB2F33FB321E"
+   coords 0.027 0.001 0
+   {
+    GenericEntity {
+     ID "6186D3A8CE3D252F"
+     coords -3.008 0.06 1.196
+     angleX -1.264
+     angleY 95.836
+     angleZ -0.036
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D253A"
+     coords -3.048 0.058 -0.305
+     angleX 1.26
+     angleY -90.59
+     angleZ -0.105
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2546"
+     coords 2.759 -0.012 0.978
+     angleX -0.561
+     angleY 88.071
+     angleZ 0.696
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2553"
+     coords -0.967 -0.003 3.236
+     angleX -0.499
+     angleY -6.927
+     angleZ 0.743
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2566"
+     coords 2.74 -0.008 -0.537
+     angleX -0.028
+     angleY -86.285
+     angleZ -0.872
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2577"
+     coords 0.549 -0.021 3.284
+     angleX 0.645
+     angleY -174.629
+     angleZ -0.62
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2583"
+     coords 2.03 -0.015 2.498
+     angleX -0.065
+     angleY 45.043
+     angleZ -0.892
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D25A8"
+     coords -2.323 0.036 2.5
+     angleX 1.022
+     angleY -44.981
+     angleZ 1.718
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D25B5"
+     coords -2.292 0.035 2.499
+     angleX 1.022
+     angleY -44.981
+     angleZ 1.718
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D25B8"
+     coords 1.998 -0.015 2.498
+     angleX -0.065
+     angleY 45.018
+     angleZ -0.892
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D25C7"
+     coords -2.321 0.01 -2
+     angleX -0.131
+     angleY -134.996
+     angleZ -1.782
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2601"
+     coords 2.004 -0.028 -2
+     angleX -3.861
+     angleY 135.106
+     angleZ -1.942
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2672"
+     coords 1.84 -0.013 2.144
+     angleX 0.878
+     angleY 150.161
+     angleZ 0.17
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D25E3"
+     coords -0.143 0 0.536
+     angleY 163.319
+     {
+      DecalEntity {
+       ID "56DEFDB4A9499F9B"
+       coords 0 0 0
+       angleX 0
+       angleY 161.979
+      }
+     }
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D24EB"
+     coords -0.036 -0.086 -3.447
+     angleX -4.293
+     angleY 88.768
+     angleZ 21.719
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D24F0"
+     coords -0.036 -0.021 -2.145
+     angleX 2.653
+     angleY 89.987
+     angleZ -0.281
+    }
+    Turret {
+     ID "6186D3A8CE3D250E"
+     coords -0.294 0 0.5
+     angleY 2
+    }
+   }
+  }
+ }
+}
+Vehicle M923A1_command1 : "{36BDCC88B17B3BFA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command.et" {
+ coords 9366.913 51.451 1775.269
+ angleX 3.837
+ angleY -29.249
+ angleZ 5.006
+}
+GenericEntity : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
+ coords 9319.683 53.559 1816.075
+ angleX -5.45
+ angleY 75.723
+ angleZ -3.301
+}
+$grp GenericEntity : "{6DC231B93D42AF21}Prefabs/Items/Equipment/Kits/MortarRearmingKit/MortarRearmingKit_USSR.et" {
+ {
+  coords 8936.589 88.625 2369.097
+ }
+ {
+  coords 8939.51 88.352 2368.192
+ }
+}
+Vehicle M998_covered_long_MERDC1 : "{751AFEEA19DDFB04}Prefabs/Vehicles/Wheeled/M998/M998_covered_long_MERDC.et" {
+ coords 9364.618 45.67 1884.059
+ angleX -3.496
+ angleY 128.553
+ angleZ -2.782
+}
+$grp GenericEntity : "{905F6CCA37A82DDB}Prefabs/Items/Equipment/Kits/MortarRearmingKit/MortarRearmingKit_US.et" {
+ {
+  coords 9361.316 45.928 1885.542
+  angleX 0.181
+  angleY -2.311
+  angleZ 4.464
+ }
+ {
+  coords 9362.023 45.973 1885.286
+  angleY 129.492
+ }
+ {
+  coords 9361.513 45.929 1885.006
+  angleY 91.235
+ }
+}
+GenericEntity : "{972F01488E5B23C2}Prefabs/Structures/Military/CamoNets/US/CamoNet_Medium_Top_US.et" {
+ coords 9363.981 45.72 1884.684
+ angleX -3.796
+ angleY 121.861
+ angleZ -2.356
+}
+GenericEntity : "{9AE2149222FAD9A3}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_FIA_03.et" {
+ coords 8930.855 89.398 2373.338
+ angleX -0.213
+ angleY -163.72
+ angleZ -5.64
+ {
+  GenericEntity {
+   ID "5D45393FFA2FEF00"
+   coords 0.707 0.039 -1.34
+   angleX -2.588
+   angleY -2.311
+   angleZ -0.639
+  }
+  GenericEntity {
+   ID "5D45393FFA2FEF0E"
+   coords 0.556 0 0.025
+   angleY -7.279
+  }
+  GenericEntity {
+   ID "5D45393FFA2FEF0F"
+   coords 0.624 0.005 1.435
+   angleX -1.697
+   angleY 1.23
+   angleZ -0.532
+  }
+  GenericEntity {
+   ID "5D45393FFA2FEF0B"
+   coords -2.326 -0.03 0.315
+   angleX -1.729
+   angleY -94.304
+   angleZ -0.369
+  }
+  GenericEntity {
+   ID "5D45393FFA2FEF1C"
+   coords 1.93 0.052 -1.257
+   angleX -0.928
+   angleY -85.839
+   angleZ 2.499
+  }
+  GenericEntity {
+   ID "5D45393FFA2FEF07"
+   coords -2.002 0.013 -1.163
+   angleX 0.423
+   angleY -96.475
+   angleZ 2.783
+  }
+  GenericEntity {
+   ID "5D45393FFA2FEF13"
+   coords 2.102 0.023 1.262
+   angleX 0.495
+   angleY 89.985
+   angleZ -1.708
+  }
+  GenericEntity {
+   ID "5D45393FFA2FEF02"
+   coords -2.268 -0.022 1.694
+   angleX 1.097
+   angleY 89.988
+   angleZ -0.604
+  }
+  GenericEntity {
+   ID "5D45393FFA2FEF10"
+   coords 1.888 0.03 0.025
+   angleX 1.697
+   angleY 90.015
+   angleZ 0.498
+  }
+ }
+}
+GenericEntity : "{B4F2701CBBE49C48}Prefabs/Props/Military/Antennas/Antenna_RC292_01.et" {
+ coords 9359.039 51.47 1788.386
+ angleY -37.398
+}
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ Area7 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+    m_aActivationActions {
+     SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65A3400B0A62B7E6}" {
+     }
+    }
+   }
+  }
+  coords 9322.191 52.729 1817.085
+  {
+   GenericEntity Layer4 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {
+      SlotMarker1 {
+       components {
+        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+         m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{632B2D63D46D05B7}" {
+          m_eMapMarkerIcon DOT2
+          m_eMapMarkerColor BLUFOR
+         }
+        }
+       }
+       coords 35.203 -6.522 73.487
+      }
+      SlotMarker3 {
+       components {
+        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+         m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6321475D2CA10931}" {
+          m_sMapMarkerText "FORWARD OBSERVER"
+          m_eMapMarkerType1Modifier RECON
+          m_eMapMarkerType2Modifier RECON
+         }
+        }
+       }
+       coords 101.048 206.77 828.251
+      }
+      SlotMarker4 {
+       components {
+        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+         m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6321475D2CA10931}" {
+          m_sMapMarkerText "FIRE DIRECTION CENTER"
+          m_eMapMarkerType1Modifier MOBILEHQ
+          m_eMapMarkerType2Modifier MOBILEHQ
+         }
+        }
+       }
+       coords 41.47 -1.019 -37.968
+       angleX -1.779
+       angleY -0.139
+       angleZ 4.469
+      }
+     }
+    }
+   }
+  }
+ }
+ Area8 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
+  coords 8940.109 88.201 2365.808
+  angleX -4.97
+  angleY 138.315
+  angleZ -1.551
+  {
+   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    Layer2 {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
+     coords -0.911 -0.101 -1.605
+     {
+      GenericEntity SlotAI23 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{63291800DA6A1BF4}" {
+          m_aLayerName {
+           "SlotWaypoint2" "SlotWaypoint4" "SlotWaypoint5" "SlotWaypoint6"
+          }
+         }
+        }
+       }
+       coords -3.528 0.13 -6.336
+       angleX -0.13
+       angleY 33.231
+       angleZ -0.878
+      }
+      $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+       SlotWaypoint4 {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_bShowDebugShapesDuringRuntime 1
+          m_eActivationType ON_TRIGGER_ACTIVATION
+          m_Waypoint SCR_ScenarioFrameworkWaypointArtillerySupport "{62AE875506818539}" {
+           m_iTargetShotCount 4
+          }
+         }
+        }
+        coords -37.1 15.635 657.562
+       }
+       SlotWaypoint5 {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_bShowDebugShapesDuringRuntime 1
+          m_eActivationType ON_TRIGGER_ACTIVATION
+          m_Waypoint SCR_ScenarioFrameworkWaypointArtillerySupport "{62AE875506818539}" {
+           m_iTargetShotCount 4
+          }
+         }
+        }
+        coords 129.253 16.835 564.041
+       }
+       SlotWaypoint6 {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_bShowDebugShapesDuringRuntime 1
+          m_eActivationType ON_TRIGGER_ACTIVATION
+          m_Waypoint SCR_ScenarioFrameworkWaypointArtillerySupport "{62AE875506818539}" {
+           m_iTargetShotCount 4
+          }
+         }
+        }
+        coords -93.029 23.996 633.102
+       }
+       SlotWaypoint2 {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_bShowDebugShapesDuringRuntime 1
+          m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{63291800FBD10D0C}" {
+          }
+         }
+        }
+        coords 0 0 0
+       }
+       SlotWaypoint7 {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_bShowDebugShapesDuringRuntime 1
+          m_eActivationType ON_TRIGGER_ACTIVATION
+          m_Waypoint SCR_ScenarioFrameworkWaypointArtillerySupport "{62AE875506818539}" {
+           m_iTargetShotCount 4
+          }
+         }
+        }
+        coords 97.065 16.699 601.413
+        angleX -2.675
+        angleY -138.143
+        angleZ -4.467
+       }
+       SlotWaypoint8 {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_bShowDebugShapesDuringRuntime 1
+          m_eActivationType ON_TRIGGER_ACTIVATION
+          m_Waypoint SCR_ScenarioFrameworkWaypointArtillerySupport "{62AE875506818539}" {
+           m_iTargetShotCount 4
+          }
+         }
+        }
+        coords 51.608 15.564 633.852
+        angleX -2.675
+        angleY -138.143
+        angleZ -4.467
+       }
+      }
+     }
+    }
+    Layer1 {
+     coords 0 0 0
+     {
+      GenericEntity SlotTrigger1 : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+       components {
+        SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+         m_bShowDebugShapesInWorkbench 0
+         m_aPlugins {
+          SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+           m_fAreaRadius 200
+           m_eActivationPresence PLAYER
+           m_sActivatedByThisFaction "US"
+          }
+         }
+         m_aTriggerActions {
+          SCR_ScenarioFrameworkActionWaitAndExecute "{63291815D0BF9C4F}" {
+           m_iDelayInSeconds 10
+           m_iDelayInSecondsMax 0
+           m_aActions {
+            SCR_ScenarioFrameworkActionSpawnObjects "{6329181521E37B7E}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "Layer2"
+             }
+            }
+           }
+          }
+          SCR_ScenarioFrameworkActionSpawnClosestObjectFromList "{632918003FAB8443}" {
+           m_Getter SCR_ScenarioFrameworkGetPlayerEntity "{63291800027B864D}" {
+           }
+           m_aListOfObjects {
+            "SlotWaypoint4" "SlotWaypoint5" "SlotWaypoint6" "SlotWaypoint7" "SlotWaypoint8"
+           }
+          }
+          SCR_ScenarioFrameworkActionPlaySound "{632B2D770F4CB1CB}" {
+           m_iMaxNumberOfActivations 1
+           m_sSound "SOUND_SHOT"
+          }
+         }
+        }
+       }
+       coords -15.797 9.317 489.896
+       angleX -2.675
+       angleY -138.143
+       angleZ -4.467
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{CD8641F8E583489F}Prefabs/Structures/Military/CamoNets/US/CamoNet_Large_US.et" {
+ coords 9369.12 51.234 1771.208
+ angleX 2.015
+ angleY -26.699
+ angleZ 5.975
+}
+Turret : "{D1FFE458E8AC4BDB}Prefabs/Weapons/Mortars/2B14/Mortar_2B14.et" {
+ coords 8939.292 88.508 2369.829
+ angleY 131.788
+}
+StaticModelEntity : "{E8697D4489516AE0}Prefabs/Compositions/Misc/SubCompositions/Tent_Barrack_Cluttered_USSR_03.et" {
+ coords 9353.354 52.329 1776.557
+ angleX -1.197
+ angleY 55.464
+ angleZ 2.994
+}
