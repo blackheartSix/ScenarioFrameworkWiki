@@ -182,6 +182,8 @@ SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramewo
     }
    }
   }
+  SCR_RespawnBriefingComponent "{65EB002DDA0CB180}" : "{7E21AF93887FC55A}ComponentsCopied/SCR_RespawnBriefingComponent.ct" {
+  }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
    m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
     m_sForcedFaction "US"
@@ -208,27 +210,55 @@ SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramewo
   }
   SCR_VotingManagerComponent "{5650BB6B6089393A}" : "{37037CBB8B4CD354}Prefabs/MP/Components/VotingManagerComponent.ct" {
   }
-  SCR_WelcomeScreenComponent "{64FEB5A80E0EF295}" {
-   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{64FEB5A814672A61}" {
-    m_LeftColumn SCR_WelcomeScreenIntroductionContent "{64FEB5A866D1AA58}" {
+  SCR_WelcomeScreenComponent "{65ECBC8B299E3554}" {
+   m_sHeaderTitle "Welcome Header Title"
+   m_sHeaderSubtitle "Welcome Header Subtitle"
+   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{65ECBC8B063FCDBE}" {
+    m_LeftColumn SCR_WelcomeScreenIntroductionContent "{65ECBC8B721EF849}" {
      m_aIntroduction {
-      SCR_WelcomeScreenIntroduction "{64FEB5A863FCE4AA}" {
-       m_sContentTitleText "Welcome to the Scenario Framework Community WIki"
-       m_sContentDescriptionText "The purpose of this modification is educational. It was designed to give examples of the entries in the Scenario Framework Community Wiki. Along with the wiki and this mod, I've created a youtube channel show how to use the item of interest. This mod and the youtube channel follow the section contents of the community wiki."
+      SCR_WelcomeScreenIntroduction "{65ECBC8B492A7683}" {
+       m_sContentImage "{2A06DB6C5CD7B3BF}Images/SFWPreviewImage.edds"
+       m_sContentTitleText "Welcome Content Title Text"
+       m_sContentDescriptionText "Welcome Content Description Text"
+      }
+      SCR_WelcomeScreenIntroduction "{65ECD0BA3C482E56}" {
+       m_sContentImage "{2A06DB6C5CD7B3BF}Images/SFWPreviewImage.edds"
+       m_sContentTitleText "Welcome Content Title Text 2"
+       m_sContentDescriptionText "Welcome Content Description Text 2"
+      }
+      SCR_WelcomeScreenIntroduction "{65ECD0BA3EBF0102}" {
+       m_sContentImage "{2A06DB6C5CD7B3BF}Images/SFWPreviewImage.edds"
+       m_sContentTitleText "Welcome Content Title Text 3"
+       m_sContentDescriptionText "Welcome Content Description Text 3"
       }
      }
     }
-    m_MiddleColumn SCR_WelcomeScreenIntroductionContent "{64FEB5AAA5E3496F}" {
-     m_aIntroduction {
-      SCR_WelcomeScreenIntroduction "{64FEB5AAA738C38F}" {
-       m_sContentTitleText "[HOW-TO] Use"
-       m_sContentDescriptionText "1. Open Enfusion Workbench, and world editor. "\
-       "2. Open the mod's world. "\
-       "3. Refer to the scenario framework community wiki, listed in the description. "\
-       "4. Go to the world layer that corresponds to the section contents. "\
-       "5. And if more help is needed go to my youtube channel, listed in the description. "
+    m_MiddleColumn SCR_WelcomeScreenFactionContent "{65ECBC8AA685D1E4}" {
+     m_sTitleText "Welcome Faction Title Text"
+     m_sBottomTitleText "Welcome Faction Bottom Title Text"
+    }
+    m_RightColumn SCR_WelcomeScreenMissionObjectivesContent "{65ECBC8A032F9B76}" {
+     m_bIsInteractible 1
+     m_sTitleText "Mission Text Title"
+     m_aMissionObjectives {
+      SCR_WelcomeScreenMissionObjectives "{65ECBC8A14B70BA3}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "Attack Units"
+      }
+      SCR_WelcomeScreenMissionObjectives "{65ECBC8818A94DE1}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "Attack Units"
+      }
+      SCR_WelcomeScreenMissionObjectives "{65ECBC881BAD3095}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "Attack Units"
+      }
+      SCR_WelcomeScreenMissionObjectives "{65ECBC881B080F82}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "Attack Units"
       }
      }
+     m_sBottomTitleText "Mission Bottom Title Text"
     }
    }
   }
@@ -246,7 +276,6 @@ SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramewo
 GenericEntity HierarchyExamples : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  components {
   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-   Enabled 0
    m_iRandomPercent 50
   }
  }
@@ -260,6 +289,16 @@ GenericEntity HierarchyExamples : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
         m_sFactionKey "CIV"
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionShowLayout "{65E52B0BE5C1716A}" {
+          m_iMaxNumberOfActivations 1
+          m_sLayout "{7B25616ECA2EB026}UI/layouts/MyCustomLayout.layout"
+          m_fVisibilityTime 10
+          m_fOpacityValue 0.5
+          m_Getter SCR_ScenarioFrameworkGetPlayerEntity "{65E52B0B32A220B2}" {
+          }
+         }
+        }
         m_sObjectToSpawn "{A6B0D2923262E755}Prefabs/Vehicles/Wheeled/S105/S105_yellow.et"
         m_bRandomizePerFaction 1
         m_eEntityCatalogType VEHICLE

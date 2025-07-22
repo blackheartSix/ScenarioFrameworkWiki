@@ -2,13 +2,24 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
  Actions {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    Enabled 0
+    m_aActivationActions {
+     SCR_ScenarioFrameworkActionAppendBriefingEntryText "{65EB002E95740351}" {
+      m_sFactionKey "US"
+      m_iEntryID 2
+      m_sTargetText "Mission: Append Briefing Text"
+     }
+    }
    }
   }
   coords 6500 161.875 6500
   {
    $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     MedicalActions {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       Enabled 0
+      }
+     }
      coords -2633.335 -146.969 1989.144
      {
       GenericEntity SlotAI2 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
@@ -48,6 +59,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     ShootFlare {
      components {
       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       Enabled 0
        m_bShowDebugShapesDuringRuntime 1
        m_bShowDebugShapesInWorkbench 1
        m_iDynamicDespawnRange 350
@@ -93,6 +105,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      }
     }
     VoiceOver {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       Enabled 0
+      }
+     }
      coords -3614.04 -154.746 -4315.045
      {
       $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
@@ -127,6 +144,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      }
     }
     KillEntity {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       Enabled 0
+      }
+     }
      coords 4303.678 -56.267 -4359.635
      {
       GenericEntity SlotTrigger5 : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
@@ -262,6 +284,197 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          }
         }
        }
+      }
+     }
+    }
+    MoveIntoCompartment {
+     coords 0 0 0
+     {
+      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       VehGroup1 {
+        components {
+         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+          m_iRepeatedSpawnNumber 1
+          m_fRepeatedSpawnTimer 16
+          m_aActivationActions {
+           SCR_ScenarioFrameworkActionMoveIntoCompartment "{65E49946DEB10284}" {
+            m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65E499460A862D12}" {
+             m_sLayerName "VehA11Driver1"
+            }
+            m_GetterTargetEntity SCR_ScenarioFrameworkGetSpawnedEntity "{65E49946169EB0D4}" {
+             m_sLayerName "VehA11"
+            }
+           }
+           SCR_ScenarioFrameworkActionMoveIntoCompartment "{65E499592C231F28}" {
+            m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65E499460A862D12}" {
+             m_sLayerName "VehA11TC1"
+            }
+            m_GetterTargetEntity SCR_ScenarioFrameworkGetSpawnedEntity "{65E49946169EB0D4}" {
+             m_sLayerName "VehA11"
+            }
+            m_iCompartmentIndex 1
+           }
+           SCR_ScenarioFrameworkActionMoveIntoCompartment "{65E49959295E2E26}" {
+            m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65E499460A862D12}" {
+             m_sLayerName "VehA11PAXA1"
+            }
+            m_GetterTargetEntity SCR_ScenarioFrameworkGetSpawnedEntity "{65E49946169EB0D4}" {
+             m_sLayerName "VehA11"
+            }
+            m_iCompartmentIndex 2
+           }
+           SCR_ScenarioFrameworkActionMoveIntoCompartment "{65E499592AE08D58}" {
+            m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65E499460A862D12}" {
+             m_sLayerName "VehA11PAXB1"
+            }
+            m_GetterTargetEntity SCR_ScenarioFrameworkGetSpawnedEntity "{65E49946169EB0D4}" {
+             m_sLayerName "VehA11"
+            }
+            m_iCompartmentIndex 7
+           }
+          }
+         }
+        }
+        coords -1554.538 -134 5088.068
+        angleY -172.398
+        {
+         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+          VehA11Driver1 {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_bEnableRepeatedSpawn 1
+             m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+             m_sWPToSpawn ""
+             m_eAISkill EXPERT
+            }
+           }
+           coords -1.716 0.031 -4.925
+           angleY 0.501
+          }
+          VehA11PAXA1 {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_bEnableRepeatedSpawn 1
+             m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+             m_sWPToSpawn ""
+             m_eAISkill EXPERT
+            }
+           }
+           coords -1.661 0.031 -7.925
+           angleY -3.589
+          }
+          VehA11PAXB1 {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_bEnableRepeatedSpawn 1
+             m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+             m_sWPToSpawn ""
+             m_eAISkill EXPERT
+            }
+           }
+           coords 1.531 0.031 -8.291
+           angleY -0.589
+          }
+          VehA11TC1 {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_bEnableRepeatedSpawn 1
+             m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+             m_sWPToSpawn ""
+             m_eAISkill EXPERT
+            }
+           }
+           coords 1.382 0.032 -5.184
+           angleY -4.225
+          }
+         }
+         GenericEntity VehA11 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+          components {
+           SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+            m_bEnableRepeatedSpawn 1
+            m_sObjectToSpawn "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
+           }
+          }
+          coords 0 0 0
+         }
+        }
+       }
+       ETS_WPS1 {
+        coords -1600.249 -133.284 5163.677
+        angleY 87.612
+        {
+         $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+          ETS_WPA1 {
+           components {
+            SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+             m_bShowDebugShapesDuringRuntime 1
+             m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{65DC18A53F89CF55}" {
+             }
+            }
+           }
+           coords 338.473 1.11 32.424
+           angleX 0.263
+           angleY -7.567
+           angleZ -3.677
+          }
+          ETS_WPB1 {
+           components {
+            SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+             m_bShowDebugShapesDuringRuntime 1
+             m_Waypoint SCR_ScenarioFrameworkWaypointMove "{65DC18A531BFDD29}" {
+             }
+            }
+           }
+           coords 346.261 7.936 168.817
+          }
+          ETS_WPC1 {
+           components {
+            SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+             m_bShowDebugShapesDuringRuntime 1
+             m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65DC18A508889FDC}" {
+             }
+            }
+           }
+           coords 648.271 13.363 489.261
+          }
+          VehGrpCycleWP1 {
+           components {
+            SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+             m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{65DC18A896348A85}" {
+              m_fPriorityLevel 2000
+             }
+            }
+           }
+           coords 0 0 0
+          }
+          ETS_WPD1 {
+           components {
+            SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+             m_bShowDebugShapesDuringRuntime 1
+             m_Waypoint SCR_ScenarioFrameworkWaypointPatrolHierarchy "{65DAA0B1FFC64F27}" {
+              m_aSettings {
+               SCR_AIGroupFormationSetting "{65DAA0B03D559333}" {
+                m_eFormation Column
+               }
+              }
+              m_fPriorityLevel 2000
+             }
+            }
+           }
+           coords 752.562 3.069 59.641
+           angleY -87.612
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    AppendBriefingText {
+     coords 0 0 0
+     {
+      GenericEntity ABT : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+       coords 0 0 0
       }
      }
     }

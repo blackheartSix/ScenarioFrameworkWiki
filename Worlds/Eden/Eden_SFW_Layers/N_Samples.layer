@@ -1,3 +1,6 @@
+GenericEntity EveronTrafficSystem : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+ coords 4923.058 27.781 11582.688
+}
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  A_ON_OFF_Switch {
   components {
@@ -1247,7 +1250,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       }
      }
      SCR_ScenarioFrameworkActionShowLayout "{6550C4F8399A04B4}" {
-      m_sLayout "{131DAC3E58EF8FAC}UI/layouts/HUD/Hint/HintInfoDisplayCustom.layout"
+      m_sLayout "{131DAC3E58EF8FAC}UI/layouts/HintInfoDisplayCustom.layout"
       m_fFadeIn 1
       m_fFadeOut 1
       m_fVisibilityTime 30
@@ -3011,156 +3014,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    }
   }
  }
- EveronTrafficSystem {
-  components {
-   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    m_bShowDebugShapesDuringRuntime 1
-   }
-  }
-  coords 4899.751 28.591 11663.678
-  angleY 87.612
-  {
-   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-    ETS_WPS1 {
-     coords 0 0 0
-     {
-      $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-       ETS_WPA1 {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_bShowDebugShapesDuringRuntime 1
-          m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{65DC18A53F89CF55}" {
-          }
-         }
-        }
-        coords 338.473 1.11 32.424
-        angleX 0.263
-        angleY -7.567
-        angleZ -3.677
-       }
-       ETS_WPB1 {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_bShowDebugShapesDuringRuntime 1
-          m_Waypoint SCR_ScenarioFrameworkWaypointMove "{65DC18A531BFDD29}" {
-          }
-         }
-        }
-        coords 346.261 7.936 168.817
-       }
-       ETS_WPC1 {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_bShowDebugShapesDuringRuntime 1
-          m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65DC18A508889FDC}" {
-          }
-         }
-        }
-        coords 648.271 13.363 489.261
-       }
-       VehGrpCycleWP1 {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{65DC18A896348A85}" {
-           m_fPriorityLevel 2000
-          }
-         }
-        }
-        coords 0 0 0
-       }
-       ETS_WPD1 {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_bShowDebugShapesDuringRuntime 1
-          m_Waypoint SCR_ScenarioFrameworkWaypointPatrolHierarchy "{65DAA0B1FFC64F27}" {
-           m_aSettings {
-            SCR_AIGroupFormationSetting "{65DAA0B03D559333}" {
-             m_eFormation Column
-            }
-           }
-           m_fPriorityLevel 2000
-          }
-         }
-        }
-        coords 752.562 3.069 59.641
-        angleY -87.612
-       }
-      }
-     }
-    }
-    VehGrp1 {
-     components {
-      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-       m_bEnableRepeatedSpawn 1
-       m_iRepeatedSpawnNumber 3
-       m_fRepeatedSpawnTimer 20
-      }
-     }
-     coords 79.632 -0.716 42.446
-     angleY 99.99
-     {
-      GenericEntity VehGrpVeh1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-       components {
-        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-         m_bEnableRepeatedSpawn 1
-         m_sObjectToSpawn "{B0DB416052438E48}Prefabs/Vehicles/Wheeled/Conflict_Variants/M1025_armed_M2HB_MERDC_Conflict.et"
-        }
-       }
-       coords 2.245 0 0.633
-       angleY 2.454
-      }
-     }
-    }
-    Layer52 {
-     components {
-      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-       m_bEnableRepeatedSpawn 1
-       m_iRepeatedSpawnNumber 3
-       m_fRepeatedSpawnTimer 20.5
-      }
-     }
-     coords 77.448 -0.716 42.521
-     angleY 99.99
-     {
-      GenericEntity VehGrpAI1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_bEnableRepeatedSpawn 1
-         m_aActivationActions {
-          SCR_ScenarioFrameworkActionAI "{65B0B4B4391C5FD9}" {
-           m_aAIActions {
-            SCR_ScenarioFrameworkAIActionDisableLOD "{65B0B4B43A3C3205}" {
-            }
-           }
-          }
-         }
-         m_sObjectToSpawn "{3BF36BDEEB33AEC9}Prefabs/Groups/BLUFOR/Group_US_SentryTeam.et"
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{65B0B23696A71506}" {
-          m_aLayerName {
-           "VehGrpGetInWP1" "VehGrpCycleWP1"
-          }
-         }
-         m_eAISkill EXPERT
-        }
-       }
-       coords 0.349 0 3.077
-       angleY 90.378
-      }
-      GenericEntity VehGrpGetInWP1 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-       components {
-        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{65B0B4B5D8D1AD41}" {
-         }
-        }
-       }
-       coords -0.043 0 1.362
-       angleY 95.72
-      }
-     }
-    }
-   }
-  }
- }
  AlternativeIntelTask {
   coords 7505.612 170.931 4321.877
   {
@@ -3900,6 +3753,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_sFactionKey "CSTO"
         m_bShowDebugShapesInWorkbench 0
         m_aActivationActions {
+         SCR_ScenarioFrameworkActionAppendBriefingEntryTextBasedOnTask "{65EB002FC6B35562}" {
+          m_sFactionKey "US"
+          m_iEntryID 2
+          m_Getter SCR_ScenarioFrameworkGetTask "{65EB002ED3F46973}" {
+           m_sLayerTaskName "Ambush3"
+          }
+         }
          SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{63275B89CD90F43E}" {
          }
         }
@@ -3918,6 +3778,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         "2. Three minutes to set up ambush.  "\
         "3. Place charges/landmines in the kill zone."\
         "4. End of three minutes move out of the kill zone to concealed positions.  5. Remained concealed and wait until vehicle approaches and execute the ambush. "
+        m_sTaskExecutionBriefing "Mission: Append Briefing Text based on Task. "
         m_aActionsOnFinished {
          SCR_ScenarioFrameworkActionRandomAction "{65DA01ABB6B78E93}" {
           m_aActions {

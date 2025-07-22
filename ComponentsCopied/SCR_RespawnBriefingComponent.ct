@@ -1,0 +1,35 @@
+SCR_RespawnBriefingComponent {
+ m_sJournalConfigPath "{E8B9FDA6DF9066DE}Configs/Journal/Journal_CO_Arland.conf"
+ m_Info SCR_UIInfo "{65EB002DF51B9255}" {
+  Description "AR-CombatScenario_Briefing"
+ }
+ m_SimpleBriefingBackground "{39A515BAE3795994}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_3_UI.edds"
+ m_aGameModeHints {
+  SCR_HintUIInfo "{65EB002DF51B9243}" {
+   Name "#AR-Workshop_TabName_Briefing"
+   Description "#AR-CombatScenario_Briefing"
+   Icon "{39A515BAE3795994}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_3_UI.edds"
+  }
+ }
+ m_aWinConditions {
+  SCR_BriefingVictoryCondition "{65EB002DF51B9246}" {
+   victoryCondition CUSTOM
+   name "#AR-CombatScenario_Intel_Title"
+   description "#AR-CombatScenario_Intel_Title"
+  }
+  SCR_BriefingVictoryCondition "{65EB002DF51B9245}" {
+   victoryCondition SEIZE
+   name "#AR-CombatScenario_ClearAreaTask_Title"
+   description "#AR-CombatScenario_ClearAreaTask_Title"
+  }
+  SCR_BriefingVictoryCondition "{65EB002DF51B9244}" {
+   victoryCondition GUARD
+   name "#AR-EditableEntity_AIWaypoint_SearchAndDestroy_Name"
+   description "#AR-EditableEntity_AIWaypoint_SearchAndDestroy_Name"
+  }
+  SCR_BriefingVictoryCondition "{65EB002DF51B93BB}" {
+   name "#AR-CombatScenario_ExfilTask_Title"
+   description "#AR-CombatScenario_ExfilTask_Title"
+  }
+ }
+}

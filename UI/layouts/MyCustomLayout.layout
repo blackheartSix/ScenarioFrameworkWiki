@@ -1,0 +1,56 @@
+FrameWidgetClass {
+ Name "rootFrame"
+ {
+  HorizontalLayoutWidgetClass "{65E52B08B298D9AF}" {
+   Name "HorizontalLayout0"
+   Slot FrameWidgetSlot "{65E52B08B29B5F00}" {
+   }
+   {
+    GridLayoutWidgetClass "{65E52B08B298D9AE}" {
+     Name "FooterGrid"
+     Slot LayoutSlot "{5E249B851789EBA1}" {
+     }
+     ColumnFill {
+     }
+     {
+      ButtonWidgetClass "{65E52B08B29B4CF9}" : "{CB8563509DEF3E0E}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButtonSmall.layout" {
+       Name "ButtonToggle"
+       Slot GridWidgetSlot "{62CA7591E6DE3416}" {
+        HorizontalAlign 0
+        Padding 0 2 0 0
+       }
+       components {
+        SCR_InputButtonComponent "{5D346C3DD81D95CD}" {
+         m_BackgroundDefault 0 0 0 0.392
+         m_bShowBorderOnFocus 1
+         m_sActionName "HintToggle"
+         m_sLabel ""
+         m_iHeightInPixel 40
+         m_bCanBeDisabled 0
+        }
+       }
+      }
+      ButtonWidgetClass "{65E52B08B29B4CE4}" : "{CB8563509DEF3E0E}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButtonSmall.layout" {
+       Name "ButtonContext"
+       Slot GridWidgetSlot "{62CA7591E6DE3449}" {
+        HorizontalAlign 0
+        Padding 0 3 0 0
+        Row 1
+       }
+       components {
+        SCR_InputButtonComponent "{5D346C3DD81D95CD}" {
+         m_BackgroundDefault 0 0 0 0.392
+         m_bShowBorderOnFocus 1
+         m_sActionName "HintContext"
+         m_sLabel "#AR-Hint_ButtonContext_Text"
+         m_iHeightInPixel 40
+         m_bCanBeDisabled 0
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

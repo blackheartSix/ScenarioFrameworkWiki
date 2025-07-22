@@ -1,3 +1,174 @@
+GenericEntity ActionsList : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+ components {
+  SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+   m_aActivationActions {
+    SCR_ScenarioFrameworkAIActionSetRadioFrequency "{65E4994B553FBECD}" {
+    }
+    SCR_ScenarioFrameworkActionAI "{65E499499869862E}" {
+    }
+    SCR_ScenarioFrameworkActionAddItemToInventory "{65E499499B0AF814}" {
+    }
+    SCR_ScenarioFrameworkActionAddScoreToCAHFaction "{65E4994994B4DFC5}" {
+    }
+    SCR_ScenarioFrameworkActionAppendBriefingEntryText "{65E49949E970493A}" {
+    }
+    SCR_ScenarioFrameworkActionAppendBriefingEntryTextBasedOnTask "{65E49949EB1F3395}" {
+    }
+    SCR_ScenarioFrameworkActionBasedOnConditions "{65E49949E0C4EB26}" {
+    }
+    SCR_ScenarioFrameworkActionChangeLayerActivationType "{65E49949E29858AA}" {
+    }
+    SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65E49949CF553DFE}" {
+    }
+    SCR_ScenarioFrameworkActionChangeTaskState "{65E49949CBCEB4AC}" {
+    }
+    SCR_ScenarioFrameworkActionChangeTaskTitleOrDescription "{65E49949C5A0BCF8}" {
+    }
+    SCR_ScenarioFrameworkActionChangeTime "{65E49949C19063F3}" {
+    }
+    SCR_ScenarioFrameworkActionChangeTriggerActivationPresence "{65E49949C3BEC394}" {
+    }
+    SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65E49949DF644CFC}" {
+    }
+    SCR_ScenarioFrameworkActionChangeWeather "{65E49949DA81C442}" {
+    }
+    SCR_ScenarioFrameworkActionCompareCounterAndExecute "{65E49949D6EFBEEA}" {
+    }
+    SCR_ScenarioFrameworkActionCountInventoryItemsAndExecuteAction "{65E49949D2FC7B93}" {
+    }
+    SCR_ScenarioFrameworkActionDamageWheel "{65E499492F7F4F52}" {
+    }
+    SCR_ScenarioFrameworkActionVoiceOverPlaySequence "{65E4994B08BE7EE1}" {
+    }
+    SCR_ScenarioFrameworkActionDecreaseLogicCounter "{65E499492B241B87}" {
+    }
+    SCR_ScenarioFrameworkActionDeleteEntity "{65E4994926480DCC}" {
+    }
+    SCR_ScenarioFrameworkActionDeleteMarker "{65E499493ECC11A6}" {
+    }
+    SCR_ScenarioFrameworkActionEndMission "{65E499493B9789C0}" {
+    }
+    SCR_ScenarioFrameworkActionExecuteFunction "{65E499493267BBFC}" {
+    }
+    SCR_ScenarioFrameworkActionFailTaskIfVehiclesInTriggerDestroyed "{65E4994902039740}" {
+    }
+    SCR_ScenarioFrameworkActionFeedParamToTaskDescription "{65E4994914EF054F}" {
+    }
+    SCR_ScenarioFrameworkActionHideHint "{65E4994910C9B35B}" {
+    }
+    SCR_ScenarioFrameworkActionIncrementCounter "{65E499496D8827F1}" {
+    }
+    SCR_ScenarioFrameworkActionIntroVoicelineBasedOnTasks "{65E499496B0931F1}" {
+    }
+    SCR_ScenarioFrameworkActionItemSafeguard "{65E499497B162F1B}" {
+    }
+    SCR_ScenarioFrameworkActionKillEntity "{65E4994976876501}" {
+    }
+    SCR_ScenarioFrameworkActionLockOrUnlockAllTargetVehiclesInTrigger "{65E49948261F69A1}" {
+    }
+    SCR_ScenarioFrameworkActionLockOrUnlockVehicle "{65E499482219B76D}" {
+    }
+    SCR_ScenarioFrameworkActionLoopOverNotRandomlySelectedLayers "{65E4994839C8C8AD}" {
+    }
+    SCR_ScenarioFrameworkActionMedical "{65E499483BEF48C8}" {
+    }
+    SCR_ScenarioFrameworkActionMoveIntoCompartment "{65E49948347E11F9}" {
+    }
+    SCR_ScenarioFrameworkActionOnCinematicFinished "{65E4994831C40853}" {
+    }
+    SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{65E499483284E756}" {
+    }
+    SCR_ScenarioFrameworkActionOnEngineStartedOrStop "{65E4994809E25730}" {
+    }
+    SCR_ScenarioFrameworkActionOnUserActionEvent "{65E499480A2C6550}" {
+    }
+    SCR_ScenarioFrameworkActionPlayMusic "{65E499481D8E10D2}" {
+    }
+    SCR_ScenarioFrameworkActionPlaySound "{65E499481EA43943}" {
+    }
+    SCR_ScenarioFrameworkActionPlaySoundOnEntity "{65E499481817A211}" {
+    }
+    SCR_ScenarioFrameworkActionPrepareAreaFromDynamicDespawn "{65E499487C7C88FD}" {
+    }
+    SCR_ScenarioFrameworkActionPrepareLayerFromDynamicDespawn "{65E49948793ECD7C}" {
+    }
+    SCR_ScenarioFrameworkActionProcessVoicelineEnumAndString "{65E49948749136CC}" {
+    }
+    SCR_ScenarioFrameworkActionQRFDispacher "{65E499484C149C23}" {
+    }
+    SCR_ScenarioFrameworkActionRandomAction "{65E4994845DE6D84}" {
+    }
+    SCR_ScenarioFrameworkActionRemoveAreaFromDynamicDespawn "{65E499485C26AD13}" {
+    }
+    SCR_ScenarioFrameworkActionRemoveItemFromInventory "{65E4994855E632AB}" {
+    }
+    SCR_ScenarioFrameworkActionRemoveLayerFromDynamicDespawn "{65E49948504447A8}" {
+    }
+    SCR_ScenarioFrameworkActionResetCounter "{65E4994BAEA56F7B}" {
+    }
+    SCR_ScenarioFrameworkActionRestoreLayerToDefault "{65E4994B8AA2353D}" {
+    }
+    SCR_ScenarioFrameworkActionSetBriefingEntryText "{65E4994B84155BF6}" {
+    }
+    SCR_ScenarioFrameworkActionSetBriefingEntryTextBasedOnGeneratedTasks "{65E4994B83010A67}" {
+    }
+    SCR_ScenarioFrameworkActionSetEntityPosition "{65E4994B99F539BD}" {
+    }
+    SCR_ScenarioFrameworkActionSetEntityScale "{65E4994B9047B379}" {
+    }
+    SCR_ScenarioFrameworkActionSetExecutionEntryTextBasedOnGeneratedTasks "{65E4994BE89EA908}" {
+    }
+    SCR_ScenarioFrameworkActionSetFactionToCAHArea "{65E4994BE40C46E2}" {
+    }
+    SCR_ScenarioFrameworkActionSetFuelConsumption "{65E4994BE06AB585}" {
+    }
+    SCR_ScenarioFrameworkActionSetFuelPercentage "{65E4994BFF6D8E93}" {
+    }
+    SCR_ScenarioFrameworkActionSetMissionEndScreen "{65E4994BF868FC81}" {
+    }
+    SCR_ScenarioFrameworkActionSetSupplyPercentage "{65E4994BCD85530C}" {
+    }
+    SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{65E4994BCE044F60}" {
+    }
+    SCR_ScenarioFrameworkActionShowHint "{65E4994BC4B57B21}" {
+    }
+    SCR_ScenarioFrameworkActionShowItemSlotHint "{65E4994BC0704A03}" {
+    }
+    SCR_ScenarioFrameworkActionShowLayout "{65E4994BDCA0E203}" {
+    }
+    SCR_ScenarioFrameworkActionShowPopupNotification "{65E4994BD3AC0F65}" {
+    }
+    SCR_ScenarioFrameworkActionSpawnClosestObjectFromList "{65E4994B29E743C4}" {
+    }
+    SCR_ScenarioFrameworkActionSpawnObjectBasedOnDistance "{65E4994B3D0F0685}" {
+    }
+    SCR_ScenarioFrameworkActionSpawnObjects "{65E4994B39A23F28}" {
+    }
+    SCR_ScenarioFrameworkActionToggleEngine "{65E4994B355A74F2}" {
+    }
+    SCR_ScenarioFrameworkActionToggleLights "{65E4994B318A5534}" {
+    }
+    SCR_ScenarioFrameworkActionVoiceOverPlayLine "{65E4994B0C360A46}" {
+    }
+    SCR_ScenarioFrameworkActionVoiceOverPlaySequence "{65E4994B66009566}" {
+    }
+    SCR_ScenarioFrameworkActionWaitAndExecute "{65E4994B62033733}" {
+    }
+    SCR_ScenarioFrameworkCreateVariable "{65E4994B78EB8184}" {
+    }
+    SCR_ScenarioFrameworkGetVariableValue "{65E4994B7A2118D8}" {
+    }
+    SCR_ScenarioFrameworkSetSignal "{65E4994B718E7A2B}" {
+    }
+    SCR_ScenarioFrameworkSetVariable "{65E4994B7338C57A}" {
+    }
+   }
+   m_sObjectToSpawn "{FB18EFE9C1A81E29}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_US_01.et"
+  }
+ }
+ coords 4940.827 28.563 11453.358
+ angleY 103.28
+}
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  VehDepotModify {
   components {
@@ -13,108 +184,173 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      GenericEntity Slot62 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       components {
        SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkAIActionSetRadioFrequency "{65E4994B553FBECD}" {
+         }
+         SCR_ScenarioFrameworkActionAI "{65E499499869862E}" {
+         }
+         SCR_ScenarioFrameworkActionAddItemToInventory "{65E499499B0AF814}" {
+         }
+         SCR_ScenarioFrameworkActionAddScoreToCAHFaction "{65E4994994B4DFC5}" {
+         }
+         SCR_ScenarioFrameworkActionAppendBriefingEntryText "{65E49949E970493A}" {
+         }
+         SCR_ScenarioFrameworkActionAppendBriefingEntryTextBasedOnTask "{65E49949EB1F3395}" {
+         }
+         SCR_ScenarioFrameworkActionBasedOnConditions "{65E49949E0C4EB26}" {
+         }
+         SCR_ScenarioFrameworkActionChangeLayerActivationType "{65E49949E29858AA}" {
+         }
+         SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65E49949CF553DFE}" {
+         }
+         SCR_ScenarioFrameworkActionChangeTaskState "{65E49949CBCEB4AC}" {
+         }
+         SCR_ScenarioFrameworkActionChangeTaskTitleOrDescription "{65E49949C5A0BCF8}" {
+         }
+         SCR_ScenarioFrameworkActionChangeTime "{65E49949C19063F3}" {
+         }
+         SCR_ScenarioFrameworkActionChangeTriggerActivationPresence "{65E49949C3BEC394}" {
+         }
+         SCR_ScenarioFrameworkActionChangeUserActionVisibility "{65E49949DF644CFC}" {
+         }
+         SCR_ScenarioFrameworkActionChangeWeather "{65E49949DA81C442}" {
+         }
+         SCR_ScenarioFrameworkActionCompareCounterAndExecute "{65E49949D6EFBEEA}" {
+         }
+         SCR_ScenarioFrameworkActionCountInventoryItemsAndExecuteAction "{65E49949D2FC7B93}" {
+         }
+         SCR_ScenarioFrameworkActionDamageWheel "{65E499492F7F4F52}" {
+         }
+         SCR_ScenarioFrameworkActionVoiceOverPlaySequence "{65E4994B08BE7EE1}" {
+         }
+         SCR_ScenarioFrameworkActionDecreaseLogicCounter "{65E499492B241B87}" {
+         }
+         SCR_ScenarioFrameworkActionDeleteEntity "{65E4994926480DCC}" {
+         }
+         SCR_ScenarioFrameworkActionDeleteMarker "{65E499493ECC11A6}" {
+         }
+         SCR_ScenarioFrameworkActionEndMission "{65E499493B9789C0}" {
+         }
+         SCR_ScenarioFrameworkActionExecuteFunction "{65E499493267BBFC}" {
+         }
+         SCR_ScenarioFrameworkActionFailTaskIfVehiclesInTriggerDestroyed "{65E4994902039740}" {
+         }
+         SCR_ScenarioFrameworkActionFeedParamToTaskDescription "{65E4994914EF054F}" {
+         }
+         SCR_ScenarioFrameworkActionHideHint "{65E4994910C9B35B}" {
+         }
+         SCR_ScenarioFrameworkActionIncrementCounter "{65E499496D8827F1}" {
+         }
+         SCR_ScenarioFrameworkActionIntroVoicelineBasedOnTasks "{65E499496B0931F1}" {
+         }
+         SCR_ScenarioFrameworkActionItemSafeguard "{65E499497B162F1B}" {
+         }
+         SCR_ScenarioFrameworkActionKillEntity "{65E4994976876501}" {
+         }
+         SCR_ScenarioFrameworkActionLockOrUnlockAllTargetVehiclesInTrigger "{65E49948261F69A1}" {
+         }
+         SCR_ScenarioFrameworkActionLockOrUnlockVehicle "{65E499482219B76D}" {
+         }
+         SCR_ScenarioFrameworkActionLoopOverNotRandomlySelectedLayers "{65E4994839C8C8AD}" {
+         }
+         SCR_ScenarioFrameworkActionMedical "{65E499483BEF48C8}" {
+         }
+         SCR_ScenarioFrameworkActionMoveIntoCompartment "{65E49948347E11F9}" {
+         }
+         SCR_ScenarioFrameworkActionOnCinematicFinished "{65E4994831C40853}" {
+         }
+         SCR_ScenarioFrameworkActionOnCompartmentEnteredOrLeft "{65E499483284E756}" {
+         }
+         SCR_ScenarioFrameworkActionOnEngineStartedOrStop "{65E4994809E25730}" {
+         }
+         SCR_ScenarioFrameworkActionOnUserActionEvent "{65E499480A2C6550}" {
+         }
+         SCR_ScenarioFrameworkActionPlayMusic "{65E499481D8E10D2}" {
+         }
+         SCR_ScenarioFrameworkActionPlaySound "{65E499481EA43943}" {
+         }
+         SCR_ScenarioFrameworkActionPlaySoundOnEntity "{65E499481817A211}" {
+         }
+         SCR_ScenarioFrameworkActionPrepareAreaFromDynamicDespawn "{65E499487C7C88FD}" {
+         }
+         SCR_ScenarioFrameworkActionPrepareLayerFromDynamicDespawn "{65E49948793ECD7C}" {
+         }
+         SCR_ScenarioFrameworkActionProcessVoicelineEnumAndString "{65E49948749136CC}" {
+         }
+         SCR_ScenarioFrameworkActionQRFDispacher "{65E499484C149C23}" {
+         }
+         SCR_ScenarioFrameworkActionRandomAction "{65E4994845DE6D84}" {
+         }
+         SCR_ScenarioFrameworkActionRemoveAreaFromDynamicDespawn "{65E499485C26AD13}" {
+         }
+         SCR_ScenarioFrameworkActionRemoveItemFromInventory "{65E4994855E632AB}" {
+         }
+         SCR_ScenarioFrameworkActionRemoveLayerFromDynamicDespawn "{65E49948504447A8}" {
+         }
+         SCR_ScenarioFrameworkActionResetCounter "{65E4994BAEA56F7B}" {
+         }
+         SCR_ScenarioFrameworkActionRestoreLayerToDefault "{65E4994B8AA2353D}" {
+         }
+         SCR_ScenarioFrameworkActionSetBriefingEntryText "{65E4994B84155BF6}" {
+         }
+         SCR_ScenarioFrameworkActionSetBriefingEntryTextBasedOnGeneratedTasks "{65E4994B83010A67}" {
+         }
+         SCR_ScenarioFrameworkActionSetEntityPosition "{65E4994B99F539BD}" {
+         }
+         SCR_ScenarioFrameworkActionSetEntityScale "{65E4994B9047B379}" {
+         }
+         SCR_ScenarioFrameworkActionSetExecutionEntryTextBasedOnGeneratedTasks "{65E4994BE89EA908}" {
+         }
+         SCR_ScenarioFrameworkActionSetFactionToCAHArea "{65E4994BE40C46E2}" {
+         }
+         SCR_ScenarioFrameworkActionSetFuelConsumption "{65E4994BE06AB585}" {
+         }
+         SCR_ScenarioFrameworkActionSetFuelPercentage "{65E4994BFF6D8E93}" {
+         }
+         SCR_ScenarioFrameworkActionSetMissionEndScreen "{65E4994BF868FC81}" {
+         }
+         SCR_ScenarioFrameworkActionSetSupplyPercentage "{65E4994BCD85530C}" {
+         }
+         SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{65E4994BCE044F60}" {
+         }
+         SCR_ScenarioFrameworkActionShowHint "{65E4994BC4B57B21}" {
+         }
+         SCR_ScenarioFrameworkActionShowItemSlotHint "{65E4994BC0704A03}" {
+         }
+         SCR_ScenarioFrameworkActionShowLayout "{65E4994BDCA0E203}" {
+         }
+         SCR_ScenarioFrameworkActionShowPopupNotification "{65E4994BD3AC0F65}" {
+         }
+         SCR_ScenarioFrameworkActionSpawnClosestObjectFromList "{65E4994B29E743C4}" {
+         }
+         SCR_ScenarioFrameworkActionSpawnObjectBasedOnDistance "{65E4994B3D0F0685}" {
+         }
+         SCR_ScenarioFrameworkActionSpawnObjects "{65E4994B39A23F28}" {
+         }
+         SCR_ScenarioFrameworkActionToggleEngine "{65E4994B355A74F2}" {
+         }
+         SCR_ScenarioFrameworkActionToggleLights "{65E4994B318A5534}" {
+         }
+         SCR_ScenarioFrameworkActionVoiceOverPlayLine "{65E4994B0C360A46}" {
+         }
+         SCR_ScenarioFrameworkActionVoiceOverPlaySequence "{65E4994B66009566}" {
+         }
+         SCR_ScenarioFrameworkActionWaitAndExecute "{65E4994B62033733}" {
+         }
+         SCR_ScenarioFrameworkCreateVariable "{65E4994B78EB8184}" {
+         }
+         SCR_ScenarioFrameworkGetVariableValue "{65E4994B7A2118D8}" {
+         }
+         SCR_ScenarioFrameworkSetSignal "{65E4994B718E7A2B}" {
+         }
+         SCR_ScenarioFrameworkSetVariable "{65E4994B7338C57A}" {
+         }
+        }
         m_sObjectToSpawn "{FB18EFE9C1A81E29}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_US_01.et"
        }
       }
       coords 8.031 0 -1.007
       angleY 103.28
-     }
-    }
-   }
-  }
- }
- NestingAndBranching_WIP {
-  components {
-   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    Enabled 0
-   }
-  }
-  coords 8444.575 229.24 2002.995
-  {
-   $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
-    A_StartPoint {
-     components {
-      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-       m_aTriggerActionsOnFinish {
-        SCR_ScenarioFrameworkActionWaitAndExecute "{6566D38417203FFB}" {
-         m_iDelayInSeconds 1
-         m_aActions {
-          SCR_ScenarioFrameworkActionRandomAction "{6566D3846D872A88}" {
-           m_aActions {
-            SCR_ScenarioFrameworkActionSpawnObjects "{6566D384693FB7C9}" {
-             m_aNameOfObjectsToSpawnOnActivation {
-              "MoveLeftA"
-             }
-            }
-            SCR_ScenarioFrameworkActionSpawnObjects "{6566D3846A394302}" {
-             m_aNameOfObjectsToSpawnOnActivation {
-              "MoveRightA"
-             }
-            }
-           }
-          }
-         }
-        }
-       }
-      }
-     }
-     coords 1911.964 -194.792 -1605.924
-     {
-      GenericEntity SlotMoveTo14 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-       coords 0 0 0
-      }
-     }
-    }
-    B_MoveLeft {
-     components {
-      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-       m_eActivationType ON_TRIGGER_ACTIVATION
-      }
-     }
-     coords -861.663 -115.961 59.532
-     {
-      GenericEntity SlotMoveTo18 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-       coords 0 0 0
-      }
-     }
-    }
-    B_MoveRight {
-     components {
-      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-       m_eActivationType ON_TRIGGER_ACTIVATION
-      }
-     }
-     coords 1079.561 -198.311 -235.511
-     {
-      GenericEntity SlotMoveTo19 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-       coords 0 0 0
-      }
-     }
-    }
-    C__MoveLeft {
-     components {
-      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-       m_eActivationType ON_TRIGGER_ACTIVATION
-      }
-     }
-     coords -1471.797 -137.682 2675.99
-     {
-      GenericEntity SlotMoveTo21 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-       coords 0 0 0
-      }
-     }
-    }
-    C_MoveRight {
-     components {
-      SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-       m_eActivationType ON_TRIGGER_ACTIVATION
-      }
-     }
-     coords 394.324 -134.19 690.175
-     {
-      GenericEntity SlotMoveTo22 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-       coords 0 0 0
-      }
      }
     }
    }
