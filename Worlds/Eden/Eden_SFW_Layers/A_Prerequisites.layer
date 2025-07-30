@@ -39,8 +39,50 @@ SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 7114.536 102.942 6284.017
 }
-SCR_FactionManager FactionManager_USxUSSR1 : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
- coords 6500 161.875 6500
+SCR_FactionManager FactionManager_Base1 : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionManager_Base.et" {
+ components {
+  SCR_FactionAliasComponent "{65F3329064734983}" {
+   m_aFactionAliases {
+    SCR_ScenarioFrameworkFactionAliasConfig "{65F3329061C7AEE7}" {
+     m_sAlias "PLAYER"
+     m_sFactionKey "US"
+    }
+    SCR_ScenarioFrameworkFactionAliasConfig "{65F332907B16D1B9}" {
+     m_sAlias "CSTO"
+     m_sFactionKey "USSR"
+    }
+    SCR_ScenarioFrameworkFactionAliasConfig "{65F3329073D69775}" {
+     m_sAlias "CSTO"
+     m_sFactionKey "FIA"
+    }
+    SCR_ScenarioFrameworkFactionAliasConfig "{65F332911834824F}" {
+     m_sAlias "UNKNOWN"
+     m_sFactionKey "US"
+    }
+    SCR_ScenarioFrameworkFactionAliasConfig "{65F3329113FE7335}" {
+     m_sAlias "UNKNOWN"
+     m_sFactionKey "FIA"
+    }
+    SCR_ScenarioFrameworkFactionAliasConfig "{65F332916A8893E3}" {
+     m_sAlias "UNKNOWN"
+     m_sFactionKey "USSR"
+    }
+   }
+  }
+ }
+ coords 3919.667 15.312 8450.721
+ Factions {
+  SCR_Faction "{65F33290273D1D27}" : "{3FA20B01D950D31F}Configs/Factions/CIV.conf" {
+  }
+  SCR_Faction "{65F332902B370771}" : "{8053DB656DD18B14}Configs/Factions/FIA.conf" {
+   m_bIsPlayable 0
+  }
+  SCR_Faction "{65F33290D397B2AA}" : "{5EB46557DF2AA24F}Configs/Factions/US.conf" {
+  }
+  SCR_Faction "{65F33290257ECBBD}" : "{09727032415AC39B}Configs/Factions/USSR.conf" {
+   m_bIsPlayable 0
+  }
+ }
 }
 RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
  coords 7114.536 103.058 6283.017
@@ -63,6 +105,13 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFra
   }
  }
 }
-SCR_LoadoutManager : "{97EF4C1A41F63DDB}Prefabs/MP/Managers/Loadouts/LoadoutManager_USxUSSR.et" {
+SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
  coords 6500 161.875 6500
+ m_aPlayerLoadouts {
+  SCR_PlayerArsenalLoadout "{65F33292834C6EF1}" {
+   m_sLoadoutName "Player"
+   m_sLoadoutResource "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+   m_sAffiliatedFaction "US"
+  }
+ }
 }

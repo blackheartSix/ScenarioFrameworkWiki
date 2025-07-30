@@ -1,4 +1,9 @@
 GenericEntity EveronTrafficSystem : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+ components {
+  SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+   Enabled 0
+  }
+ }
  coords 4923.058 27.781 11582.688
 }
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
@@ -889,6 +894,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   }
  }
  PatrolDismounted {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
   coords 4789.05 13.423 9952.408
   {
    $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
@@ -1248,14 +1258,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_sFactionKey "US"
        }
       }
-     }
-     SCR_ScenarioFrameworkActionShowLayout "{6550C4F8399A04B4}" {
-      m_sLayout "{131DAC3E58EF8FAC}UI/layouts/HintInfoDisplayCustom.layout"
-      m_fFadeIn 1
-      m_fFadeOut 1
-      m_fVisibilityTime 30
-      m_fOpacityValue 0.5
-      m_iID 100
      }
     }
    }
@@ -2220,6 +2222,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
  IED_Defuse {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
     m_bShowDebugShapesDuringRuntime 1
     m_bShowDebugShapesInWorkbench 1
     m_iDynamicDespawnRange 5
@@ -3015,6 +3018,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   }
  }
  AlternativeIntelTask {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
   coords 7505.612 170.931 4321.877
   {
    $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
@@ -3098,6 +3106,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   }
  }
  RemoteDetonation {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
   coords 9917.522 296.576 2598.855
   {
    GenericEntity Kill_Entity_RemoteDetonation1 : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
@@ -3444,6 +3457,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   }
  }
  NewAmbushTask {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
   coords 7024.345 94.043 4630.072
   {
    GenericEntity Ambush3 : "{5EDF39860639027D}Prefabs/Systems/ScenarioFramework/Components/LayerTaskDestroy.et" {
@@ -3848,6 +3866,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
               m_Info SCR_UIInfo "{65DB125F90CDC27B}" {
                Name "Camp Bragg"
               }
+              m_aActionsOnSpawnPointUsed {
+               SCR_ScenarioFrameworkAIActionSetRadioFrequency "{65F503CA4FEF4F6D}" {
+                m_iFrequency 37
+               }
+              }
              }
             }
             m_sObjectToSpawn "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et"
@@ -3900,6 +3923,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              SCR_ScenarioFrameworkPluginSpawnPoint "{65DB125FF9E8655C}" {
               m_Info SCR_UIInfo "{65DB125F90CDC27B}" {
                Name "Camp A.P. Hill"
+              }
+              m_aActionsOnSpawnPointUsed {
+               SCR_ScenarioFrameworkAIActionSetRadioFrequency "{65F503CA56D49B51}" {
+                m_iFrequency 48000
+                m_sEncryptionKey "chickenNuggets"
+               }
               }
              }
             }

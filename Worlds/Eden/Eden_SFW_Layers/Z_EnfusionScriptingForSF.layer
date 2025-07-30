@@ -1,0 +1,23 @@
+GenericEntity BH6_RandomPosition : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 6500 161.875 6500
+ {
+  GenericEntity Layer9 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity Slot53 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     components {
+      SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+       m_aActivationActions {
+        SCR_ScenarioFrameworkActionExecuteFunction "{65FA94C2DA675123}" {
+         m_ObjectToCallTheMethodFrom SCR_ScenarioFrameworkGetPlayerEntity "{65FA94C20F4A1C07}" {
+         }
+        }
+       }
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}

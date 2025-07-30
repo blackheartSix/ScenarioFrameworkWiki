@@ -1,9 +1,41 @@
+$grp CommentEntity {
+ {
+  coords 10904.06 19.592 8839.379
+  angleX 3.576
+  m_Comment "A"
+  m_Color 1 1 1
+  m_ScaleByDistance 1
+  m_FaceCamera 1
+  m_VisibleOverall 1
+  m_VisibleIngame 1
+  m_BackgroundColor 0 0 0
+ }
+ {
+  coords 10891.339 19.323 8803.543
+  m_Comment "B"
+  m_Color 1 1 1
+  m_ScaleByDistance 1
+  m_FaceCamera 1
+  m_VisibleOverall 1
+  m_VisibleIngame 1
+  m_BackgroundColor 0 0 0
+ }
+ {
+  coords 10921.171 20.239 8806.538
+  angleX 0.563
+  angleY 0.042
+  angleZ 4.243
+  m_Comment "C"
+  m_ScaleByDistance 1
+  m_FaceCamera 1
+  m_VisibleOverall 1
+  m_VisibleIngame 1
+ }
+}
 GenericEntity ActionsList : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
  components {
   SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
    m_aActivationActions {
-    SCR_ScenarioFrameworkAIActionSetRadioFrequency "{65E4994B553FBECD}" {
-    }
     SCR_ScenarioFrameworkActionAI "{65E499499869862E}" {
     }
     SCR_ScenarioFrameworkActionAddItemToInventory "{65E499499B0AF814}" {
@@ -453,342 +485,438 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
     Enabled 0
-    m_aActivationActions {
-     SCR_ScenarioFrameworkCreateVariable "{65CCB2B94822B5F7}" {
-      m_sVariableName "varAA"
-      m_sVariableValue "True"
-     }
-     SCR_ScenarioFrameworkCreateVariable "{65CCB2B8A36220CA}" {
-      m_sVariableName "varAB"
-      m_sVariableValue "True"
-     }
-     SCR_ScenarioFrameworkCreateVariable "{65CCB2B8BCEAC464}" {
-      m_sVariableName "varAC"
-      m_sVariableValue "True"
-     }
-     SCR_ScenarioFrameworkCreateVariable "{65CCB2B8BE1018F1}" {
-      m_sVariableName "varBA"
-      m_sVariableValue "True"
-     }
-     SCR_ScenarioFrameworkCreateVariable "{65CCB2B8B5645E8D}" {
-      m_sVariableName "varBB"
-      m_sVariableValue "True"
-     }
-     SCR_ScenarioFrameworkCreateVariable "{65CCB2B884E48A11}" {
-      m_sVariableName "varBC"
-      m_sVariableValue "True"
-     }
-     SCR_ScenarioFrameworkCreateVariable "{65CCB2B88743EB4F}" {
-      m_sVariableName "varCA"
-      m_sVariableValue "True"
-     }
-     SCR_ScenarioFrameworkCreateVariable "{65CCB2B88192FC3D}" {
-      m_sVariableName "varCB"
-      m_sVariableValue "True"
-     }
-     SCR_ScenarioFrameworkCreateVariable "{65CCB2B8822F8259}" {
-      m_sVariableName "varCC"
-      m_sVariableValue "True"
-     }
-    }
-    m_aTriggerActions {
-     SCR_ScenarioFrameworkActionWaitAndExecute "{65CCB2A37FEFC2C1}" {
-      m_iDelayInSeconds 5
-      m_aActions {
-       SCR_ScenarioFrameworkActionRandomAction "{65CCB2A374E8A66A}" {
-        m_aActions {
-         SCR_ScenarioFrameworkActionSpawnObjects "{65CCB2A370C5302F}" {
-          m_aNameOfObjectsToSpawnOnActivation {
-           "Sector1A" "Sector1B" "Sector1C"
-          }
-         }
-        }
-       }
-      }
-     }
-    }
+    m_bShowDebugShapesDuringRuntime 1
+    m_bShowDebugShapesInWorkbench 1
+    m_fAreaRadius 5
    }
   }
   coords 10903.575 19.044 8817.526
   {
    $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-    Sector1B {
+    SampleLayer1 {
      components {
       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-       Enabled 0
+       m_SpawnChildren RANDOM_ONE
+      }
+     }
+     coords 0 0 0
+     {
+      $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+       LayerTaskMoveA {
+        components {
+         SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+          m_sTaskTitle "A1"
+         }
+        }
+        coords 0.232 -0.335 21.201
+        angleX 3.576
+        {
+         GenericEntity SlotMoveToA : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+          components {
+           SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+            m_bShowDebugShapesDuringRuntime 1
+            m_aPlugins {
+             SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+             }
+            }
+            m_aActionsOnFinished {
+             SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65FC1E7D018DE49C}" {
+              m_Getter SCR_ScenarioFrameworkGetLayerBase "{65FC99B2FB2FE8AD}" {
+               m_sLayerBaseName "LayerTaskMoveA"
+              }
+             }
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65FC1E7D19A4A038}" {
+              m_iDelayInSeconds 1
+              m_aActions {
+               SCR_ScenarioFrameworkActionDeleteEntity "{65FC1E7D16594548}" {
+                m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65FC99B2D004C84C}" {
+                 m_sLayerName "LayerTaskMoveA"
+                }
+               }
+              }
+             }
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65FC1E7D6F672B2C}" {
+              m_iDelayInSeconds 5
+              m_aActions {
+               SCR_ScenarioFrameworkActionRestoreLayerToDefault "{65FC1E7D64BF655F}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65FC1E7D665E2C9F}" {
+                 m_sLayerBaseName "SampleLayer1"
+                }
+                m_bIncludeChildren 0
+                m_bReinitAfterRestoration 1
+               }
+              }
+             }
+            }
+            m_aActionsOnCreated {
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65CCB2BE7FD55108}" {
+              m_iDelayInSeconds 3
+              m_aActions {
+               SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65CCB2BE74AC9AC6}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65CCB2BEA1957BB1}" {
+                 m_sLayerBaseName "LayerTaskMoveA"
+                }
+                m_bTerminated 1
+               }
+              }
+             }
+            }
+           }
+          }
+          coords -0.001 0 0
+         }
+        }
+       }
+       LayerTaskMoveB {
+        components {
+         SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+          m_sTaskTitle "B1"
+         }
+        }
+        coords -12.497 -0.577 -15.137
+        {
+         GenericEntity SlotMoveToB : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+          components {
+           SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+            m_bShowDebugShapesDuringRuntime 1
+            m_aPlugins {
+             SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+             }
+            }
+            m_aActionsOnFinished {
+             SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65FC1E7D018DE49C}" {
+              m_Getter SCR_ScenarioFrameworkGetLayerBase "{65FC99B2FB2FE8AD}" {
+               m_sLayerBaseName "LayerTaskMoveB"
+              }
+             }
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65FC1E7D19A4A038}" {
+              m_iDelayInSeconds 1
+              m_aActions {
+               SCR_ScenarioFrameworkActionDeleteEntity "{65FC1E7D16594548}" {
+                m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65FC99B2DA84CE4B}" {
+                 m_sLayerName "LayerTaskMoveB"
+                }
+               }
+              }
+             }
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65FC1E7D6F672B2C}" {
+              m_iDelayInSeconds 5
+              m_aActions {
+               SCR_ScenarioFrameworkActionRestoreLayerToDefault "{65FC1E7D64BF655F}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65FC1E7D665E2C9F}" {
+                 m_sLayerBaseName "SampleLayer1"
+                }
+                m_bIncludeChildren 0
+                m_bReinitAfterRestoration 1
+               }
+              }
+             }
+            }
+            m_aActionsOnCreated {
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65CCB2BE7FD55108}" {
+              m_iDelayInSeconds 3
+              m_aActions {
+               SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65CCB2BE74AC9AC6}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65CCB2BEA1957BB1}" {
+                 m_sLayerBaseName "LayerTaskMoveB"
+                }
+                m_bTerminated 1
+               }
+              }
+             }
+            }
+            m_aActionsOnProgress {
+             SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65FC1E7ED92F1384}" {
+              m_bTerminated 1
+             }
+            }
+            m_aActionsOnUpdated {
+             SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65FC1E7ED56B261D}" {
+              m_bTerminated 1
+             }
+            }
+           }
+          }
+          coords 0 0 0.001
+         }
+        }
+       }
+       LayerTaskMoveC {
+        components {
+         SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+          m_sTaskTitle "C1"
+         }
+        }
+        coords 16.628 0.076 -11.137
+        angleX 0.563
+        angleY 0.042
+        angleZ 4.243
+        {
+         GenericEntity SlotMoveToC : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+          components {
+           SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+            m_bShowDebugShapesDuringRuntime 1
+            m_aPlugins {
+             SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+             }
+            }
+            m_aActionsOnFinished {
+             SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65FC1E7D018DE49C}" {
+              m_Getter SCR_ScenarioFrameworkGetLayerBase "{65FC99B2FB2FE8AD}" {
+               m_sLayerBaseName "LayerTaskMoveC"
+              }
+             }
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65FC1E7D19A4A038}" {
+              m_iDelayInSeconds 1
+              m_aActions {
+               SCR_ScenarioFrameworkActionDeleteEntity "{65FC1E7D16594548}" {
+                m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65FC99B2C214E359}" {
+                 m_sLayerName "LayerTaskMoveC"
+                }
+               }
+              }
+             }
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65FC1E7D6F672B2C}" {
+              m_iDelayInSeconds 5
+              m_aActions {
+               SCR_ScenarioFrameworkActionRestoreLayerToDefault "{65FC1E7D64BF655F}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65FC1E7D665E2C9F}" {
+                 m_sLayerBaseName "SampleLayer1"
+                }
+                m_bIncludeChildren 0
+                m_bReinitAfterRestoration 1
+               }
+              }
+             }
+            }
+            m_aActionsOnCreated {
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65CCB2BE7FD55108}" {
+              m_iDelayInSeconds 3
+              m_aActions {
+               SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65CCB2BE74AC9AC6}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65CCB2BEA1957BB1}" {
+                 m_sLayerBaseName "LayerTaskMoveC"
+                }
+                m_bTerminated 1
+               }
+              }
+             }
+            }
+            m_aActionsOnProgress {
+             SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65FC1E7EF2DEAA61}" {
+              m_bTerminated 1
+             }
+            }
+            m_aActionsOnUpdated {
+             SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65FC1E7EC8F51FE8}" {
+              m_bTerminated 1
+             }
+            }
+           }
+          }
+          coords -0.001 0 0
+         }
+        }
+       }
+      }
+     }
+    }
+    SampleLayer2 {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
        m_SpawnChildren RANDOM_ONE
        m_eActivationType ON_TRIGGER_ACTIVATION
       }
      }
-     coords -22.201 -1.322 -28.081
+     coords -42.933 -7.42 -246.688
      {
-      GenericEntity LayerTaskMoveB : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
-       components {
-        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-         m_sTaskTitle "B"
+      $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+       LayerTaskMoveA2 {
+        components {
+         SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+          m_sTaskTitle "A2"
+         }
         }
-       }
-       coords 0 0 0
-       {
-        CommentEntity {
-         coords 0 0.832 0
-         m_Comment "B"
-         m_Color 1 1 1
-         m_ScaleByDistance 1
-         m_FaceCamera 1
-         m_VisibleOverall 1
-         m_VisibleIngame 1
-         m_BackgroundColor 0 0 0
-        }
-        GenericEntity SlotMoveToB : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-         components {
-          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-           m_bShowDebugShapesDuringRuntime 1
-           m_aPlugins {
-            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-            }
-           }
-           m_aActionsOnFinished {
-            SCR_ScenarioFrameworkActionSpawnObjectBasedOnDistance "{65CCB2BE8F0398F4}" {
-             m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65CCB2BF2FC3D2E5}" {
-              m_sLayerName "SlotZ"
+        coords 2.561 3.758 29.34
+        angleX 3.576
+        {
+         CommentEntity {
+          coords 0 0.831 0.052
+          m_Comment "A"
+          m_Color 1 1 1
+          m_ScaleByDistance 1
+          m_FaceCamera 1
+          m_VisibleOverall 1
+          m_VisibleIngame 1
+          m_BackgroundColor 0 0 0
+         }
+         GenericEntity SlotMoveToA2 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+          components {
+           SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+            m_bShowDebugShapesDuringRuntime 1
+            m_aPlugins {
+             SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
              }
-             m_iMinDistance 0
-             m_iMaxDistance 100
-             m_aListOfObjects {
-              "LayerTaskMoveA" "LayerTaskMoveC"
-             }
-             m_eActivationType SAME_AS_PARENT
             }
-           }
-           m_aActionsOnCreated {
-            SCR_ScenarioFrameworkActionWaitAndExecute "{65CCB2BE7FD55108}" {
-             m_iDelayInSeconds 3
-             m_aActions {
-              SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65CCB2BE74AC9AC6}" {
-               m_Getter SCR_ScenarioFrameworkGetLayerBase "{65CCB2BEA1957BB1}" {
-                m_sLayerBaseName "LayerTaskMoveB"
+            m_aActionsOnFinished {
+             SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65FB46D269B22A99}" {
+             }
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65FB46D67763D3AF}" {
+              m_iDelayInSeconds 1
+              m_iDelayInSecondsMax 0
+              m_aActions {
+               SCR_ScenarioFrameworkActionRestoreLayerToDefault "{65FB46D66BFFA1A5}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65FB46D66A7C07A7}" {
+                 m_sLayerBaseName "SampleLayer2"
+                }
+                m_bIncludeChildren 0
+                m_bReinitAfterRestoration 1
                }
-               m_bTerminated 1
+              }
+             }
+            }
+            m_aActionsOnCreated {
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65CCB2BE7FD55108}" {
+              m_iDelayInSeconds 3
+              m_aActions {
+               SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65CCB2BE74AC9AC6}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65CCB2BEA1957BB1}" {
+                 m_sLayerBaseName "LayerTaskMoveA"
+                }
+                m_bTerminated 1
+               }
               }
              }
             }
            }
           }
+          coords -0.001 0 0
          }
-         coords 0 0 0.001
         }
        }
-      }
-     }
-    }
-    Sector1A {
-     components {
-      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-       m_SpawnChildren RANDOM_ONE
-       m_eActivationType ON_TRIGGER_ACTIVATION
-      }
-     }
-     coords 2.562 0.152 29.606
-     angleX 3.576
-     {
-      GenericEntity LayerTaskMoveA : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
-       components {
-        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-         m_sTaskTitle "A"
+       LayerTaskMoveB2 {
+        components {
+         SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+          m_sTaskTitle "B2"
+         }
         }
-       }
-       coords 0 0 0
-       {
-        CommentEntity {
-         coords 0 0.831 0.052
-         m_Comment "A"
-         m_Color 1 1 1
-         m_ScaleByDistance 1
-         m_FaceCamera 1
-         m_VisibleOverall 1
-         m_VisibleIngame 1
-         m_BackgroundColor 0 0 0
-        }
-        GenericEntity SlotMoveToA : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-         components {
-          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-           m_bShowDebugShapesDuringRuntime 1
-           m_aPlugins {
-            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-            }
-           }
-           m_aActionsOnFinished {
-            SCR_ScenarioFrameworkActionSpawnObjectBasedOnDistance "{65CCB2BFD653576F}" {
-             m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65CCB2BF2FC3D2E5}" {
-              m_sLayerName "SlotZ"
+        coords -22.201 -6.004 -28.081
+        {
+         CommentEntity {
+          coords 0 0.832 0
+          m_Comment "B"
+          m_Color 1 1 1
+          m_ScaleByDistance 1
+          m_FaceCamera 1
+          m_VisibleOverall 1
+          m_VisibleIngame 1
+          m_BackgroundColor 0 0 0
+         }
+         GenericEntity SlotMoveToB2 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+          components {
+           SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+            m_bShowDebugShapesDuringRuntime 1
+            m_aPlugins {
+             SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
              }
-             m_iMaxDistance 100
-             m_aListOfObjects {
-              "LayerTaskMoveB" "LayerTaskMoveC"
-             }
-             m_eActivationType SAME_AS_PARENT
             }
-           }
-           m_aActionsOnCreated {
-            SCR_ScenarioFrameworkActionWaitAndExecute "{65CCB2BE7FD55108}" {
-             m_iDelayInSeconds 3
-             m_aActions {
-              SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65CCB2BE74AC9AC6}" {
-               m_Getter SCR_ScenarioFrameworkGetLayerBase "{65CCB2BEA1957BB1}" {
-                m_sLayerBaseName "LayerTaskMoveA"
+            m_aActionsOnFinished {
+             SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65FB46D269B22A99}" {
+             }
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65FB46D613746799}" {
+              m_iDelayInSeconds 1
+              m_aActions {
+               SCR_ScenarioFrameworkActionRestoreLayerToDefault "{65FB46D66BFFA1A5}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65FB46D66A7C07A7}" {
+                 m_sLayerBaseName "SampleLayer2"
+                }
+                m_bIncludeChildren 0
+                m_bReinitAfterRestoration 1
                }
-               m_bTerminated 1
+              }
+             }
+            }
+            m_aActionsOnCreated {
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65CCB2BE7FD55108}" {
+              m_iDelayInSeconds 3
+              m_aActions {
+               SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65CCB2BE74AC9AC6}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65CCB2BEA1957BB1}" {
+                 m_sLayerBaseName "LayerTaskMoveB"
+                }
+                m_bTerminated 1
+               }
               }
              }
             }
            }
           }
+          coords 0 0 0.001
          }
-         coords -0.001 0 0
         }
        }
-      }
-     }
-    }
-    Sector1C {
-     components {
-      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-       m_eActivationType ON_TRIGGER_ACTIVATION
-      }
-     }
-     coords 20.003 -0.066 -24.206
-     angleX 0.563
-     angleY 0.042
-     angleZ 4.243
-     {
-      GenericEntity LayerTaskMoveC : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
-       components {
-        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
-         m_sTaskTitle "C"
+       LayerTaskMoveC2 {
+        components {
+         SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+          m_sTaskTitle "C2"
+         }
         }
-       }
-       coords 0 0 0
-       {
-        CommentEntity {
-         coords -0.083 1.126 0.011
-         m_Comment "C"
-         m_ScaleByDistance 1
-         m_FaceCamera 1
-         m_VisibleOverall 1
-         m_VisibleIngame 1
-        }
-        GenericEntity SlotMoveToC : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
-         components {
-          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-           m_bShowDebugShapesDuringRuntime 1
-           m_aPlugins {
-            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-            }
-           }
-           m_aActionsOnFinished {
-            SCR_ScenarioFrameworkActionSpawnObjectBasedOnDistance "{65CCB2BE858120F7}" {
-             m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65CCB2BF2FC3D2E5}" {
-              m_sLayerName "SlotZ"
+        coords 20.003 -0.276 -24.206
+        angleX 0.563
+        angleY 0.042
+        angleZ 4.243
+        {
+         CommentEntity {
+          coords -0.083 1.126 0.011
+          m_Comment "C"
+          m_ScaleByDistance 1
+          m_FaceCamera 1
+          m_VisibleOverall 1
+          m_VisibleIngame 1
+         }
+         GenericEntity SlotMoveToC2 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+          components {
+           SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+            m_bShowDebugShapesDuringRuntime 1
+            m_aPlugins {
+             SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
              }
-             m_iMinDistance 0
-             m_iMaxDistance 100
-             m_aListOfObjects {
-              "LayerTaskMoveA" "LayerTaskMoveB"
-             }
-             m_eActivationType SAME_AS_PARENT
             }
-           }
-           m_aActionsOnCreated {
-            SCR_ScenarioFrameworkActionWaitAndExecute "{65CCB2BE7FD55108}" {
-             m_iDelayInSeconds 3
-             m_aActions {
-              SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65CCB2BE74AC9AC6}" {
-               m_Getter SCR_ScenarioFrameworkGetLayerBase "{65CCB2BEA1957BB1}" {
-                m_sLayerBaseName "LayerTaskMoveC"
+            m_aActionsOnFinished {
+             SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65FB46D269B22A99}" {
+             }
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65FB46D6449C33AC}" {
+              m_iDelayInSeconds 1
+              m_iDelayInSecondsMax 0
+              m_aActions {
+               SCR_ScenarioFrameworkActionRestoreLayerToDefault "{65FB46D66BFFA1A5}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65FB46D66A7C07A7}" {
+                 m_sLayerBaseName "SampleLayer2"
+                }
+                m_bIncludeChildren 0
+                m_bReinitAfterRestoration 1
                }
-               m_bTerminated 1
+              }
+             }
+            }
+            m_aActionsOnCreated {
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65CCB2BE7FD55108}" {
+              m_iDelayInSeconds 3
+              m_aActions {
+               SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65CCB2BE74AC9AC6}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65CCB2BEA1957BB1}" {
+                 m_sLayerBaseName "LayerTaskMoveC"
+                }
+                m_bTerminated 1
+               }
               }
              }
             }
            }
           }
-         }
-         coords -0.001 0 0
-        }
-       }
-      }
-     }
-    }
-    Logics {
-     components {
-      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-       Enabled 0
-      }
-     }
-     coords 1.271 2.638 -64.52
-     {
-      SCR_ScenarioFrameworkLogicCounter LogicCounter5 : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
-       coords 0 0 0
-       m_aInputs {
-        SCR_ScenarioFrameworkLogicInput "{65A3400EA556C297}" {
-         m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{65A3400EA70E09FA}" {
+          coords -0.001 0 0
          }
         }
-       }
-       m_aActions {
-        SCR_ScenarioFrameworkActionShowPopupNotification "{65A49AB1AA7D6647}" {
-         m_sTitle "Finished!"
-         m_sText "Good Job, Bob!"
-         m_sFactionKey "US"
-        }
-        SCR_ScenarioFrameworkActionSpawnObjects "{65A4ADCD529A7F8A}" {
-         m_aNameOfObjectsToSpawnOnActivation {
-          "Sector2"
-         }
-        }
-       }
-       m_iCountTo 3
-       m_aOnIncreaseActions {
-        SCR_ScenarioFrameworkActionShowPopupNotification "{65A49ABFBF20CA21}" {
-         m_sTitle "Counter Increased +1"
-         m_sFactionKey "US"
-        }
-        SCR_ScenarioFrameworkActionDeleteEntity "{65A51A7B06F2F9BE}" {
-         m_Getter SCR_ScenarioFrameworkGetLastFinishedTaskEnity "{65A51A7B1E8FDDEB}" {
-         }
-        }
-       }
-      }
-      $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
-       SlotA {
-        components {
-         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-          m_sObjectToSpawn "{3D7FB651C9C11CCA}Prefabs/Vegetation/Plant/c_branches_debris_sparse_01.et"
-         }
-        }
-        coords 62.294 -2.037 -37.926
-        angleY 32.549
-       }
-       SlotC {
-        components {
-         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-          m_sObjectToSpawn "{3D7FB651C9C11CCA}Prefabs/Vegetation/Plant/c_branches_debris_sparse_01.et"
-         }
-        }
-        coords 76.914 -7.972 -124.877
-        angleX -2.187
-        angleY 32.387
-        angleZ 0.971
-       }
-       SlotB {
-        components {
-         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-          m_sObjectToSpawn "{3D7FB651C9C11CCA}Prefabs/Vegetation/Plant/c_branches_debris_sparse_01.et"
-         }
-        }
-        coords 24.162 4.527 -77.138
-        angleY 32.549
        }
       }
      }

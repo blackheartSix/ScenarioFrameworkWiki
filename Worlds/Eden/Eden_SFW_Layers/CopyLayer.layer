@@ -1,4 +1,9 @@
 GenericEntity Area1 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+  }
+ }
  coords 5483.608 96.314 5173.076
 }
 GenericEntity : "{FFFC0CFF3F85A846}Prefabs/Structures/Signs/Tourist/TouristSign_01/TouristSign_Pole_01_I16_Chotain.et" {

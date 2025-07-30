@@ -1,4 +1,9 @@
 GenericEntity Area_ExplodingVehicles : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+  }
+ }
  coords 9039.688 80.262 2354.751
  angleY 48.569
  {
