@@ -1,0 +1,65 @@
+GenericEntity QRFTesting : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   m_aActivationActions {
+    SCR_ScenarioFrameworkActionQRFDispacher "{66574CEF809E362A}" : "{323CE89802F85CC0}Prefabs/Systems/ScenarioFramework/Core/QRFDispacherAction.conf" {
+     m_sQRFLayerName "X_QRF"
+     m_iThreshold 1
+     m_iNumberOfAvailableQRFWaves 5
+     m_fThreatLevelEscalation 1
+     m_fQRFSpawnDelay 5
+     m_fQRFNextWaveDelay 15
+    }
+   }
+  }
+ }
+ coords 3086.967 118.051 5213.66
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   X_QRF {
+    coords 18.201 0.56 4.152
+    angles 0 -78.61 0
+    {
+     GenericEntity QRFSpawnpoint1 : "{FCE82B7F21949782}Prefabs/Systems/ScenarioFramework/Compositions/QRFSpawnpoint.et" {
+      coords -113.18 -0.184 -384.937
+     }
+    }
+   }
+   Layer35 {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI5 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et"
+         m_sWPToSpawn "{B049D4C74FBC0C4D}Prefabs/AI/Waypoints/AIWaypoint_GetInNearest.et"
+        }
+       }
+       coords 29.163 0.826 6.118
+       angles -0.877 -78.607 -0.177
+      }
+      SlotAI6 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et"
+        }
+       }
+       coords 25.016 0.728 11.5
+       angles 0 -78.61 0
+      }
+     }
+     GenericEntity Slot28 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{254289B9C09904AB}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2.et"
+       }
+      }
+      coords 25.472 0.743 6.862
+      angles -1.755 -78.587 -0.354
+     }
+    }
+   }
+  }
+ }
+}

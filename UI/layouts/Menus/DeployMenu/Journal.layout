@@ -1,0 +1,38 @@
+FrameWidgetClass {
+ {
+  HorizontalLayoutWidgetClass "{6258E33DF99C5805}" {
+   Prefab "{6258E33DF99C5805}"
+   {
+    SizeLayoutWidgetClass "{6258E33DF99C5803}" {
+     Prefab "{6258E33DF99C5803}"
+     WidthOverride 500
+     HeightOverride 400
+     {
+      OverlayWidgetClass "{6258E33DF99C5802}" {
+       Prefab "{6258E33DF99C5802}"
+       {
+        VerticalLayoutWidgetClass "{6258E33DF99C581F}" {
+         Prefab "{6258E33DF99C581F}"
+         {
+          OverlayWidgetClass "{6258E33DF99C7664}" {
+           Prefab "{6258E33DF99C7664}"
+           {
+            TextWidgetClass "{6258E33DF99C7666}" {
+             Prefab "{6258E33DF99C7666}"
+             Text "OPERATIONS ORDER DEVILS DEN 210800ZAUG25"
+             FontProperties FontProperties "{5CDCAC64C215FAE8}" {
+              Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

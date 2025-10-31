@@ -1,0 +1,46 @@
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ AddDepotToSF {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
+  coords 7470.063 7.83 6698.879
+  {
+   GenericEntity Layer31 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     GenericEntity Slot23 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{FB18EFE9C1A81E29}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_US_01.et"
+       }
+      }
+      coords 0 0 0
+      angles 0 -26.559 0
+     }
+    }
+   }
+  }
+ }
+ RandomCompositions {
+  coords 8792.73 196.594 3896.554
+  {
+   GenericEntity Layer59 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     GenericEntity Slot78 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sFactionKey "US"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType COMPOSITION
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+}

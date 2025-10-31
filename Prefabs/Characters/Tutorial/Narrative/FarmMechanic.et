@@ -1,0 +1,147 @@
+SCR_ChimeraCharacter : "{9A2A04FF5BDA6F6A}Prefabs/Characters/Tutorial/Character_Tutorial_NPCBase.et" {
+ ID "520EC961A090B1EE"
+ components {
+  CharacterSoundComponent "{520EA1D2F659CF84}" {
+   Filenames {
+    "" "{81D32DC765A2B68D}Sounds/Character/Character_Movement_Foley_Locomotion.acp" "{67007BA2E4D81B0D}Sounds/Character/Character_Movement_Foley_Additive.acp" "{7BACA57AF41F033D}Sounds/SupportStations/SupportStations_Character.acp" "{D4C2A806F3ACDE61}Sounds/Character/Tutorial/Character_Tutorial_NarrativeNPCs.acp"
+   }
+  }
+  SCR_CommunicationSoundComponent "{54FD05D0C92D071F}" {
+   Filenames {
+    "{86D97B8FC35EC918}Sounds/VO/Tutorial/Tutorial_VO_RepairDepot_Mechanic.acp"
+   }
+  }
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Enabled 0
+      }
+     }
+    }
+   }
+  }
+  BaseSlotComponent "{66070AD9AFF85B27}" {
+   AttachType EquipmentStorageSlot wrench {
+    PivotID "RightHandProp"
+    Offset -0.0001 0 0.013
+    Angles 90 0 0
+    DisablePhysicsInteraction 1
+    DeactivatePhysicsOnAtaching 1
+   }
+   EntityPrefab "{33B2DFDCD0EBA3DB}Prefabs/Items/Equipment/Kits/RepairKit_01/RepairKit_01_wrench.et"
+  }
+  ChimeraAIControlComponent "{520EA1D2DB109F34}" {
+   Enabled 1
+   components {
+    SCR_AICombatComponent "{55A2C9BE343B2EA1}" {
+     m_eAISkillDefault EXPERT
+    }
+   }
+   EnableAI 1
+  }
+  SCR_CharacterFactionAffiliationComponent "{520EC961FB0A2E90}" {
+   "faction affiliation" "CIV"
+  }
+  SCR_NarrativeComponent "{66070AD9AFF85B09}" {
+   m_iCharacterID 30
+   m_bProximityTalk 1
+   m_iTalkVariants 2
+   m_bRandomTalkVariant 1
+  }
+  SCR_TutorialInstructorComponent "{66070AD9AFF85B0E}" {
+   Enabled 0
+   m_eStageConfig 0
+  }
+  SCR_VoNComponent "{520EA1D2F659C856}" {
+   Enabled 0
+  }
+  CharacterHandWeaponSlotComponent "{5C9CA35B6F6B604C}" {
+   AttachType InventoryStorageSlot a {
+    Enabled 1
+   }
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
+   WeaponTemplate ""
+  }
+  SCR_CharacterIdentityComponent "{5584CBC63E092DBC}" {
+   Override 1
+   Identity Identity "{5584CBC6363C648B}" {
+    VisualIdentity VisualIdentity "{56E6D9456009D1C4}" {
+     Head "{32583C88222142FD}Prefabs/Characters/Heads/Head_White_04.et"
+     Body "{0023F898C0FF18AA}Prefabs/Characters/Basebody/CharacterBasebody.et"
+    }
+   }
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{17674905311133D7}Prefabs/Characters/HeadGear/Hat_TruckerCap_01/Hat_TruckerCap_01_alsworth.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{23A15812C40D34C2}Prefabs/Characters/Uniforms/Jacket_Denim_01/Jacket_Denim_01_strippedShirt_dirty.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{537FD11C135757AC}Prefabs/Characters/Uniforms/Pants_Trousers_01/Pants_Trousers_01_DarkGrey_Dirty.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{4C6029AB8BF5C044}Prefabs/Characters/Footwear/CombatBoots_Soviet_01_Dirty.et"
+    }
+    LoadoutSlotInfo Vest {
+     Enabled 0
+    }
+    LoadoutSlotInfo HandWear {
+     Prefab ""
+    }
+   }
+  }
+  SlotManagerComponent "{66070AD9AFF85B76}" {
+   Slots {
+    EntitySlotInfo PointOfViewStart {
+     PivotID "Neck1"
+     Offset 0 0 -0.2
+    }
+    EntitySlotInfo PointOfViewEnd {
+     PivotID "Neck1"
+     Offset 0 1 -3
+    }
+    EntitySlotInfo generator {
+     PivotID "Scene_Root"
+     Offset -0.2244 0.1404 0.8862
+     Angles 0 79.2979 0
+     Prefab "{4F6BB0502ED3EFBB}Prefabs/Props/Military/Generators/GeneratorPortable_US_01_Off.et"
+     DisablePhysicsInteraction 1
+    }
+    EntitySlotInfo palett {
+     PivotID "Scene_Root"
+     Offset -0.186 0 0.9453
+     Angles 0 80 0
+     Prefab "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et"
+    }
+   }
+  }
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   ActionContexts {
+    UserActionContext "{66070AD9AFF85B62}" {
+     ContextName "Interaction"
+     Position PointInfo "{66070AD9AFF85B61}" {
+      Offset 0 1.491 0.0301
+     }
+     Radius 1
+    }
+   }
+  }
+  AnimationPlayerComponent "{66070AD9AFF85B67}" {
+   Animation "{18C95EC279C26689}anims/anm/Tutorial/Character_anm/npc_mechanic_Unequip_Work_Unequip.anm"
+  }
+  CharacterAnimationComponent "{520EA1D2F659C994}" {
+   AnimGraph "{D17A40F4A9A585A5}anims/workspaces/narrative/narrative_npc_main.agr"
+   AnimInstance "{3C10152FB5ACD74B}anims/workspaces/narrative/narrative_npc_main.asi"
+   ColliderStand PhysAgentCollisionShapeItem "{5570AA65EEDB5E11}" {
+   }
+  }
+ }
+ coords 3251.147 2.231 2881.237
+ angles 0 -105.086 0
+}

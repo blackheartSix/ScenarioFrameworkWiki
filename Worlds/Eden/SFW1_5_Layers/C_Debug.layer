@@ -1,0 +1,26 @@
+GenericEntity AreaDebug : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+  }
+ }
+ coords 9613.646 16.774 5375.226
+ {
+  GenericEntity Layer13 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity Slot4 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     coords 0 0 0
+    }
+   }
+  }
+  GenericEntity LayerTaskDeliver2 : "{88821DCA414AF4C7}Prefabs/Systems/ScenarioFramework/Components/LayerTaskDeliver.et" {
+   coords 0 0 0
+   {
+    GenericEntity SlotDelivery2 : "{4C2EF5C1E53FE511}Prefabs/Systems/ScenarioFramework/Components/SlotDelivery.et" {
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}

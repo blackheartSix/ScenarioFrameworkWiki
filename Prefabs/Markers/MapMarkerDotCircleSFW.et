@@ -1,0 +1,10 @@
+SCR_MapMarkerDotCircle {
+ ID "662ED22F8E3F5AEC"
+ components {
+  RplComponent "{662ED22F8E3F5AE5}" {
+  }
+ }
+ Flags 0 0x3
+ scale 100
+ m_fRadius 1
+}

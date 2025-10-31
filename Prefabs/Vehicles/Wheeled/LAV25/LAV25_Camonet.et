@@ -35,7 +35,7 @@ Vehicle : "{1B8EB269EECA2DF9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_base.et" {
   }
  }
  coords 0 0 0
- angleY 48.5
+ angles 0 48.5 0
  {
   GenericEntity {
    ID "64F364A814524CB2"
@@ -68,7 +68,7 @@ Vehicle : "{1B8EB269EECA2DF9}Prefabs/Vehicles/Wheeled/LAV25/LAV25_base.et" {
     }
    }
    coords -0.108 2.162 -1.9
-   angleY -89.93
+   angles 0 -89.93 0
   }
  }
 }

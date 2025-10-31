@@ -126,15 +126,13 @@ Projectile : "{EEF8495A9A6787A6}Prefabs/Weapons/Core/Ammo_MortarShell_Base.et" {
   GenericEntity : "{5C053ACAE9D17683}Prefabs/Items/Equipment/Detonators/BlastingMachine_KPM_3U1/ArmedDetonatorWires_KPM_3U1.et" {
    ID "657AB70CEC0E433C"
    coords 0.008 0.013 -0.083
-   angleX -85.247
-   angleY 109.136
-   angleZ 71.653
+   angles -85.247 109.136 71.653
    scale 0.5
   }
   GenericEntity : "{CE0AF733722B3978}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34.et" {
    ID "657AB70F5EA229C8"
    coords 0 0.026 -0.092
-   angleX -74.636
+   angles -74.636 0 0
    scale 0.5
   }
  }

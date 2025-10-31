@@ -1,0 +1,17 @@
+GenericEntity BHS_Scripting_Test_Area : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 6500 161.875 6500
+ EOnContact ""\
+ "		/* code here */"\
+ "	"
+ {
+  GenericEntity Layer9 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity Slot53 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     coords 0 0 0
+     userScript "	// code here"
+    }
+   }
+  }
+ }
+}

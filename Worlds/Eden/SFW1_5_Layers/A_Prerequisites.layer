@@ -1,0 +1,165 @@
+SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{66189B1C682CA4AA}" {
+     NavmeshFile "{AD5F99CD7C59D5E0}worlds/GameMaster/Navmeshes/GM_Eden.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5584F30EEFEE1223}" {
+   NavmeshSettings ChimeraNavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60CA9BE5536BF701}" {
+     NavmeshFile "{C35ECF3276824654}worlds/GameMaster/Navmeshes/GM_Eden_vehicles.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5C8C9B750D124A63}" {
+   NavmeshSettings NavmeshWorld "{5C8C9B750B60C6E2}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" {
+     NavmeshFile "{5E19E60F26327356}worlds/MP/Navmeshes/LowResEden.nmn"
+    }
+   }
+  }
+ }
+ coords 7114.537 103.567 6279.017
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "SCR_AIWorld: "\
+   "Configure navigation mesh"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7114.537 103.057 6283.017
+}
+SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+ coords 6500 161.875 6500
+ Factions {
+  SCR_Faction "{56DEAC40D2DBC8B1}" {
+   m_bIsPlayable 1
+   m_aEntityCatalogs {
+    SCR_EntityCatalog "{6638D1D12FF427E6}" : "{83D548265F6E6DEB}Configs/EntityCatalog/US/Compositions_EntityCatalog_US.conf" {
+    }
+   }
+  }
+ }
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Systems/Radio/RadioManager.et" {
+ coords 7114.537 103.198 6282.017
+}
+ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords 7114.537 102.942 6284.017
+}
+GenericEntity Parent_LayerTask_Generic_1 : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+ components {
+  SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+   Enabled 0
+   m_eActivationType ON_TASKS_INIT
+   m_aActivationActions {
+    SCR_ScenarioFrameworkActionSetBriefingEntryTextBasedOnGeneratedTasks "{6628F4D9A3C30311}" {
+     m_sFactionKey "US"
+     m_iEntryID 1
+     m_sTargetText "Enemy forces have occupied the major urban area of Saint Pierre. "
+    }
+    SCR_ScenarioFrameworkActionSetBriefingEntryTextBasedOnGeneratedTasks "{6628F4D820560876}" {
+     m_sFactionKey "US"
+     m_iEntryID 2
+     m_sTargetText "Clear all enemy forces from Saint Pierre, and conduct any follow-on tasks. "
+    }
+    SCR_ScenarioFrameworkActionSetBriefingEntryTextBasedOnGeneratedTasks "{6628F4D80C894F60}" {
+     m_sFactionKey "US"
+     m_iEntryID 3
+     m_sTargetText "Determine the best way to do this."
+    }
+    SCR_ScenarioFrameworkActionSetBriefingEntryTextBasedOnGeneratedTasks "{6628F4D808049EEF}" {
+     m_sFactionKey "US"
+     m_iEntryID 4
+     m_sTargetText "How are we going to get our stuff. "\
+     ""
+    }
+    SCR_ScenarioFrameworkActionSetBriefingEntryTextBasedOnGeneratedTasks "{6628F4D806201913}" {
+     m_sFactionKey "US"
+     m_iEntryID 5
+     m_sTargetText "Who is in charge of this outfit. "
+    }
+   }
+   m_sTaskTitle "OPPLAN ST PIERRE"
+   m_sTaskDescription "See Operations Order Devils Den 201200ZAUG25"
+   m_sTaskIconSet "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+   m_sTaskIconName "Icon_M_Task_Intel"
+   m_bTaskFunctionsOnItsOwn 0
+   m_bProgressBar 1
+  }
+ }
+ coords 9716.267 11.395 1570.13
+ {
+  GenericEntity Parent_SlotTask_Generic_1 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
+   components {
+    SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
+     m_aPlugins {
+      SCR_ScenarioFrameworkPluginTrigger "{6628F4DEAAD1B0A7}" {
+      }
+     }
+     m_sObjectToSpawn "{DA58C3DF4455555E}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkTrigger.et"
+    }
+   }
+   coords 0 0 0
+  }
+ }
+}
+SCR_LoadoutManager LoadoutManager_USxUSSR : "{97EF4C1A41F63DDB}Prefabs/MP/Managers/Loadouts/LoadoutManager_USxUSSR.et" {
+ coords 7114.537 103.319 6281.017
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "LoadoutManager_USxUSSR: "\
+   "Configure desired loadouts"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+GenericEntity Area1 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 6593.262 82.546 5650.589
+ {
+  GenericEntity Layer1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity SlotAI9 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sObjectToSpawn "{CE41AF625D05D0F0}Prefabs/Groups/INDFOR/Group_FIA_RifleSquad.et"
+       m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{667AF06ACE1E7723}" {
+        m_aLayerName {
+         "SlotWaypoint2"
+        }
+       }
+      }
+     }
+     coords 7.083 4.786 43.438
+    }
+    GenericEntity SlotWaypoint2 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+     components {
+      SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+       m_Waypoint SCR_ScenarioFrameworkWaypointSearchAndDestroy "{667AF06A2DBD20A9}" {
+        m_fPriorityLevel 2000
+       }
+      }
+     }
+     coords -227.546 11.405 211.243
+     angles 3.569 -0.168 -2.689
+    }
+   }
+  }
+ }
+}

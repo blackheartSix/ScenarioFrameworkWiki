@@ -1,0 +1,8 @@
+GenericEntity SeeLogConsoleAndWiki : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+  }
+ }
+ coords 6500 161.875 6500
+}

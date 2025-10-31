@@ -1,0 +1,34 @@
+GenericEntity GetterArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+   m_bShowDebugShapesDuringRuntime 1
+   m_bShowDebugShapesInWorkbench 1
+   m_aActivationActions {
+    SCR_ScenarioFrameworkActionToggleEngine "{654A9E3EE3DA9999}" {
+     m_Getter SCR_ScenarioFrameworkGetLayerBase "{654A9E3EFF477B8E}" {
+      m_sLayerBaseName "Layer49"
+     }
+    }
+   }
+   m_iDynamicDespawnRange 100
+   m_fAreaRadius 10
+  }
+ }
+ coords 9653.166 22.237 5267.872
+ {
+  GenericEntity Layer49 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity Slot58 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     components {
+      SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+       m_sObjectToSpawn "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}

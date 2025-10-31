@@ -17,7 +17,7 @@ MetaFileClass {
    FormatCompress Best
    ColorSpace ToSRGB
   }
-  JPGResourceClass PS5 : "{6248F71B9D7C1E93}configs/ResourceTypes/PS5/TextureUnspecified.conf" {
+  JPGResourceClass PS5 : "{6248F71B9D7C1E93}Configs/System/ResourceTypes/PS5/TextureUnspecified.conf" {
    FormatCompress Best
    ColorSpace ToSRGB
   }

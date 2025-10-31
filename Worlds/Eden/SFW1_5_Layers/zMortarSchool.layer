@@ -1,0 +1,216 @@
+$grp GenericEntity : "{1A34A7A8677C3EC1}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_NightStand_US_02.et" {
+ {
+  coords 9359.963 46.115 1891.037
+  angles 4.912 -107.573 -2.681
+ }
+ {
+  coords 9357.701 46.202 1888.381
+  angles 0.425 -9.104 2.65
+ }
+}
+GenericEntity : "{2323F9E4C524F047}Prefabs/Compositions/Slotted/SlotFlatSmall/MortarPlacement_S_US_01.et" {
+ coords 9357.647 46.199 1890.78
+ angles 1.355 -49.19 1.17
+ {
+  GenericEntity {
+   ID "6186DB2F33FB321E"
+   coords 0.027 0.001 0
+   {
+    GenericEntity {
+     ID "6186D3A8CE3D252F"
+     coords -3.008 0.06 1.196
+     angles -1.264 95.836 -0.036
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D253A"
+     coords -3.048 0.058 -0.305
+     angles 1.26 -90.59 -0.105
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2546"
+     coords 2.759 -0.012 0.978
+     angles -0.561 88.071 0.696
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2553"
+     coords -0.967 -0.003 3.236
+     angles -0.499 -6.927 0.743
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2566"
+     coords 2.74 -0.008 -0.537
+     angles -0.028 -86.285 -0.872
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2577"
+     coords 0.549 -0.021 3.284
+     angles 0.645 -174.629 -0.62
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2583"
+     coords 2.03 -0.015 2.498
+     angles -0.065 45.043 -0.892
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D25A8"
+     coords -2.323 0.036 2.5
+     angles 1.022 -44.981 1.718
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D25B5"
+     coords -2.292 0.035 2.499
+     angles 1.022 -44.981 1.718
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D25B8"
+     coords 1.998 -0.015 2.498
+     angles -0.065 45.018 -0.892
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D25C7"
+     coords -2.321 0.01 -2
+     angles -0.131 -134.996 -1.782
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2601"
+     coords 2.004 -0.028 -2
+     angles -3.861 135.106 -1.942
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D2672"
+     coords 1.84 -0.013 2.144
+     angles 0.878 150.161 0.17
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D25E3"
+     coords -0.143 0 0.536
+     angles 0 163.319 0
+     {
+      DecalEntity {
+       ID "56DEFDB4A9499F9B"
+       coords 0 0 0
+       angles 0 161.979 0
+      }
+     }
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D24EB"
+     coords -0.036 -0.086 -3.447
+     angles -4.293 88.768 21.719
+    }
+    GenericEntity {
+     ID "6186D3A8CE3D24F0"
+     coords -0.036 -0.021 -2.145
+     angles 2.653 89.987 -0.281
+    }
+    Turret {
+     ID "6186D3A8CE3D250E"
+     coords -0.294 0 0.5
+     angles 0 2 0
+    }
+   }
+  }
+ }
+}
+Vehicle M923A1_command1 : "{36BDCC88B17B3BFA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command.et" {
+ coords 9366.913 51.451 1775.269
+ angles 3.837 -29.249 5.006
+}
+GenericEntity : "{5C5C6EE05EE2FF1A}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium_assembled.et" {
+ coords 9319.683 53.559 1816.075
+ angles -5.45 75.723 -3.301
+}
+GenericEntity : "{6DC231B93D42AF21}Prefabs/Items/Equipment/Kits/MortarRearmingKit/MortarRearmingKit_USSR.et" {
+ coords 8936.589 88.625 2369.097
+}
+Vehicle M998_covered_long_MERDC1 : "{751AFEEA19DDFB04}Prefabs/Vehicles/Wheeled/M998/M998_covered_long_MERDC.et" {
+ coords 9364.618 45.67 1884.059
+ angles -3.496 128.553 -2.782
+}
+$grp GenericEntity : "{905F6CCA37A82DDB}Prefabs/Items/Equipment/Kits/MortarRearmingKit/MortarRearmingKit_US.et" {
+ {
+  coords 9361.316 45.928 1885.542
+  angles 0.181 -2.311 4.464
+ }
+ {
+  coords 9362.023 45.973 1885.286
+  angles 0 129.492 0
+ }
+ {
+  coords 9361.513 45.929 1885.006
+  angles 0 91.235 0
+ }
+}
+GenericEntity : "{972F01488E5B23C2}Prefabs/Structures/Military/CamoNets/US/CamoNet_Medium_Top_US.et" {
+ coords 9363.981 45.72 1884.684
+ angles -3.796 121.861 -2.356
+}
+GenericEntity : "{B4F2701CBBE49C48}Prefabs/Props/Military/Antennas/Antenna_RC292_01.et" {
+ coords 9359.039 51.47 1788.386
+ angles 0 -37.398 0
+}
+GenericEntity Area7 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   Enabled 0
+   m_aActivationActions {
+    SCR_ScenarioFrameworkActionChangeLayerTerminationStatus "{65A3400B0A62B7E6}" {
+    }
+   }
+  }
+ }
+ coords 9322.191 52.729 1817.085
+ {
+  GenericEntity Layer4 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    $grp GenericEntity : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {
+     SlotMarker1 {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{632B2D63D46D05B7}" {
+         m_eMapMarkerIcon DOT2
+         m_eMapMarkerColor BLUFOR
+        }
+       }
+      }
+      coords 35.203 -6.522 73.487
+     }
+     SlotMarker3 {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6321475D2CA10931}" {
+         m_sMapMarkerText "FORWARD OBSERVER"
+         m_eMapMarkerType1Modifier RECON
+         m_eMapMarkerType2Modifier RECON
+        }
+       }
+      }
+      coords 101.048 206.77 828.251
+     }
+     SlotMarker4 {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6321475D2CA10931}" {
+         m_sMapMarkerText "FIRE DIRECTION CENTER"
+         m_eMapMarkerType1Modifier MOBILEHQ
+         m_eMapMarkerType2Modifier MOBILEHQ
+        }
+       }
+      }
+      coords 41.47 -1.019 -37.968
+      angles -1.779 -0.139 4.469
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{CD8641F8E583489F}Prefabs/Structures/Military/CamoNets/US/CamoNet_Large_US.et" {
+ coords 9369.12 51.234 1771.208
+ angles 2.015 -26.699 5.975
+}
+StaticModelEntity : "{E8697D4489516AE0}Prefabs/Compositions/Misc/SubCompositions/Tent_Barrack_Cluttered_USSR_03.et" {
+ coords 9353.354 52.329 1776.557
+ angles -1.197 55.464 2.994
+}

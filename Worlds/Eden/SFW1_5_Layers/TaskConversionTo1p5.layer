@@ -1,0 +1,329 @@
+GenericEntity AMEDEVACTask : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 3696.328 110.715 4939.529
+ {
+  GenericEntity LTPMedevac1 : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+     m_sTaskTitle "Operation Caduceus"
+     m_sTaskDescription "Situation: A %1 is down and the pilot needs to be Medevac'd."\
+     ""\
+     "Mission: Dispatch a vehicle (Air or Ground) and move to the location of the down %1."
+     m_sOverrideObjectDisplayName "UH1H Helicopter"
+     m_sTaskIconSet "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
+     m_sTaskIconName "Icon_M_Task_First_Aid"
+     m_bProgressBar 1
+     m_eTaskNotificationSettings 7
+     m_sSubtasksDescription "MEDEVAC 9-Line"
+    }
+   }
+   coords 0 0 0
+   {
+    $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+     LTCMedevacA1 {
+      components {
+       SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+        m_sTaskTitle "9-Line MEDEVAC Request"
+        m_sTaskDescription "Line 1: Map overlay Caduceus"\
+        "Line 2: DUSTOFF 1-1 @ 48.000 Mhz"\
+        "Line 3: Alpha - 1 Bravo - 0 Charlie - 0 Delta - 0"\
+        "Line 4: Alpha"\
+        "Line 5: Lima - 1"\
+        "Line 6: X-Ray"\
+        "Line 7: "\
+        "Line 8: Alpha"\
+        "Line 9:"
+        m_bProgressBar 1
+        m_eTaskNotificationSettings 7
+        m_bIsSubtask 1
+        m_sParentLayerTask "LTPMedevac1"
+        m_aTriggerActionsOnFinish {
+         SCR_ScenarioFrameworkActionWaitAndExecute "{665096B729859E2B}" {
+          m_iDelayInSeconds 3
+         }
+        }
+       }
+      }
+      coords 0 0 0
+      {
+       GenericEntity SMedevacPAXA1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+        components {
+         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+          m_sFactionKey "US"
+          m_bShowDebugShapesInWorkbench 0
+          m_aActivationActions {
+           SCR_ScenarioFrameworkActionMedical "{6226A2F006E23F4B}" {
+            m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65952AC92331AE59}" {
+             m_sLayerName "SMedevacPAXA1"
+            }
+            m_aMedicalActions {
+             SCR_ScenarioFrameworkMedicalActionSetBlood "{6226A2F01ED14FC5}" {
+              m_fBloodValue 1700
+             }
+             SCR_ScenarioFrameworkMedicalActionSetBleedingRate "{6226A2FE4F6B0E2F}" {
+              m_fBleedingRate 0
+             }
+             SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{6226A2FE537F361A}" {
+              m_sHitZoneName "Head"
+             }
+             SCR_ScenarioFrameworkMedicalActionAddParticularBleeding "{6226A2FF191C2FA5}" {
+              m_sHitZoneName "Leg"
+             }
+            }
+           }
+          }
+          m_sObjectToSpawn "{42A502E3BB727CEB}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_HeliPilot.et"
+          m_bCanBeGarbageCollected 0
+          m_aIncludedEditableEntityLabels {
+          }
+         }
+        }
+        coords 0.319 0.065 4.77
+        angles 0 48.784 0
+       }
+       GenericEntity SMedevacPick1 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+        components {
+         SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+            m_fAreaRadius 100
+            m_eActivationPresence SPECIFIC_PREFAB_NAME
+            m_aSpecificClassNames {
+            }
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilter "{659010203551E80E}" {
+              m_sSpecificPrefabName "{00C9BBE426F7D459}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance.et"
+              m_bIncludeChildren 1
+             }
+            }
+            m_sActivatedByThisFaction "US"
+            m_aCustomTriggerConditions {
+             SCR_CustomTriggerConditionsSpecificPrefabCount "{65901020AC0776BD}" {
+              m_aPrefabFilter {
+               SCR_ScenarioFrameworkPrefabFilterCount "{65901020A86E4C95}" {
+                m_sSpecificPrefabName "{00C9BBE426F7D459}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance.et"
+                m_bIncludeChildren 1
+               }
+              }
+             }
+             SCR_ScenarioFrameworkCharacterInVehicleCondition "{65901023B9C6516E}" {
+              m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65952AC98E12C2AC}" {
+               m_sLayerName "SMedevacPAXA1"
+              }
+             }
+            }
+            m_fUpdateRate 5
+            m_aFinishedActions {
+             SCR_ScenarioFrameworkActionChangeTaskState "{6590102011CA5726}" {
+              m_Getter SCR_ScenarioFrameworkGetTask "{659010206D8FC2EE}" {
+               m_sLayerTaskName "LTCMedevacA1"
+              }
+             }
+             SCR_ScenarioFrameworkActionSpawnObjects "{65901024159214A4}" {
+              m_aNameOfObjectsToSpawnOnActivation {
+               "LTCMedevacB1"
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        coords 0 0 0
+       }
+       GenericEntity SMedevacWreck1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_sObjectToSpawn "{5A3C5290D0DDB6F3}Prefabs/Props/Wrecks/UH1H_wreck_SFW.et"
+          m_sOverrideObjectDisplayName "UH1H Helicopter"
+         }
+        }
+        coords 4.713 1.232 0.206
+        angles 0 0 -90.88
+       }
+      }
+     }
+     LTCMedevacB1 {
+      components {
+       SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+        m_eActivationType ON_TRIGGER_ACTIVATION
+        m_sTaskTitle "Operation Slow Ride"
+        m_sTaskDescription "Situation: The %1 pilot has been recovered and needs immediate medical attention at the CASH. "\
+        ""\
+        "Mission: Take the patient to the Battalion Aid Station and transfer him to the awaiting ambulance. Charlie Med will take them to the CASH. "\
+        ""\
+        "Execution:"\
+        "1. Depart the Operation Caduceus PZ."\
+        "2. Move to Battalion Aid Station. "\
+        "4. Transfer PAX from CASEVAC vehicle and place in awaiting M997 ambulance."
+        m_bProgressBar 1
+        m_eTaskNotificationSettings 15
+        m_bIsSubtask 1
+        m_sParentLayerTask "LTPMedevac1"
+       }
+      }
+      coords 1333.252 63.974 2090.42
+      angles 1.531 135.231 -0.63
+      {
+       GenericEntity SAIMedevacDriverA1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+        components {
+         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+          m_eActivationType ON_TRIGGER_ACTIVATION
+          m_aActivationActions {
+           SCR_ScenarioFrameworkActionMoveIntoCompartment "{665096BF611201DA}" {
+            m_GetterTargetEntity SCR_ScenarioFrameworkGetSpawnedEntity "{665096BF77ACCF81}" {
+             m_sLayerName "SVM997A1"
+            }
+           }
+           SCR_ScenarioFrameworkActionWaitAndExecute "{6590D5A81011D757}" {
+            m_iDelayInSeconds 5
+            m_aActions {
+             SCR_ScenarioFrameworkActionAI "{6590D5A8680114DD}" {
+              m_aAIActions {
+               SCR_ScenarioFrameworkAIAddWaypoint "{6590D5A86380D71A}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{65952AC7A210127A}" {
+                 m_sLayerBaseName "SWPMoveForceB1"
+                }
+                m_bAddOnTopOfQueue 1
+                m_bClearPreviousWaypoints 1
+               }
+               SCR_ScenarioFrameworkAIActionOnWaypointCompleted "{665096BDC527B81C}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{665096BDC153D3FF}" {
+                 m_sLayerBaseName "SWPMoveForceB1"
+                }
+                m_aActionsOnWaypointCompleted {
+                 SCR_ScenarioFrameworkActionChangeTaskState "{665096BDD8939EE0}" {
+                  m_Getter SCR_ScenarioFrameworkGetTask "{665096BDDA99FB0E}" {
+                   m_sLayerTaskName "LTCMedevacB1"
+                  }
+                 }
+                 SCR_ScenarioFrameworkActionChangeTaskState "{665096BD2ECF1CAE}" {
+                  m_Getter SCR_ScenarioFrameworkGetTask "{665096BD28B71456}" {
+                   m_sLayerTaskName "LTPMedevac1"
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          m_sObjectToSpawn "{C9E4FEAF5AAC8D8C}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Medic.et"
+          m_sWPToSpawn ""
+         }
+        }
+        coords -0.184 0.473 0.257
+        angles -1.581 5.065 0.492
+       }
+       GenericEntity STCMedevacB1 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+        components {
+         SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+            m_eActivationPresence SPECIFIC_PREFAB_NAME
+            m_aSpecificEntityNames {
+             "SVM997A1"
+            }
+            m_aSpecificClassNames {
+            }
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilter "{659010203551E80E}" {
+              m_sSpecificPrefabName "{3B1EB924602C7A07}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance_MERDC.et"
+              m_bIncludeChildren 1
+             }
+            }
+            m_sActivatedByThisFaction "US"
+            m_aCustomTriggerConditions {
+             SCR_CustomTriggerConditionsSpecificPrefabCount "{65901020AC0776BD}" {
+              m_aPrefabFilter {
+               SCR_ScenarioFrameworkPrefabFilterCount "{65901020A86E4C95}" {
+                m_sSpecificPrefabName "{3B1EB924602C7A07}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance_MERDC.et"
+                m_bIncludeChildren 1
+               }
+              }
+             }
+             SCR_ScenarioFrameworkCharacterInVehicleCondition "{65901023B9C6516E}" {
+              m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{65952AC98E12C2AC}" {
+               m_sLayerName "SMedevacPAXA1"
+              }
+             }
+            }
+            m_fUpdateRate 5
+            m_aFinishedActions {
+             SCR_ScenarioFrameworkActionSpawnObjects "{665096B98838761E}" {
+              m_aNameOfObjectsToSpawnOnActivation {
+               "SAIMedevacDriverA1"
+              }
+             }
+             SCR_ScenarioFrameworkActionChangeTaskState "{665096BA53FD8404}" {
+              m_Getter SCR_ScenarioFrameworkGetTask "{665096B9ACC2F847}" {
+               m_sLayerTaskName "LTCMedevacB1"
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        coords 0 0 0
+       }
+       GenericEntity SVM997A1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_aActivationActions {
+           SCR_ScenarioFrameworkActionSetVehicleCruiseSpeed "{6590D5AB25A28DFB}" {
+            m_fMaxCruiseSpeed 20
+           }
+          }
+          m_sObjectToSpawn "{3B1EB924602C7A07}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance_MERDC.et"
+          m_sID "SVM997A1"
+         }
+        }
+        coords 0 0 0
+        angles -0.895 0 0
+       }
+      }
+     }
+    }
+    GenericEntity LMedevacWPS1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+     coords 1288.785 63.973 2103.672
+     {
+      GenericEntity SWPMoveForceB1 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_Waypoint SCR_ScenarioFrameworkWaypointForcedMove "{6590E85F0642B529}" {
+          m_fCompletionRadius 3
+         }
+        }
+       }
+       coords 72.979 0.099 55.995
+      }
+     }
+    }
+    GenericEntity STCMedevac1 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
+     components {
+      SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
+       m_bUseExistingWorldAsset 1
+       m_sOverrideObjectDisplayName "UH1H Helicopter"
+       m_aActionsOnFinished {
+        SCR_ScenarioFrameworkActionWaitAndExecute "{665096BE8DBCD1D6}" {
+         m_iDelayInSeconds 10
+         m_aActions {
+          SCR_ScenarioFrameworkActionRestoreLayerToDefault "{665096BE8AB96B25}" {
+           m_Getter SCR_ScenarioFrameworkGetLayerBase "{665096BE872895E7}" {
+            m_sLayerBaseName "LTPMedevac1"
+           }
+           m_bReinitAfterRestoration 1
+          }
+         }
+        }
+       }
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}
