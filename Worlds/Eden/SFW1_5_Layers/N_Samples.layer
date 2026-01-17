@@ -700,183 +700,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    }
   }
  }
- DismountedPatrol1 {
-  components {
-   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    Enabled 0
-    m_iDynamicDespawnRange 30
-   }
-  }
-  coords 7470.727 165.499 4222.345
-  {
-   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-    LPatrolA1 {
-     coords 0 0 0
-     {
-      GenericEntity SAIPatrolA1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
-       components {
-        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-         m_sFactionKey "US"
-         m_bRandomizePerFaction 1
-         m_eEntityCatalogType GROUP
-         m_aIncludedEditableEntityLabels {
-          GROUPSIZE_SMALL
-         }
-         m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{650D2542FF30B1B7}" {
-          m_aLayerName {
-           "SWPCycleA1"
-           "LWPSPatrols1"
-          }
-         }
-         m_bSpawnAIOnWPPos 1
-        }
-       }
-       coords 0 0 0
-      }
-     }
-    }
-    LWPSPatrols1 {
-     coords 0 0 0
-     {
-      GenericEntity LWPSPatrolCycle1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
-       coords 0 0 0
-       {
-        GenericEntity SWPCycleA1 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-         components {
-          SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-           m_bShowDebugShapesDuringRuntime 1
-           m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{650D2542E8C333FB}" {
-            m_fCompletionRadius 1
-            m_aLayersWithWaypointsToCycle {
-             "SWPPatrolC1"
-             "SWPPatrolA1"
-             "SWPPatrolD1"
-             "SWPPatrolB1"
-            }
-           }
-          }
-         }
-         coords 0 0 0
-        }
-       }
-      }
-      $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
-       SWPPatrolA1 {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_Waypoint SCR_ScenarioFrameworkWaypointPatrolHierarchy "{650D254289AA4A9E}" {
-           m_aSettings {
-            SCR_AIGroupFormationSetting "{650D2542D4AB4229}" {
-             m_eFormation Line
-            }
-           }
-           m_fCompletionRadius 2
-           m_sWaypointPrefab "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et"
-          }
-         }
-        }
-        coords 1.945 0.006 9.451
-        {
-         CommentEntity {
-          coords 0 5.367 0
-          m_Comment "WP A"
-          m_ScaleByDistance 1
-          m_FaceCamera 1
-          m_VisibleOverall 1
-          m_VisibleIngame 1
-         }
-        }
-       }
-       SWPPatrolD1 {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_Waypoint SCR_ScenarioFrameworkWaypointPatrolHierarchy "{650D254289AA4A9E}" {
-           m_aSettings {
-            SCR_AIGroupFormationSetting "{650D2542D4AB4229}" {
-             m_eFormation Line
-            }
-           }
-           m_fCompletionRadius 2
-           m_sWaypointPrefab "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et"
-          }
-         }
-        }
-        coords -22.136 0 5.179
-        {
-         CommentEntity {
-          coords 0 5.367 0
-          m_Comment "WP D"
-          m_Color 1 1 1
-          m_ScaleByDistance 1
-          m_FaceCamera 1
-          m_VisibleOverall 1
-          m_VisibleIngame 1
-          m_BackgroundColor 0 0 0
-         }
-        }
-       }
-       SWPPatrolC1 {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_Waypoint SCR_ScenarioFrameworkWaypointPatrolHierarchy "{650D254289AA4A9E}" {
-           m_aSettings {
-            SCR_AIGroupFormationSetting "{650D2542D4AB4229}" {
-             m_eFormation Line
-            }
-           }
-           m_fCompletionRadius 2
-           m_sWaypointPrefab "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et"
-          }
-         }
-        }
-        coords -2.347 -0.001 -10.195
-        {
-         CommentEntity {
-          coords 0 5.367 0
-          m_Comment "WP C"
-          m_Color 1 1 1
-          m_ScaleByDistance 1
-          m_FaceCamera 1
-          m_VisibleOverall 1
-          m_VisibleIngame 1
-          m_BackgroundColor 0 0 0
-         }
-        }
-       }
-       SWPPatrolB1 {
-        components {
-         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
-          m_Waypoint SCR_ScenarioFrameworkWaypointPatrolHierarchy "{650D254289AA4A9E}" {
-           m_aSettings {
-            SCR_AIGroupFormationSetting "{650D2542D4AB4229}" {
-             m_eFormation Line
-            }
-           }
-           m_fCompletionRadius 2
-           m_sWaypointPrefab "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et"
-          }
-         }
-        }
-        coords 21.998 0.001 -6.561
-        {
-         CommentEntity {
-          coords 0 5.367 0
-          m_Comment "WP B"
-          m_Color 1 1 1
-          m_ScaleByDistance 1
-          m_FaceCamera 1
-          m_VisibleOverall 1
-          m_VisibleIngame 1
-          m_BackgroundColor 0 0 0
-         }
-        }
-       }
-      }
-     }
-    }
-   }
-  }
- }
  PickUpAIandDropOff {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
@@ -3133,12 +2956,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
            SovietOfficerWPB1 {
             components {
              SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+              m_bShowDebugShapesInWorkbench 0
               m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{65D2D233547A6AA8}" {
                m_fPriorityLevel 2000
               }
              }
             }
-            coords 1598.175 -132.848 -2509.694
+            coords 1596.98 -132.99 -2512.328
            }
           }
          }
@@ -4351,7 +4175,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     Enabled 0
    }
   }
-  coords 720.267 39 2688.246
+  coords 7577.675 82.176 5525.99
+  angles 0 -91.011 0
   {
    GenericEntity SectorAlpha : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     components {
@@ -4401,9 +4226,10 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        components {
         SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
          m_eActivationType ON_TRIGGER_ACTIVATION
+         m_sTaskTitle "Body A"
         }
        }
-       coords -53.554 0.011 -36.187
+       coords -785.644 54.608 156.621
        {
         GenericEntity SlotMoveTo1 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
          components {
@@ -4419,9 +4245,10 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        components {
         SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
          m_eActivationType ON_TRIGGER_ACTIVATION
+         m_sTaskTitle "Body B"
         }
        }
-       coords 0 0 0
+       coords -11.717 -1.049 -7.084
        {
         GenericEntity SlotMoveTo2 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
          components {
@@ -4437,9 +4264,10 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        components {
         SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
          m_eActivationType ON_TRIGGER_ACTIVATION
+         m_sTaskTitle "Body C"
         }
        }
-       coords 54.737 0 38.52
+       coords 517.289 36.87 498.499
        {
         GenericEntity SlotMoveTo3 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
          components {
@@ -4447,7 +4275,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
            m_bShowDebugShapesDuringRuntime 1
           }
          }
-         coords 0 0 0
+         coords 0 0 0.001
         }
        }
       }
@@ -4760,6 +4588,358 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        }
        m_iCountTo 3
       }
+     }
+    }
+   }
+  }
+ }
+ AlternativeDefendTask {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesDuringRuntime 1
+    m_bShowDebugShapesInWorkbench 1
+    m_sTriggerResource "{47D49EA6A216CFD5}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkCharacterTrigger.et"
+    m_fAreaRadius 20
+    m_aTriggerActions {
+     SCR_ScenarioFrameworkActionWaitAndExecute "{6842F9581FB63FEF}" {
+      m_aActions {
+       SCR_ScenarioFrameworkActionSpawnObjects "{6842F9581404B4CC}" {
+        m_aNameOfObjectsToSpawnOnActivation {
+         "Task_Defend2"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  coords 12062.68 30.841 1854.622
+  {
+   GenericEntity AltDefendTask : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+    coords 0 0 0
+    {
+     GenericEntity AttackersTrigger : "{032C15BBEBE9E1E9}Prefabs/Systems/ScenarioFramework/Components/SlotTrigger.et" {
+      components {
+       SCR_ScenarioFrameworkSlotTrigger "{6118D659EDB7084E}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{6118D659EDB7085B}" {
+          m_fAreaRadius 15
+          m_eActivationPresence ANY_CHARACTER
+          m_sActivatedByThisFaction "USSR"
+          m_bOnce 1
+          m_fMinimumPlayersNeededPercentage 0.51
+          m_aFinishedActions {
+           SCR_ScenarioFrameworkActionShowPopupNotification "{6842F95CD7FEF027}" {
+            m_sTitle "Attackers WON!"
+            m_sText "You have failed you misable cretin!"
+            m_sFactionKey "US"
+           }
+          }
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+     GenericEntity SlotTask13 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
+      components {
+       SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{6842F95D0502BAFE}" {
+          m_fAreaRadius 10
+          m_fMinimumPlayersNeededPercentage 0.51
+          m_fActivationCountdownTimer 60
+          m_bNotificationEnabled 1
+          m_sPlayerActivationNotificationTitle "Defend to the last man!"
+          m_aFinishedActions {
+           SCR_ScenarioFrameworkActionShowPopupNotification "{6842F9528F66DEFB}" {
+            m_sTitle "Defender WON!"
+            m_sText "You have failed you misable cretin!"
+            m_sFactionKey "US"
+           }
+          }
+         }
+        }
+        m_sObjectToSpawn "{DA58C3DF4455555E}Prefabs/Systems/ScenarioFramework/Triggers/ScenarioFrameworkTrigger.et"
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ BiDirectionalTasks {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
+  coords 5061.537 -106.019 3974.807
+  {
+   GenericEntity LayerTaskParent : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_sTaskTitle "Parent Task"
+      m_bTaskFunctionsOnItsOwn 0
+      m_iNumberOfRequieredTasksToFinish 4
+      m_aActionsOnCreated {
+       SCR_ScenarioFrameworkActionWaitAndExecute "{6860AB6264F7881C}" {
+        m_iDelayInSeconds 5
+        m_aActions {
+         SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6860AB62626BB2BF}" {
+          m_eComparisonOperator EQUAL
+          m_iValue 1
+          m_sCounterName "Logic1"
+          m_aActions {
+           SCR_ScenarioFrameworkActionIncrementCounter "{6860AB6F9C7065E9}" {
+            m_sCounterName "Logic1"
+           }
+           SCR_ScenarioFrameworkActionSpawnObjects "{6860AB624E837D83}" {
+            m_aNameOfObjectsToSpawnOnActivation {
+             "LayerTask1"
+            }
+           }
+          }
+         }
+         SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6860AB729C6C76F8}" {
+          m_eComparisonOperator EQUAL
+          m_iValue -1
+          m_sCounterName "Logic1"
+          m_aActions {
+           SCR_ScenarioFrameworkActionDecreaseLogicCounter "{6860AB729244CD15}" {
+            m_sCounterName "Logic1"
+           }
+           SCR_ScenarioFrameworkActionSpawnObjects "{6860AB624E837D83}" {
+            m_aNameOfObjectsToSpawnOnActivation {
+             "LayerTask4"
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    {
+     $grp GenericEntity : "{246BEC080F393398}Prefabs/Systems/ScenarioFramework/Components/LayerTaskMove.et" {
+      LayerTask1 {
+       components {
+        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_sTaskTitle "1"
+         m_sTaskDescription "1"
+         m_bIsSubtask 1
+         m_sParentLayerTask "LayerTaskParent"
+         m_aTriggerActionsOnFinish {
+          SCR_ScenarioFrameworkActionWaitAndExecute "{6860AB6141EC8150}" {
+           m_iDelayInSeconds 5
+           m_aActions {
+            SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6860AB61553514C8}" {
+             m_eComparisonOperator EQUAL
+             m_iValue 2
+             m_sCounterName "Logic1"
+             m_aActions {
+              SCR_ScenarioFrameworkActionIncrementCounter "{6860AB6BE6493471}" {
+               m_sCounterName "Logic1"
+              }
+              SCR_ScenarioFrameworkActionSpawnObjects "{68602DEB391EC5EF}" {
+               m_aNameOfObjectsToSpawnOnActivation {
+                "LayerTask2"
+               }
+              }
+             }
+            }
+            SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6860AB73BCF5178F}" {
+             m_eComparisonOperator EQUAL
+             m_iValue -5
+             m_sCounterName "Logic1"
+             m_aActions {
+              SCR_ScenarioFrameworkActionEndMission "{6860AB73B3EF6347}" {
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+       coords 31.851 120.751 46.143
+       {
+        GenericEntity SlotMoveTo1 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+         coords 0 0 0
+        }
+       }
+      }
+      LayerTask2 {
+       components {
+        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_sTaskTitle "2"
+         m_sTaskDescription "2"
+         m_bIsSubtask 1
+         m_sParentLayerTask "LayerTaskParent"
+         m_aTriggerActionsOnFinish {
+          SCR_ScenarioFrameworkActionWaitAndExecute "{6860AB62C6D6FD23}" {
+           m_iDelayInSeconds 5
+           m_aActions {
+            SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6860AB62D7D1A1E3}" {
+             m_eComparisonOperator EQUAL
+             m_iValue 3
+             m_sCounterName "Logic1"
+             m_aActions {
+              SCR_ScenarioFrameworkActionIncrementCounter "{6860AB65865F5B5B}" {
+               m_sCounterName "Logic1"
+              }
+              SCR_ScenarioFrameworkActionSpawnObjects "{68602DEA5D912D5D}" {
+               m_aNameOfObjectsToSpawnOnActivation {
+                "LayerTask3"
+               }
+              }
+             }
+            }
+            SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6860AB725963A5BD}" {
+             m_eComparisonOperator EQUAL
+             m_iValue -4
+             m_sCounterName "Logic1"
+             m_aActions {
+              SCR_ScenarioFrameworkActionDecreaseLogicCounter "{6860AB7244FB247E}" {
+               m_sCounterName "Logic1"
+              }
+              SCR_ScenarioFrameworkActionSpawnObjects "{6860AB62006FB96F}" {
+               m_aNameOfObjectsToSpawnOnActivation {
+                "LayerTask1"
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+       coords 98.809 120.3 64.098
+       {
+        GenericEntity SlotMoveTo2 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+         coords 0 0 0
+        }
+       }
+      }
+      LayerTask3 {
+       components {
+        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_sTaskTitle "3"
+         m_sTaskDescription "3"
+         m_bIsSubtask 1
+         m_sParentLayerTask "LayerTaskParent"
+         m_aTriggerActionsOnFinish {
+          SCR_ScenarioFrameworkActionWaitAndExecute "{6860AB6234F1A6E0}" {
+           m_iDelayInSeconds 5
+           m_aActions {
+            SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6860AB6233277373}" {
+             m_eComparisonOperator EQUAL
+             m_iValue 4
+             m_sCounterName "Logic1"
+             m_aActions {
+              SCR_ScenarioFrameworkActionIncrementCounter "{6860AB65C179B2B8}" {
+               m_sCounterName "Logic1"
+              }
+              SCR_ScenarioFrameworkActionSpawnObjects "{6860AB62006FB96F}" {
+               m_aNameOfObjectsToSpawnOnActivation {
+                "LayerTask4"
+               }
+              }
+             }
+            }
+            SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6860AB7277ADA6DF}" {
+             m_eComparisonOperator EQUAL
+             m_iValue -3
+             m_sCounterName "Logic1"
+             m_aActions {
+              SCR_ScenarioFrameworkActionDecreaseLogicCounter "{6860AB7244FB247E}" {
+               m_sCounterName "Logic1"
+              }
+              SCR_ScenarioFrameworkActionSpawnObjects "{6860AB62006FB96F}" {
+               m_aNameOfObjectsToSpawnOnActivation {
+                "LayerTask2"
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+       coords 113.382 120.979 15.748
+       {
+        GenericEntity SlotMoveTo3 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+         coords 0 0 0
+        }
+       }
+      }
+      LayerTask4 {
+       components {
+        SCR_ScenarioFrameworkLayerTaskMove "{5A2283E9F84958A1}" {
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_sTaskTitle "4"
+         m_sTaskDescription "4"
+         m_bIsSubtask 1
+         m_sParentLayerTask "LayerTaskParent"
+         m_aTriggerActionsOnFinish {
+          SCR_ScenarioFrameworkActionWaitAndExecute "{6860AB64F73898D2}" {
+           m_iDelayInSeconds 5
+           m_aActions {
+            SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6860AB72CA4B2CA2}" {
+             m_eComparisonOperator GREATER_THEN
+             m_iValue 4
+             m_sCounterName "Logic1"
+             m_aActions {
+              SCR_ScenarioFrameworkActionEndMission "{6860AB722C6872DD}" {
+              }
+             }
+            }
+            SCR_ScenarioFrameworkActionCompareCounterAndExecute "{6860AB72C42BAB89}" {
+             m_eComparisonOperator EQUAL
+             m_iValue -2
+             m_sCounterName "Logic1"
+             m_aActions {
+              SCR_ScenarioFrameworkActionDecreaseLogicCounter "{6860AB73E26F8E56}" {
+               m_sCounterName "Logic1"
+              }
+              SCR_ScenarioFrameworkActionSpawnObjects "{6860AB723D36900E}" {
+               m_aNameOfObjectsToSpawnOnActivation {
+                "LayerTask3"
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+       coords 33.627 120.501 -4.784
+       {
+        GenericEntity SlotMoveTo4 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
+         coords 0 0 0
+        }
+       }
+      }
+     }
+     GenericEntity SlotTask1 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
+      coords 0 0 0
+     }
+    }
+   }
+   GenericEntity Logics : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    {
+     SCR_ScenarioFrameworkLogicCounter Logic1 : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/Logic/LogicCounter.et" {
+      coords 0 0 0
+      m_iCountTo 0
      }
     }
    }

@@ -1,0 +1,8 @@
+GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  SCR_CharacterRankComponent "{67095C263531CE41}" {
+   m_iRank SERGEANT
+  }
+ }
+}

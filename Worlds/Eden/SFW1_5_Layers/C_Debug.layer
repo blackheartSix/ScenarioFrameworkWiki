@@ -10,14 +10,29 @@ GenericEntity AreaDebug : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/C
    coords 0 0 0
    {
     GenericEntity Slot4 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     components {
+      SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+       m_bShowDebugShapesInWorkbench 0
+      }
+     }
      coords 0 0 0
     }
    }
   }
   GenericEntity LayerTaskDeliver2 : "{88821DCA414AF4C7}Prefabs/Systems/ScenarioFramework/Components/LayerTaskDeliver.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+     Enabled 0
+    }
+   }
    coords 0 0 0
    {
     GenericEntity SlotDelivery2 : "{4C2EF5C1E53FE511}Prefabs/Systems/ScenarioFramework/Components/SlotDelivery.et" {
+     components {
+      SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+       m_bShowDebugShapesInWorkbench 0
+      }
+     }
      coords 0 0 0
     }
    }

@@ -1,0 +1,7 @@
+VehicleHelicopterSimulation {
+ Simulation Helicopter "{51FAED9EF37A2D29}" {
+  Engine HelicopterEngine "{51FAED9EF37A2D2B}" {
+   StartUpTime 0
+  }
+ }
+}

@@ -1,0 +1,203 @@
+GenericEntity DismountedPatrols1 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   m_iDynamicDespawnRange 30
+  }
+ }
+ coords 7470.727 165.499 4222.345
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   DismountedPatrol1 {
+    coords 22.121 0 -6.723
+    {
+     GenericEntity PatrolGroupAI1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "US"
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionAI "{66C8D9166E4B6954}" {
+          m_aAIActions {
+           SCR_ScenarioFrameworkAIAddWaypoint "{66C8D91664F9F2F0}" {
+            m_Getter SCR_ScenarioFrameworkGetLayerBase "{66C8D9167D0F1CA1}" {
+             m_sLayerBaseName "CycleWP1"
+            }
+            m_bClearPreviousWaypoints 1
+           }
+          }
+         }
+        }
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType GROUP
+        m_aIncludedEditableEntityLabels {
+         GROUPSIZE_SMALL
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+   DismountedPatrolWPS1 {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      CycleWP1 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{66C8D91469326FD1}" {
+         }
+        }
+       }
+       coords 0 0 0
+      }
+      PatrolWP1 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrolHierarchy "{650D254289AA4A9E}" {
+          m_aSettings {
+           SCR_AIGroupFormationSetting "{650D2542D4AB4229}" {
+            m_eFormation Column
+           }
+          }
+          m_fCompletionRadius 2
+          m_sWaypointPrefab "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et"
+         }
+        }
+       }
+       coords 1.945 0.006 9.451
+       {
+        CommentEntity {
+         coords 0 5.367 0
+         m_Comment "WP A"
+         m_ScaleByDistance 1
+         m_FaceCamera 1
+         m_VisibleOverall 1
+         m_VisibleIngame 1
+        }
+       }
+      }
+      PatrolWP4 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrolHierarchy "{650D254289AA4A9E}" {
+          m_aSettings {
+           SCR_AIGroupFormationSetting "{650D2542D4AB4229}" {
+            m_eFormation Column
+           }
+          }
+          m_fCompletionRadius 2
+          m_sWaypointPrefab "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et"
+         }
+        }
+       }
+       coords -22.136 0 5.179
+       {
+        CommentEntity {
+         coords 0 5.367 0
+         m_Comment "WP D"
+         m_Color 1 1 1
+         m_ScaleByDistance 1
+         m_FaceCamera 1
+         m_VisibleOverall 1
+         m_VisibleIngame 1
+         m_BackgroundColor 0 0 0
+        }
+       }
+      }
+      PatrolWP3 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrolHierarchy "{650D254289AA4A9E}" {
+          m_aSettings {
+           SCR_AIGroupFormationSetting "{650D2542D4AB4229}" {
+            m_eFormation Column
+           }
+          }
+          m_fCompletionRadius 2
+          m_sWaypointPrefab "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et"
+         }
+        }
+       }
+       coords -2.347 -0.001 -10.195
+       {
+        CommentEntity {
+         coords 0 5.367 0
+         m_Comment "WP C"
+         m_Color 1 1 1
+         m_ScaleByDistance 1
+         m_FaceCamera 1
+         m_VisibleOverall 1
+         m_VisibleIngame 1
+         m_BackgroundColor 0 0 0
+        }
+       }
+      }
+      PatrolWP2 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrolHierarchy "{650D254289AA4A9E}" {
+          m_aSettings {
+           SCR_AIGroupFormationSetting "{650D2542D4AB4229}" {
+            m_eFormation Column
+           }
+          }
+          m_fCompletionRadius 2
+          m_sWaypointPrefab "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et"
+         }
+        }
+       }
+       coords 21.998 0.001 -6.561
+       {
+        CommentEntity {
+         coords 0 5.367 0
+         m_Comment "WP B"
+         m_Color 1 1 1
+         m_ScaleByDistance 1
+         m_FaceCamera 1
+         m_VisibleOverall 1
+         m_VisibleIngame 1
+         m_BackgroundColor 0 0 0
+        }
+       }
+      }
+     }
+    }
+   }
+   DismountedPatrol2 {
+    coords -22.447 0.001 5.051
+    {
+     GenericEntity PatrolGroupAI2 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sFactionKey "US"
+        m_aActivationActions {
+         SCR_ScenarioFrameworkActionAI "{66C8D9166E4B6954}" {
+          m_aAIActions {
+           SCR_ScenarioFrameworkAIAddWaypoint "{66C8D91664F9F2F0}" {
+            m_Getter SCR_ScenarioFrameworkGetLayerBase "{66C8D9167D0F1CA1}" {
+             m_sLayerBaseName "CycleWP1"
+            }
+            m_bClearPreviousWaypoints 1
+           }
+          }
+         }
+        }
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType GROUP
+        m_aIncludedEditableEntityLabels {
+         GROUPSIZE_SMALL
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+}

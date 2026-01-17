@@ -1,3 +1,7 @@
+GenericEntity : "{BFF74A287E8300FB}Prefabs/Structures/Signs/Military/Sign_CommandPost_US_01.et" {
+ coords 4879.64 28.594 11732.819
+ angles 0 -179.574 0
+}
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  Actions {
   components {
@@ -239,7 +243,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      }
     }
     MoveIntoCompartment {
-     coords 0 0 0
+     coords -1554.538 -134 5088.068
+     angles 0 -172.398 0
      {
       $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
        VehGroup1 {
@@ -286,8 +291,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           }
          }
         }
-        coords -1554.538 -134 5088.068
-        angles 0 -172.398 0
+        coords 0 0 0
         {
          $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
           VehA11Driver1 {
@@ -351,8 +355,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         }
        }
        ETS_WPS1 {
-        coords -1600.249 -133.284 5163.677
-        angles 0 87.612 0
         {
          $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
           ETS_WPA1 {
@@ -363,8 +365,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              }
             }
            }
-           coords 338.473 1.11 32.424
-           angles 0.263 -7.567 -3.677
+           coords -35.338 1.826 258.819
+           angles 0.263 -107.557 -3.677
           }
           ETS_WPB1 {
            components {
@@ -374,7 +376,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              }
             }
            }
-           coords 346.261 7.936 168.817
+           coords -171.014 8.652 242.828
+           angles 0 -99.99 0
           }
           ETS_WPC1 {
            components {
@@ -384,7 +387,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              }
             }
            }
-           coords 648.271 13.363 489.261
+           coords -538.991 14.079 484.669
+           angles 0 -99.99 0
           }
           VehGrpCycleWP1 {
            components {
@@ -394,7 +398,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              }
             }
            }
-           coords 0 0 0
           }
           ETS_WPD1 {
            components {
@@ -410,8 +413,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              }
             }
            }
-           coords 752.562 3.069 59.641
-           angles 0 -87.612 0
+           coords -133.977 3.785 661.908
+           angles 0 172.398 0
           }
          }
         }
@@ -420,6 +423,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      }
     }
     AppendBriefingText {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       Enabled 0
+      }
+     }
      coords 0 0 0
      {
       GenericEntity ABT : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
@@ -428,6 +436,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      }
     }
     ActionAI {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       Enabled 0
+      }
+     }
      coords 0 0 0
      {
       $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
@@ -1060,6 +1073,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     SpawnbyVariable {
      components {
       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       Enabled 0
        m_aActivationActions {
         SCR_ScenarioFrameworkCreateVariable "{6635031EEDCA248C}" {
          m_sVariableName "varSpawnByVar"
@@ -1113,6 +1127,51 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        }
        coords 0 -0.044 0
        angles 0.264 134.415 -0.855
+      }
+     }
+    }
+    ResourceActions {
+     coords 277.414 -71.349 -821.103
+     angles 0 -134.449 0
+     {
+      $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+       Slot67 {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_aActivationActions {
+           SCR_ScenarioFrameworkActionSetSupplyPercentage "{66C2AC41D894634D}" {
+           }
+          }
+          m_sObjectToSpawn "{F1FBD0972FA5FE09}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport.et"
+          m_sID "MyVic"
+         }
+        }
+        coords -0.236 0.37 -4.047
+        angles -3.761 0.169 -2.572
+       }
+       Slot79 {
+        components {
+         SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+          m_aActivationActions {
+           SCR_ScenarioFrameworkActionOnResourceChanged "{66C2AC4162811C0D}" {
+            m_Getter SCR_ScenarioFrameworkGetSpawnedEntity "{66C2AC40D5ED534E}" {
+             m_sLayerName "Slot67"
+            }
+            m_aActions {
+             SCR_ScenarioFrameworkActionShowHint "{66C2AC4176AB2B45}" {
+              m_sTitle "Supplies Transferred. "
+              m_sText "Great job! You've resupplied the troops to continue the fight!"
+             }
+            }
+            m_iActivationPercentage 50
+            m_eComparisonOperator LESS_OR_EQUAL
+           }
+          }
+          m_sObjectToSpawn "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_US_01.et"
+         }
+        }
+        coords -0.857 0.762 -11.264
+       }
       }
      }
     }
@@ -1285,6 +1344,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
  UserActionEventRadio {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
     m_bShowDebugShapesInWorkbench 1
     m_iDynamicDespawnRange 50
    }
@@ -1952,6 +2012,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   }
  }
  A_SpwnObjClstOnLst {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    Enabled 0
+   }
+  }
   coords 8940.109 88.201 2365.808
   angles -4.97 138.315 -1.551
   {
@@ -2151,4 +2216,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    }
   }
  }
+}
+GenericEntity : "{F09296B9255F6704}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_CommandPost_US_01.et" {
+ coords 4868.459 28.594 11734.99
 }

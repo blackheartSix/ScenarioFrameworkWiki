@@ -181,6 +181,7 @@ GenericEntity LayerTasks1p4 : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramewo
      GenericEntity SlotMoveToCPA1 : "{A44004A770A5D8BE}Prefabs/Systems/ScenarioFramework/Components/SlotMoveTo.et" {
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        Enabled 0
         m_bShowDebugShapesDuringRuntime 1
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {

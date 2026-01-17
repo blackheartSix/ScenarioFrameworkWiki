@@ -4,6 +4,10 @@ SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramewo
   }
   SCR_CampaignBuildingManagerComponent "{667748F9CD00A950}" : "{F07437CC1A5BF612}ComponentsCopied/SCR_CampBuildManagerComp.ct" {
   }
+  SCR_CampaignFactionCommanderHandlerComponent "{66C2D6183ECC3578}" : "{54DB435D23C64875}ComponentsCopied/SCR_CampaignFactionCommanderHandlerComponent.ct" {
+  }
+  SCR_CommandingManagerComponent "{66BEBD4E207FF479}" {
+  }
   SCR_GameModeSFManager "{5A96783ABCA252AE}" {
    m_bDynamicDespawn 1
   }
@@ -19,6 +23,8 @@ SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramewo
  }
  coords 7114.114 104.589 6274.413
  m_eTestGameFlags 6
+ m_bUseSpawnPreload 1
+ m_bAutotuneEnabled 1
 }
 GenericEntity HierarchyExamples : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  components {
@@ -61,6 +67,15 @@ GenericEntity HierarchyExamples : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFra
    LayerB {
     coords -4334.293 -37.612 9962.023
     {
+     GenericEntity SlotAI23 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+        m_sWPToSpawn ""
+       }
+      }
+      coords 3.349 0 -13.966
+     }
      $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       USSpawnpoint {
        components {

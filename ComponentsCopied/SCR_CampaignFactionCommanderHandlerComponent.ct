@@ -1,0 +1,26 @@
+SCR_CampaignFactionCommanderHandlerComponent {
+ m_aAIFactionCommanders {
+  SCR_EstablishBaseAIFactionCommander "{66C2D618266A3E46}" {
+   m_sFactionKey "US"
+   m_sEstablishBaseTaskPrefab "{FF81AEB7D26E6742}Prefabs/Tasks/Campaign/EstablishBaseTaskEntity.et"
+  }
+  SCR_EstablishBaseAIFactionCommander "{66C2D618266A3F89}" {
+   m_sFactionKey "USSR"
+   m_sEstablishBaseTaskPrefab "{FF81AEB7D26E6742}Prefabs/Tasks/Campaign/EstablishBaseTaskEntity.et"
+  }
+ }
+ m_MinBaseDistanceConfig SCR_MinBaseDistanceConfig "{66C2D618266A3F8F}" {
+  m_aMinBaseDistanceInfoList {
+   SCR_MinBaseDistanceInfo "{66C2D618266A3F8E}" {
+    m_eBaseType RELAY
+   }
+   SCR_MinBaseDistanceInfo "{66C2D618266A3F8D}" {
+    m_eBaseType SOURCE_BASE
+    m_iMinimumRequiredDistanceFromBase 420
+   }
+   SCR_MinBaseDistanceInfo "{66C2D618266A2D5B}" {
+    m_iMinimumRequiredDistanceFromBase 450
+   }
+  }
+ }
+}

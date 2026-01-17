@@ -1159,6 +1159,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     MoveTaskParent {
      components {
       SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+       Enabled 0
        m_sTaskTitle "Conduct a patrol"
        m_sTaskDescription "Conduct a patrol"
        m_eTaskUIVisibility LIST_ONLY
@@ -1280,6 +1281,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    GenericEntity LOPORDA1 : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
     components {
      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      Enabled 0
       m_sTaskTitle "OPORD Devils Den 240600ZAUG25"
       m_sTaskDescription "See Operations Order Devils Den"
       m_sTaskIconSet "{10C0A9A305E8B3A4}UI/Imagesets/Tasks/Task_Icons.imageset"
